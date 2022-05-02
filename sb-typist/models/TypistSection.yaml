@@ -1,0 +1,34 @@
+name: TypistSection
+label: Typist
+extends:
+  - Section
+groups:
+  - sectionComponent
+fields:
+  - name: colors
+    default: colors-a
+  - type: list
+    name: elements
+    label: Elements
+    items:
+      type: model
+      groups: [TypistElements]
+  - type: boolean
+    name: terminalWindow
+    label: Draw terminal window
+    default: true
+  - type: enum
+    name: fixedHeight
+    label: Fixed Height
+    options: ['none','h-8','h-16','h-24','h-36','h-48']
+    default: 'h-16'
+  - type: style
+    name: styles
+    styles:
+      self:
+        margin: ['tw0:96']
+        padding: ['tw0:96']
+    default:
+      self:
+        margin: ['mt-0', 'mb-0', 'ml-0', 'mr-0']
+        padding: ['pt-12', 'pb-12', 'pl-28', 'pr-28']

@@ -1,0 +1,12 @@
+name: TypistBackspaceElement
+label: Backspace
+extends:
+  - TypistBaseElement
+groups:
+  - TypistElements
+fields:
+  - type: number
+    name: count
+    label: Count
+    min: 1
+    default: 1

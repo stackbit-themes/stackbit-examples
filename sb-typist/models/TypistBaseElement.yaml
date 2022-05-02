@@ -1,0 +1,11 @@
+name: TypistBaseElement
+label: NA
+fields:
+  - type: number
+    name: delayBefore
+    label: Delay before (milliseconds)
+    default: 0
+    min: 0
+    max: 10000
+    step: 100
+    controlType: slider
