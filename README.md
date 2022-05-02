@@ -1,3 +1,45 @@
 # Stackbit Examples
 
-WIP ...
+A collection of examples that can be used to learn more about Stackbit or to be the basis for your new Stackbit project.
+
+They are broken down into various categories below for easier navigation.
+
+Have an idea of an example we should add? [Create an issue](https://github.com/stackbit/stackbit-examples/issues/new) or [join us on Discord](https://discord.gg/HUNhjVkznH) to discuss.
+
+## Starters
+
+Starters are basic Stackbit projects that bring some specific combination of _the basics_.
+
+| Example                                                        | Description                               |
+| :------------------------------------------------------------- | :---------------------------------------- |
+| [`nextjs-starter`](https://github.com/stackbit/nextjs-starter) | The essential JavaScript building blocks. |
+
+## Themes
+
+Themes are bigger, more opinionated projects, that are all production-ready and built for scale. These are great options for non-technical content editors to get an immediate feel for Stackbit.
+
+The code references are below. Although you can run these locally, each of these themes is available to [demo immediately in the Stackbit app](https://jamstack.new/).
+
+| Example                                                                                         | Description                                                                  |
+| :---------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
+| [`personal-nextjs-theme`](https://github.com/stackbit-themes/personal-nextjs-theme)             | A stylistic site to showcase a portfolio.                                    |
+| [`small-business-nextjs-theme`](https://github.com/stackbit-themes/small-business-nextjs-theme) | Pages and components meant to help small business spin up new sites quickly. |
+| [`starter-nextjs-theme`](https://github.com/stackbit-themes/starter-nextjs-theme)               | A beautifully simple site that can be flexed to fit your needs.              |
+
+## Components
+
+These examples bring a single, interactive and visually-editable component.
+
+| Example                                                                                | Description                                                                    |
+| :------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
+| [`sb-countdown`](https://github.com/stackbit/stackbit-examples/tree/main/sb-countdown) | A `CountdownSection` component for counting down to a specified date and time. |
+| [`sb-typist`](https://github.com/stackbit/stackbit-examples/tree/main/sb-typist)       | A `TypistSection` component for a typing animation based on react-typist.      |
+
+## Projects
+
+Project-based examples are built to show one or two patterns in practice.
+
+| Example                                                                                    | Description                                                                         |
+| :----------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+| [`dynamic-app`](https://github.com/stackbit/stackbit-examples/tree/main/dynamic-app)       | A showcase of multiple capabilities like authentication and workflow-based content. |
+| [`algolia-search`](https://github.com/stackbit/stackbit-examples/tree/main/algolia-search) | On-demand statically generated pages, searchable with Algolia                       |
