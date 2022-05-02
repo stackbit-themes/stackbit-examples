@@ -1,0 +1,11 @@
+# While this package is not a Stackbit project in itself,
+# having a stackbit.yaml is necessary to allow running model validation with @stackbit/cli
+stackbitVersion: 0.4.0
+pagesDir: null
+dataDir: null
+contentModels:
+  CountdownSection:
+    isPage: false
+modelsSource:
+  type: files
+  modelDirs: ['modelStubs', 'models']

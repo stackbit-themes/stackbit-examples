@@ -1,0 +1,102 @@
+name: CountdownSection
+label: Countdown
+thumbnail: https://assets.stackbit.com/components/models/thumbnails/default.png
+extends:
+  - Section
+groups:
+  - sectionComponent
+fieldGroups:
+  - name: styles
+    label: Styles
+  - name: settings
+    label: Settings
+fields:
+  - name: colors
+    default: colors-f
+  - type: enum
+    name: backgroundSize
+    group: styles
+    label: Background size
+    options:
+      - label: Full
+        value: full
+      - label: Inset
+        value: inset
+    default: full
+  - type: datetime
+    name: endDate
+    label: End date
+    default: ''
+  - type: boolean
+    name: showYears
+    label: 'Show years?'
+    default: true
+  - type: boolean
+    name: showMonths
+    label: 'Show months?'
+    default: true
+  - type: string
+    name: yearsText
+    label: Years text
+    default: years
+  - type: string
+    name: monthsText
+    label: Months text
+    default: months
+  - type: string
+    name: daysText
+    label: Days text
+    default: days
+  - type: string
+    name: hoursText
+    label: Hours text
+    default: hours
+  - type: string
+    name: minutesText
+    label: Minutes text
+    default: minutes
+  - type: string
+    name: secondsText
+    label: Seconds text
+    default: seconds
+  - type: style
+    name: styles
+    styles:
+      self:
+        height: ['auto', 'screen']
+        width: ['narrow', 'wide', 'full']
+        margin: ['tw0:96']
+        padding: ['tw0:96']
+        alignItems: ['flex-start', 'flex-end', 'center']
+        justifyContent: ['flex-start', 'flex-end', 'center']
+        flexDirection: ['row', 'col']
+        borderRadius: '*'
+        borderWidth: ['0:8']
+        borderStyle: '*'
+        borderColor:
+          - value: 'border-primary'
+            label: 'Primary color'
+            color: '$primary'
+          - value: 'border-secondary'
+            label: 'Secondary color'
+            color: '$secondary'
+          - value: 'border-dark'
+            label: 'Dark color'
+            color: '$dark'
+          - value: 'border-complementary'
+            label: 'Complementary color'
+            color: '$complementary'
+        boxShadow: '*'
+    default:
+      self:
+        height: auto
+        width: wide
+        margin: ['mt-0', 'mb-0', 'ml-0', 'mr-0']
+        padding: ['pt-4', 'pb-4', 'pl-4', 'pr-4']
+        alignItems: center
+        justifyContent: center
+        flexDirection: row
+        borderRadius: none
+        borderWidth: 0
+        borderStyle: none
+        borderColor: border-dark

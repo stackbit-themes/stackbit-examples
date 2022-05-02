@@ -1,0 +1,7 @@
+# This 'stub' is needed only so `stackbit validate` can be run in this package without issues
+# (since CountdownSection extends Section, which is provided by our base themes).
+name: Section
+label: Stub Section
+fields:
+  - name: colors
+    type: string
