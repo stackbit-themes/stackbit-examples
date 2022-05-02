@@ -1,0 +1,8 @@
+{
+    "type": "SiteConfig",
+    "favicon": "/images/favicon.svg",
+    "header": {
+        "title": "Stackbit Dynamic Example App"
+    },
+    "defaultFlow": "content/pages/flows/uno.md"
+}

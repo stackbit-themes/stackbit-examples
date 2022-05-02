@@ -1,0 +1,17 @@
+name: WizardFlow
+layout: WizardFlow
+label: Wizard Flow
+hideContent: true
+fields:
+  - type: string
+    name: title
+    label: Title
+    default: A New Flow
+    required: true
+  - type: list
+    name: steps
+    label: Steps
+    items:
+      type: model
+      models: [WizardStep]
+    default: []

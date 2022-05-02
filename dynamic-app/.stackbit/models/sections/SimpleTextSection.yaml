@@ -1,0 +1,26 @@
+name: SimpleTextSection
+label: Text section
+labelField: title
+extends:
+  - BaseSection
+groups:
+  - sectionComponents
+fields:
+  - type: string
+    name: title
+    label: Title
+    default: A Title
+  - type: string
+    name: subtitle
+    label: Subtitle
+    default: A Subtitle
+  - type: markdown
+    name: content
+    label: Content
+    default: |-
+      **Markdown** text is _possible_ here!
+  - type: model
+    name: ctaButton
+    label: CTA Button
+    groups: [sectionButtons]
+    default: null

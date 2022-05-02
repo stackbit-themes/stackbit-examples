@@ -1,0 +1,15 @@
+name: BaseSection
+label: Base section
+fields:
+  - type: enum
+    name: userGroup
+    label: Visible to
+    default: everyone
+    required: true
+    options:
+      - label: Everyone
+        value: everyone
+      - label: Logged-in users only
+        value: loggedIn
+      - label: Anonymous users only
+        value: anonymous
