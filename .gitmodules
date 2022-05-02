@@ -7,3 +7,6 @@
 [submodule "small-business-nextjs-theme"]
 	path = small-business-nextjs-theme
 	url = git@github.com:stackbit-themes/small-business-nextjs-theme.git
+[submodule "personal-nextjs-theme"]
+	path = personal-nextjs-theme
+	url = git@github.com:stackbit-themes/personal-nextjs-theme.git
