@@ -1,3 +1,6 @@
 [submodule "starter-nextjs-theme"]
 	path = starter-nextjs-theme
 	url = git@github.com:stackbit-themes/starter-nextjs-theme.git
+[submodule "nextjs-starter"]
+	path = nextjs-starter
+	url = git@github.com:stackbit/nextjs-starter.git
