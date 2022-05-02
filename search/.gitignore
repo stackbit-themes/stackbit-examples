@@ -1,0 +1,9 @@
+/.cache
+/node_modules
+/.next
+/out
+.DS_Store
+.sourcebit-nextjs-cache.json
+Thumbs.db
+.env
+.env.local
