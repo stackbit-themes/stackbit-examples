@@ -10,9 +10,10 @@ Have an idea of an example we should add? [Create an issue](https://github.com/s
 
 Starters are basic Stackbit projects that bring some specific combination of _the basics_.
 
-| Example                                                        | Description                               |
-| :------------------------------------------------------------- | :---------------------------------------- |
-| [`nextjs-starter`](https://github.com/stackbit/nextjs-starter) | The essential JavaScript building blocks. |
+| Example                                                                      | Description                               |
+| :--------------------------------------------------------------------------- | :---------------------------------------- |
+| [`nextjs-starter`](https://github.com/stackbit/nextjs-starter)               | The essential JavaScript building blocks. |
+| [`ts-mui-nextjs-starter`](https://github.com/stackbit/ts-mui-nextjs-starter) | TypeScript + MUI components               |
 
 ## Themes
 
