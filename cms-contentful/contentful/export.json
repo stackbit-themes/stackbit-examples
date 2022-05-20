@@ -6,13 +6,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "p5asbbjx1p90"
+            "id": "2damo5wqg14d"
           }
         },
-        "id": "author",
+        "id": "post",
         "type": "ContentType",
-        "createdAt": "2020-04-22T09:32:50.535Z",
-        "updatedAt": "2020-04-22T09:32:50.885Z",
+        "createdAt": "2022-04-28T18:40:44.270Z",
+        "updatedAt": "2022-04-28T18:40:47.883Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -21,8 +21,8 @@
           }
         },
         "publishedVersion": 1,
-        "publishedAt": "2020-04-22T09:32:50.885Z",
-        "firstPublishedAt": "2020-04-22T09:32:50.885Z",
+        "publishedAt": "2022-04-28T18:40:47.883Z",
+        "firstPublishedAt": "2022-04-28T18:40:47.883Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -47,80 +47,6 @@
           }
         }
       },
-      "displayField": "name",
-      "name": "Author",
-      "description": "",
-      "fields": [
-        {
-          "id": "name",
-          "name": "Name",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "picture",
-          "name": "Picture",
-          "type": "Link",
-          "localized": false,
-          "required": true,
-          "validations": [],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Asset"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "p5asbbjx1p90"
-          }
-        },
-        "id": "post",
-        "type": "ContentType",
-        "createdAt": "2020-04-22T09:34:36.878Z",
-        "updatedAt": "2020-04-22T12:23:57.726Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2020-04-22T12:23:57.726Z",
-        "firstPublishedAt": "2020-04-22T09:34:37.228Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        }
-      },
       "displayField": "title",
       "name": "Post",
       "description": "",
@@ -131,7 +57,8 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -141,7 +68,8 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -153,7 +81,12 @@
           "required": true,
           "validations": [
             {
-              "enabledMarks": ["bold", "italic", "underline", "code"],
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code"
+              ],
               "message": "Only bold, italic, underline, and code marks are allowed"
             },
             {
@@ -231,7 +164,8 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -241,7 +175,8 @@
           "type": "Link",
           "localized": false,
           "required": true,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
@@ -252,7 +187,8 @@
           "type": "Date",
           "localized": false,
           "required": true,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -264,7 +200,9 @@
           "required": true,
           "validations": [
             {
-              "linkContentType": ["author"]
+              "linkContentType": [
+                "author"
+              ]
             }
           ],
           "disabled": false,
@@ -272,7 +210,85 @@
           "linkType": "Entry"
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2damo5wqg14d"
+          }
+        },
+        "id": "author",
+        "type": "ContentType",
+        "createdAt": "2022-04-28T18:40:44.284Z",
+        "updatedAt": "2022-04-28T18:40:47.664Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-04-28T18:40:47.664Z",
+        "firstPublishedAt": "2022-04-28T18:40:47.664Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Author",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "picture",
+          "name": "Picture",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
     }
+  ],
+  "tags": [
   ],
   "editorInterfaces": [
     {
@@ -281,13 +297,13 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "p5asbbjx1p90",
+            "id": "2damo5wqg14d",
             "type": "Link",
             "linkType": "Space"
           }
         },
         "version": 2,
-        "createdAt": "2020-04-22T09:32:50.954Z",
+        "createdAt": "2022-04-28T18:40:47.971Z",
         "createdBy": {
           "sys": {
             "id": "066RqBikAjzKy0SWUEtFvH",
@@ -295,63 +311,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2020-04-22T09:32:51.642Z",
-        "updatedBy": {
-          "sys": {
-            "id": "066RqBikAjzKy0SWUEtFvH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "author",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "name",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "picture",
-          "widgetId": "assetLinkEditor",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "p5asbbjx1p90",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 4,
-        "createdAt": "2020-04-22T09:34:37.309Z",
-        "createdBy": {
-          "sys": {
-            "id": "066RqBikAjzKy0SWUEtFvH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2020-04-22T12:23:58.324Z",
+        "updatedAt": "2022-04-28T18:40:48.300Z",
         "updatedBy": {
           "sys": {
             "id": "066RqBikAjzKy0SWUEtFvH",
@@ -411,6 +371,432 @@
           "widgetNamespace": "builtin"
         }
       ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "2damo5wqg14d",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2022-04-28T18:40:47.717Z",
+        "createdBy": {
+          "sys": {
+            "id": "066RqBikAjzKy0SWUEtFvH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-04-28T18:40:48.369Z",
+        "updatedBy": {
+          "sys": {
+            "id": "066RqBikAjzKy0SWUEtFvH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "author",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "picture",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2damo5wqg14d"
+          }
+        },
+        "id": "rToLQAMH7nnOEBD5Gnqh8",
+        "type": "Entry",
+        "createdAt": "2022-04-28T18:56:01.171Z",
+        "updatedAt": "2022-05-20T19:35:46.764Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 35,
+        "publishedAt": "2022-05-20T19:35:46.764Z",
+        "firstPublishedAt": "2022-04-28T18:57:58.278Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        },
+        "publishedCounter": 10,
+        "version": 36,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "My First Post"
+        },
+        "slug": {
+          "en-US": "my-first-post"
+        },
+        "content": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Officia ipsum non ex qui cupidatat aliquip incididunt tempor proident dolor anim aliquip cupidatat esse. Reprehenderit minim laboris fugiat consequat eiusmod occaecat Lorem non anim amet velit occaecat do officia. Ullamco anim nostrud magna cillum exercitation consequat proident cupidatat esse ea sit cillum voluptate elit. Id laborum pariatur et sunt laborum dolore mollit ad.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Sit minim magna mollit occaecat eu cillum culpa. Sunt anim ex id velit aliquip do quis duis veniam. Proident qui deserunt fugiat veniam cupidatat irure laboris elit occaecat occaecat aliqua. Velit dolor nisi aliqua exercitation nostrud culpa ea minim mollit qui minim amet officia. Do non nostrud est deserunt minim excepteur eu ex.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Magna culpa aliqua dolor pariatur. Dolor ad proident magna labore et nulla deserunt enim. Ipsum occaecat sunt laboris ad. Duis est ea nulla nostrud sunt consectetur qui. Consectetur laborum do ipsum sit ea aliquip amet. Adipisicing excepteur nulla aliquip aliquip Lorem.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "excerpt": {
+          "en-US": "Officia ipsum non ex qui cupidatat aliquip incididunt tempor proident dolor anim aliquip cupidatat esse."
+        },
+        "coverImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3Gv4ZWJcVWTsLww0JwwgMD"
+            }
+          }
+        },
+        "date": {
+          "en-US": "2022-04-27T00:00-04:00"
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7sYgWGOW4g7fJfQsOYkqmk"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2damo5wqg14d"
+          }
+        },
+        "id": "7sYgWGOW4g7fJfQsOYkqmk",
+        "type": "Entry",
+        "createdAt": "2022-04-28T18:56:55.695Z",
+        "updatedAt": "2022-05-20T19:36:13.442Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2022-05-20T19:36:13.442Z",
+        "firstPublishedAt": "2022-04-28T18:57:55.007Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Author Name"
+        },
+        "picture": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6fBY15xufvFxIG61mlLU3B"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2damo5wqg14d"
+          }
+        },
+        "id": "3Gv4ZWJcVWTsLww0JwwgMD",
+        "type": "Asset",
+        "createdAt": "2022-04-28T18:56:25.623Z",
+        "updatedAt": "2022-05-06T19:23:59.804Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2022-05-06T19:23:59.804Z",
+        "firstPublishedAt": "2022-04-28T18:56:46.543Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "oguzhan-edman-tH7jFZce8IE-unsplash"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2damo5wqg14d/3Gv4ZWJcVWTsLww0JwwgMD/31da2025a674215a9138cb0ffd5e309c/diego-ph-BCuxVP5WEsU-unsplash.jpg",
+            "details": {
+              "size": 1627999,
+              "image": {
+                "width": 5184,
+                "height": 3456
+              }
+            },
+            "fileName": "diego-ph-BCuxVP5WEsU-unsplash.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2damo5wqg14d"
+          }
+        },
+        "id": "6fBY15xufvFxIG61mlLU3B",
+        "type": "Asset",
+        "createdAt": "2022-04-28T18:57:44.167Z",
+        "updatedAt": "2022-05-06T19:25:18.696Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2022-05-06T19:25:18.696Z",
+        "firstPublishedAt": "2022-04-28T18:57:50.000Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "066RqBikAjzKy0SWUEtFvH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "sergio-de-paula-c GmwfHBDzk-unsplash"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2damo5wqg14d/6fBY15xufvFxIG61mlLU3B/dc797ad321d12e835cfc8ed5f6d78ab3/sergio-de-paula-c_GmwfHBDzk-unsplash.jpg",
+            "details": {
+              "size": 2299550,
+              "image": {
+                "width": 4000,
+                "height": 4000
+              }
+            },
+            "fileName": "sergio-de-paula-c_GmwfHBDzk-unsplash.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
     }
   ],
   "locales": [
@@ -424,20 +810,21 @@
       "optional": false,
       "sys": {
         "type": "Locale",
-        "id": "09Kvvkay28CRdOt7j8Ze7V",
+        "id": "6yacH693bsDghgPzm9Ek5d",
         "version": 1,
         "space": {
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "p5asbbjx1p90"
+            "id": "2damo5wqg14d"
           }
         },
         "environment": {
           "sys": {
             "type": "Link",
             "linkType": "Environment",
-            "id": "master"
+            "id": "master",
+            "uuid": "6341f221-67b9-4646-8a8f-8fbf1ef10ada"
           }
         },
         "createdBy": {
@@ -447,7 +834,7 @@
             "id": "066RqBikAjzKy0SWUEtFvH"
           }
         },
-        "createdAt": "2020-04-22T09:10:22Z",
+        "createdAt": "2022-04-28T18:35:02Z",
         "updatedBy": {
           "sys": {
             "type": "Link",
@@ -455,570 +842,7 @@
             "id": "066RqBikAjzKy0SWUEtFvH"
           }
         },
-        "updatedAt": "2020-04-22T09:10:22Z"
-      }
-    }
-  ],
-  "webhooks": [],
-  "roles": [
-    {
-      "name": "Author",
-      "description": "Allows editing of content",
-      "policies": [
-        {
-          "effect": "allow",
-          "actions": ["create"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["read"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["update"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["create"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["read"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["update"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              }
-            ]
-          }
-        }
-      ],
-      "permissions": {
-        "ContentModel": ["read"],
-        "Settings": [],
-        "ContentDelivery": [],
-        "Environments": [],
-        "EnvironmentAliases": []
-      },
-      "sys": {
-        "type": "Role",
-        "id": "09Ly1xcRRW9vpcvEXo7Q9R",
-        "version": 0,
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "p5asbbjx1p90"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "createdAt": "2020-04-22T09:10:22Z",
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "updatedAt": "2020-04-22T09:10:22Z"
-      }
-    },
-    {
-      "name": "Editor",
-      "description": "Allows editing, publishing and archiving of content",
-      "policies": [
-        {
-          "effect": "allow",
-          "actions": "all",
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": "all",
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              }
-            ]
-          }
-        }
-      ],
-      "permissions": {
-        "ContentModel": ["read"],
-        "Settings": [],
-        "ContentDelivery": [],
-        "Environments": [],
-        "EnvironmentAliases": []
-      },
-      "sys": {
-        "type": "Role",
-        "id": "09M0BGG76Wp2UNMBgSxKGv",
-        "version": 0,
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "p5asbbjx1p90"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "createdAt": "2020-04-22T09:10:22Z",
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "updatedAt": "2020-04-22T09:10:22Z"
-      }
-    },
-    {
-      "name": "Freelancer",
-      "description": "Allows only editing of content they created themselves",
-      "policies": [
-        {
-          "effect": "allow",
-          "actions": ["create"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["create"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["read"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              },
-              {
-                "equals": [
-                  {
-                    "doc": "sys.createdBy.sys.id"
-                  },
-                  "User.current()"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["update"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              },
-              {
-                "equals": [
-                  {
-                    "doc": "sys.createdBy.sys.id"
-                  },
-                  "User.current()"
-                ]
-              },
-              {
-                "paths": [
-                  {
-                    "doc": "fields.%.%"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["delete"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              },
-              {
-                "equals": [
-                  {
-                    "doc": "sys.createdBy.sys.id"
-                  },
-                  "User.current()"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["read"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              },
-              {
-                "equals": [
-                  {
-                    "doc": "sys.createdBy.sys.id"
-                  },
-                  "User.current()"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["update"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              },
-              {
-                "equals": [
-                  {
-                    "doc": "sys.createdBy.sys.id"
-                  },
-                  "User.current()"
-                ]
-              },
-              {
-                "paths": [
-                  {
-                    "doc": "fields.%.%"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["delete"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              },
-              {
-                "equals": [
-                  {
-                    "doc": "sys.createdBy.sys.id"
-                  },
-                  "User.current()"
-                ]
-              }
-            ]
-          }
-        }
-      ],
-      "permissions": {
-        "ContentModel": ["read"],
-        "Settings": [],
-        "ContentDelivery": [],
-        "Environments": [],
-        "EnvironmentAliases": []
-      },
-      "sys": {
-        "type": "Role",
-        "id": "09MrKDfvFxjsr5PMEJjLBN",
-        "version": 0,
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "p5asbbjx1p90"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "createdAt": "2020-04-22T09:10:22Z",
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "updatedAt": "2020-04-22T09:10:22Z"
-      }
-    },
-    {
-      "name": "Translator",
-      "description": "Allows editing of localized fields in the specified language",
-      "policies": [
-        {
-          "effect": "allow",
-          "actions": ["read"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["read"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["update"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              },
-              {
-                "paths": [
-                  {
-                    "doc": "fields.%.%"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["update"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              },
-              {
-                "paths": [
-                  {
-                    "doc": "fields.%.%"
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ],
-      "permissions": {
-        "ContentModel": ["read"],
-        "Settings": [],
-        "ContentDelivery": [],
-        "Environments": [],
-        "EnvironmentAliases": []
-      },
-      "sys": {
-        "type": "Role",
-        "id": "09MWbiu0nlnFuYVtcAU3wf",
-        "version": 0,
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "p5asbbjx1p90"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "createdAt": "2020-04-22T09:10:22Z",
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "updatedAt": "2020-04-22T09:10:22Z"
+        "updatedAt": "2022-04-28T18:35:02Z"
       }
     }
   ]
