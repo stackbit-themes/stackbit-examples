@@ -1,3 +1,5 @@
+import { PREVIEW_MODE } from './constants'
+
 const POST_GRAPHQL_FIELDS = `
 slug
 title
@@ -28,7 +30,7 @@ content {
 }
 `
 
-async function fetchGraphQL(query, preview = false) {
+async function fetchGraphQL(query) {
   return fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
     {
@@ -36,7 +38,7 @@ async function fetchGraphQL(query, preview = false) {
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${
-          preview
+          PREVIEW_MODE
             ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
             : process.env.CONTENTFUL_ACCESS_TOKEN
         }`,
@@ -81,44 +83,43 @@ export async function getAllPostsWithSlug() {
   return extractPostEntries(entries)
 }
 
-export async function getAllPostsForHome(preview) {
+export async function getAllPostsForHome() {
   const entries = await fetchGraphQL(
     `query {
-      postCollection(order: date_DESC, preview: ${preview ? 'true' : 'false'}) {
+      postCollection(order: date_DESC, preview: ${
+        PREVIEW_MODE ? 'true' : 'false'
+      }) {
         items {
           ${POST_GRAPHQL_FIELDS}
         }
       }
-    }`,
-    preview
+    }`
   )
   return extractPostEntries(entries)
 }
 
-export async function getPostAndMorePosts(slug, preview) {
+export async function getPostAndMorePosts(slug) {
   const entry = await fetchGraphQL(
     `query {
       postCollection(where: { slug: "${slug}" }, preview: ${
-      preview ? 'true' : 'false'
+      PREVIEW_MODE ? 'true' : 'false'
     }, limit: 1) {
         items {
           ${POST_GRAPHQL_FIELDS}
         }
       }
-    }`,
-    preview
+    }`
   )
   const entries = await fetchGraphQL(
     `query {
       postCollection(where: { slug_not_in: "${slug}" }, order: date_DESC, preview: ${
-      preview ? 'true' : 'false'
+      PREVIEW_MODE ? 'true' : 'false'
     }, limit: 2) {
         items {
           ${POST_GRAPHQL_FIELDS}
         }
       }
-    }`,
-    preview
+    }`
   )
   return {
     post: extractPost(entry),
