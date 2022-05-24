@@ -27,14 +27,14 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "publishedCounter": 1,
@@ -43,7 +43,7 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         }
       },
@@ -238,14 +238,14 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "publishedCounter": 1,
@@ -254,7 +254,7 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         }
       },
@@ -306,7 +306,7 @@
         "createdAt": "2022-04-28T18:40:47.971Z",
         "createdBy": {
           "sys": {
-            "id": "066RqBikAjzKy0SWUEtFvH",
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
             "type": "Link",
             "linkType": "User"
           }
@@ -314,7 +314,7 @@
         "updatedAt": "2022-04-28T18:40:48.300Z",
         "updatedBy": {
           "sys": {
-            "id": "066RqBikAjzKy0SWUEtFvH",
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
             "type": "Link",
             "linkType": "User"
           }
@@ -387,7 +387,7 @@
         "createdAt": "2022-04-28T18:40:47.717Z",
         "createdBy": {
           "sys": {
-            "id": "066RqBikAjzKy0SWUEtFvH",
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
             "type": "Link",
             "linkType": "User"
           }
@@ -395,7 +395,7 @@
         "updatedAt": "2022-04-28T18:40:48.369Z",
         "updatedBy": {
           "sys": {
-            "id": "066RqBikAjzKy0SWUEtFvH",
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
             "type": "Link",
             "linkType": "User"
           }
@@ -446,7 +446,7 @@
         "id": "rToLQAMH7nnOEBD5Gnqh8",
         "type": "Entry",
         "createdAt": "2022-04-28T18:56:01.171Z",
-        "updatedAt": "2022-05-20T19:35:46.764Z",
+        "updatedAt": "2022-05-24T19:56:15.450Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -454,30 +454,30 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 35,
-        "publishedAt": "2022-05-20T19:35:46.764Z",
+        "publishedVersion": 54,
+        "publishedAt": "2022-05-24T19:56:15.450Z",
         "firstPublishedAt": "2022-04-28T18:57:58.278Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 10,
-        "version": 36,
+        "publishedCounter": 11,
+        "version": 55,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "contentType": {
@@ -497,60 +497,129 @@
         },
         "content": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "This is the body of the blog, and it is only editable directly through Contentful. Let's work together to unlock in-context, visual editing using Stackbit. ",
                     "marks": [
                     ],
-                    "value": "Officia ipsum non ex qui cupidatat aliquip incididunt tempor proident dolor anim aliquip cupidatat esse. Reprehenderit minim laboris fugiat consequat eiusmod occaecat Lorem non anim amet velit occaecat do officia. Ullamco anim nostrud magna cillum exercitation consequat proident cupidatat esse ea sit cillum voluptate elit. Id laborum pariatur et sunt laborum dolore mollit ad.",
-                    "nodeType": "text"
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "data": {
+                      "uri": "https://docs.stackbit.com/integrations/contentful/"
+                    },
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Follow along here",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": ".",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "heading-2",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Officia ipsum non ex",
                     "marks": [
                     ],
-                    "value": "Sit minim magna mollit occaecat eu cillum culpa. Sunt anim ex id velit aliquip do quis duis veniam. Proident qui deserunt fugiat veniam cupidatat irure laboris elit occaecat occaecat aliqua. Velit dolor nisi aliqua exercitation nostrud culpa ea minim mollit qui minim amet officia. Do non nostrud est deserunt minim excepteur eu ex.",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Qui cupidatat aliquip incididunt tempor proident dolor anim aliquip cupidatat esse. Reprehenderit minim laboris fugiat consequat eiusmod occaecat Lorem non anim amet velit occaecat do officia. Ullamco anim nostrud magna cillum exercitation consequat proident cupidatat esse ea sit cillum voluptate elit. Id laborum pariatur et sunt laborum dolore mollit ad.",
                     "marks": [
                     ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Sit minim magna mollit occaecat eu cillum culpa. Sunt anim ex id velit aliquip do quis duis veniam. Proident qui deserunt fugiat veniam cupidatat irure laboris elit occaecat occaecat aliqua. Velit dolor nisi aliqua exercitation nostrud culpa ea minim mollit qui minim amet officia.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-2",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Do non nostrud est deserunt",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
                     "value": "Magna culpa aliqua dolor pariatur. Dolor ad proident magna labore et nulla deserunt enim. Ipsum occaecat sunt laboris ad. Duis est ea nulla nostrud sunt consectetur qui. Consectetur laborum do ipsum sit ea aliquip amet. Adipisicing excepteur nulla aliquip aliquip Lorem.",
-                    "nodeType": "text"
+                    "marks": [
+                    ],
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         },
         "excerpt": {
-          "en-US": "Officia ipsum non ex qui cupidatat aliquip incididunt tempor proident dolor anim aliquip cupidatat esse."
+          "en-US": "This is a static post excerpt. It is not editable yet. Neither is the title, author, or any of the other content. Let's change that."
         },
         "coverImage": {
           "en-US": {
@@ -606,14 +675,14 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "publishedCounter": 2,
@@ -622,7 +691,7 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "contentType": {
@@ -666,7 +735,7 @@
         "id": "3Gv4ZWJcVWTsLww0JwwgMD",
         "type": "Asset",
         "createdAt": "2022-04-28T18:56:25.623Z",
-        "updatedAt": "2022-05-06T19:23:59.804Z",
+        "updatedAt": "2022-05-24T19:53:12.604Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -674,52 +743,52 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2022-05-06T19:23:59.804Z",
+        "publishedVersion": 12,
+        "publishedAt": "2022-05-24T19:53:12.604Z",
         "firstPublishedAt": "2022-04-28T18:56:46.543Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 2,
-        "version": 8,
+        "publishedCounter": 3,
+        "version": 13,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         }
       },
       "fields": {
         "title": {
-          "en-US": "oguzhan-edman-tH7jFZce8IE-unsplash"
+          "en-US": "Stackbit + Contentful"
         },
         "description": {
           "en-US": ""
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/2damo5wqg14d/3Gv4ZWJcVWTsLww0JwwgMD/31da2025a674215a9138cb0ffd5e309c/diego-ph-BCuxVP5WEsU-unsplash.jpg",
+            "url": "//images.ctfassets.net/2damo5wqg14d/3Gv4ZWJcVWTsLww0JwwgMD/ced48d694c0b8a8818e2a2856e6edb92/stackbit_contentful.png",
             "details": {
-              "size": 1627999,
+              "size": 57320,
               "image": {
-                "width": 5184,
-                "height": 3456
+                "width": 1200,
+                "height": 627
               }
             },
-            "fileName": "diego-ph-BCuxVP5WEsU-unsplash.jpg",
-            "contentType": "image/jpeg"
+            "fileName": "stackbit+contentful.png",
+            "contentType": "image/png"
           }
         }
       }
@@ -740,7 +809,7 @@
         "id": "6fBY15xufvFxIG61mlLU3B",
         "type": "Asset",
         "createdAt": "2022-04-28T18:57:44.167Z",
-        "updatedAt": "2022-05-06T19:25:18.696Z",
+        "updatedAt": "2022-05-24T20:04:29.275Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -748,51 +817,51 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2022-05-06T19:25:18.696Z",
+        "publishedVersion": 20,
+        "publishedAt": "2022-05-24T20:04:29.275Z",
         "firstPublishedAt": "2022-04-28T18:57:50.000Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 2,
-        "version": 7,
+        "publishedCounter": 5,
+        "version": 21,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         }
       },
       "fields": {
         "title": {
-          "en-US": "sergio-de-paula-c GmwfHBDzk-unsplash"
+          "en-US": "author-avatar"
         },
         "description": {
-          "en-US": ""
+          "en-US": "Source: https://unsplash.com/photos/L2dTmhQzx4Q"
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/2damo5wqg14d/6fBY15xufvFxIG61mlLU3B/dc797ad321d12e835cfc8ed5f6d78ab3/sergio-de-paula-c_GmwfHBDzk-unsplash.jpg",
+            "url": "//images.ctfassets.net/2damo5wqg14d/6fBY15xufvFxIG61mlLU3B/69547a83eccc2d04cc1e06ce73ad55cf/author-avatar.jpg",
             "details": {
-              "size": 2299550,
+              "size": 2309954,
               "image": {
                 "width": 4000,
                 "height": 4000
               }
             },
-            "fileName": "sergio-de-paula-c_GmwfHBDzk-unsplash.jpg",
+            "fileName": "author-avatar.jpg",
             "contentType": "image/jpeg"
           }
         }
@@ -831,7 +900,7 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "createdAt": "2022-04-28T18:35:02Z",
@@ -839,7 +908,7 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "updatedAt": "2022-04-28T18:35:02Z"
