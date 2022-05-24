@@ -1,4 +1,5 @@
-export const EXAMPLE_PATH = 'cms-contentful'
+export const EXAMPLE_URL =
+  'https://github.com/stackbit-themes/stackbit-examples/tree/main/cms-contentful'
 export const CMS_NAME = 'Contentful'
 export const CMS_URL = 'https://www.contentful.com'
 export const HOME_OG_IMAGE_URL =
