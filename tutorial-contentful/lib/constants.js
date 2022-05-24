@@ -1,5 +1,6 @@
 export const EXAMPLE_URL =
   'https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-contentful'
+export const DOCS_URL = 'https://docs.stackbit.com/integrations/contentful/'
 export const CMS_NAME = 'Contentful'
 export const CMS_URL = 'https://www.contentful.com'
 export const HOME_OG_IMAGE_URL =
