@@ -1,0 +1,11 @@
+{
+  "name": "sourcebit-sample-plugin",
+  "version": "0.0.0",
+  "description": "A sample Sourcebit plugin",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
