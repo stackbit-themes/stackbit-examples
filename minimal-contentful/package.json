@@ -1,0 +1,40 @@
+{
+  "name": "with-custom-sourcebit",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "stackbit": "stackbit",
+    "stackbit:dev": "node ./bin/dev.js",
+    "validate": "stackbit validate"
+  },
+  "dependencies": {
+    "@stackbit/annotations": "^0.1.2",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "sourcebit": "^0.11.1",
+    "sourcebit-source-contentful": "^0.6.8",
+    "sourcebit-source-filesystem": "^0.2.0",
+    "sourcebit-target-next": "^0.8.2"
+  },
+  "devDependencies": {
+    "@stackbit/cli": "^0.2.21",
+    "@stackbit/cms-contentful": "^0.0.17",
+    "contentful-export": "^7.17.7",
+    "contentful-import": "^8.3.0",
+    "contentful-management": "^10.6.0",
+    "contentful-typescript-codegen": "^3.2.3",
+    "eslint": "8.16.0",
+    "eslint-config-next": "12.1.6"
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

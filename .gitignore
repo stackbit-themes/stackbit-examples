@@ -4,3 +4,5 @@ out/
 .cache/
 .DS_Store
 .sourcebit-nextjs-cache.json
+.env
+.env.local
