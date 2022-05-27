@@ -1,0 +1,17 @@
+stackbitVersion: ~0.4.0
+ssgName: nextjs
+nodeVersion: "14"
+cmsName: git
+publishDir: .next
+dataDir: content/data
+pagesDir: content/pages
+assets:
+  referenceType: static
+  staticDir: public
+  uploadDir: images
+  publicPath: /
+contentModels:
+  Page:
+    isPage: true
+    urlPath: "/{slug}"
+    newFilePath: "{slug}.md"
