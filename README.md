@@ -6,16 +6,17 @@ They are broken down into various categories below for easier navigation.
 
 Have an idea of an example we should add? [Create an issue](https://github.com/stackbit/stackbit-examples/issues/new) or [join us on Discord](https://discord.gg/HUNhjVkznH) to discuss.
 
-## Starters
+## Minimal Starters
 
 Starters are basic Stackbit projects that bring some specific combination of _the basics_.
 
-| Example                                                                      | Description                               |
-| :--------------------------------------------------------------------------- | :---------------------------------------- |
-| [`nextjs-starter`](https://github.com/stackbit/nextjs-starter)               | The essential JavaScript building blocks. |
-| [`ts-mui-nextjs-starter`](https://github.com/stackbit/ts-mui-nextjs-starter) | TypeScript + MUI components               |
+| Example                                                                             | Description                               |
+| :---------------------------------------------------------------------------------- | :---------------------------------------- |
+| [`nextjs-starter`](https://github.com/stackbit-themes/nextjs-starter)               | The essential JavaScript building blocks. |
+| [`ts-mui-nextjs-starter`](https://github.com/stackbit-themes/ts-mui-nextjs-starter) | TypeScript + MUI components               |
+| [`contentful-starter`](https://github.com/stackbit-themes/contentful-starter)       | Contentful as the content source.         |
 
-## Themes
+## Full Starters
 
 Themes are bigger, more opinionated projects, that are all production-ready and built for scale. These are great options for non-technical content editors to get an immediate feel for Stackbit.
 
@@ -44,3 +45,12 @@ Project-based examples are built to show one or two patterns in practice.
 | :----------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
 | [`dynamic-app`](https://github.com/stackbit/stackbit-examples/tree/main/dynamic-app)       | A showcase of multiple capabilities like authentication and workflow-based content. |
 | [`algolia-search`](https://github.com/stackbit/stackbit-examples/tree/main/algolia-search) | On-demand statically generated pages, searchable with Algolia                       |
+
+## Tutorials
+
+Examples used as starting points for tutorials and other guides in our documentation.
+
+| Example                                                                                              | Description                                                                               |
+| :--------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
+| [`nextjs-starter`](https://github.com/stackbit-themes/nextjs-starter)                                | Our minimal starter, used in the getting started tutorial.                                |
+| [`tutorial-contentful`](https://github.com/stackbit/stackbit-examples/tree/main/tutorial-contentful) | Starting point for a demonstration on how to add Stackbit to a Next.js + Contentful site. |
