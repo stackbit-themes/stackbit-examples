@@ -1,0 +1,33 @@
+# The stackbit.yaml file lets you define the characteristic of your website
+# needed to make your theme, or project, work with Stackbit. For more info about
+# stackbit.yaml configuration visit https://docs.stackbit.com/reference/stackbit-yaml/
+stackbitVersion: ~0.4.0
+ssgName: nextjs
+cmsName: contentful
+nodeVersion: '16'
+
+# The "buildCommand" and the "publishDir" properties are used to configure the
+# serverless deployment platform when Stackbit creates a new site from this theme.
+buildCommand: npm run build && npm run export
+publishDir: out
+
+# The "import" object defines how Stackbit should provision Contentful when
+# creating a new site from this theme via https://app.stackbit.com/create.
+import:
+    type: contentful
+    contentFile: contentful/export.json
+    uploadAssets: true
+    assetsDirectory: contentful
+    spaceIdEnvVar: CONTENTFUL_SPACE_ID
+    accessTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+
+# styleObjectModelName: ThemeStyle
+
+modelsSource:
+    type: contentful
+
+# These models are merged with Contentful models
+models:
+    Page:
+        type: page
+        urlPath: '{slug}'

@@ -1,0 +1,5 @@
+{
+    "jest.jestCommandLine": "node_modules/.bin/jest",
+    "cSpell.words": ["contentful", "stackbit", "sourcebit"],
+    "typescript.tsdk": "node_modules/typescript/lib"
+}
