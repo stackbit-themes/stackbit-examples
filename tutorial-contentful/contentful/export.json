@@ -6,13 +6,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "p5asbbjx1p90"
+            "id": "2damo5wqg14d"
           }
         },
-        "id": "author",
+        "id": "post",
         "type": "ContentType",
-        "createdAt": "2020-04-22T09:32:50.535Z",
-        "updatedAt": "2020-04-22T09:32:50.885Z",
+        "createdAt": "2022-04-28T18:40:44.270Z",
+        "updatedAt": "2022-04-28T18:40:47.883Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -21,20 +21,20 @@
           }
         },
         "publishedVersion": 1,
-        "publishedAt": "2020-04-22T09:32:50.885Z",
-        "firstPublishedAt": "2020-04-22T09:32:50.885Z",
+        "publishedAt": "2022-04-28T18:40:47.883Z",
+        "firstPublishedAt": "2022-04-28T18:40:47.883Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
         "publishedCounter": 1,
@@ -43,81 +43,7 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        }
-      },
-      "displayField": "name",
-      "name": "Author",
-      "description": "",
-      "fields": [
-        {
-          "id": "name",
-          "name": "Name",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "picture",
-          "name": "Picture",
-          "type": "Link",
-          "localized": false,
-          "required": true,
-          "validations": [],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Asset"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "p5asbbjx1p90"
-          }
-        },
-        "id": "post",
-        "type": "ContentType",
-        "createdAt": "2020-04-22T09:34:36.878Z",
-        "updatedAt": "2020-04-22T12:23:57.726Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2020-04-22T12:23:57.726Z",
-        "firstPublishedAt": "2020-04-22T09:34:37.228Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         }
       },
@@ -131,7 +57,8 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -141,7 +68,8 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -153,7 +81,12 @@
           "required": true,
           "validations": [
             {
-              "enabledMarks": ["bold", "italic", "underline", "code"],
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code"
+              ],
               "message": "Only bold, italic, underline, and code marks are allowed"
             },
             {
@@ -231,7 +164,8 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -241,7 +175,8 @@
           "type": "Link",
           "localized": false,
           "required": true,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
@@ -252,7 +187,8 @@
           "type": "Date",
           "localized": false,
           "required": true,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -264,7 +200,9 @@
           "required": true,
           "validations": [
             {
-              "linkContentType": ["author"]
+              "linkContentType": [
+                "author"
+              ]
             }
           ],
           "disabled": false,
@@ -272,7 +210,85 @@
           "linkType": "Entry"
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2damo5wqg14d"
+          }
+        },
+        "id": "author",
+        "type": "ContentType",
+        "createdAt": "2022-04-28T18:40:44.284Z",
+        "updatedAt": "2022-04-28T18:40:47.664Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-04-28T18:40:47.664Z",
+        "firstPublishedAt": "2022-04-28T18:40:47.664Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Author",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "picture",
+          "name": "Picture",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
     }
+  ],
+  "tags": [
   ],
   "editorInterfaces": [
     {
@@ -281,80 +297,24 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "p5asbbjx1p90",
+            "id": "2damo5wqg14d",
             "type": "Link",
             "linkType": "Space"
           }
         },
         "version": 2,
-        "createdAt": "2020-04-22T09:32:50.954Z",
+        "createdAt": "2022-04-28T18:40:47.971Z",
         "createdBy": {
           "sys": {
-            "id": "066RqBikAjzKy0SWUEtFvH",
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
             "type": "Link",
             "linkType": "User"
           }
         },
-        "updatedAt": "2020-04-22T09:32:51.642Z",
+        "updatedAt": "2022-04-28T18:40:48.300Z",
         "updatedBy": {
           "sys": {
-            "id": "066RqBikAjzKy0SWUEtFvH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "author",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "name",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "picture",
-          "widgetId": "assetLinkEditor",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "p5asbbjx1p90",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 4,
-        "createdAt": "2020-04-22T09:34:37.309Z",
-        "createdBy": {
-          "sys": {
-            "id": "066RqBikAjzKy0SWUEtFvH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2020-04-22T12:23:58.324Z",
-        "updatedBy": {
-          "sys": {
-            "id": "066RqBikAjzKy0SWUEtFvH",
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
             "type": "Link",
             "linkType": "User"
           }
@@ -411,6 +371,501 @@
           "widgetNamespace": "builtin"
         }
       ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "2damo5wqg14d",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2022-04-28T18:40:47.717Z",
+        "createdBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-04-28T18:40:48.369Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7zhoOzOJYq0RqY5mshy4HK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "author",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "picture",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2damo5wqg14d"
+          }
+        },
+        "id": "rToLQAMH7nnOEBD5Gnqh8",
+        "type": "Entry",
+        "createdAt": "2022-04-28T18:56:01.171Z",
+        "updatedAt": "2022-05-24T19:56:15.450Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 54,
+        "publishedAt": "2022-05-24T19:56:15.450Z",
+        "firstPublishedAt": "2022-04-28T18:57:58.278Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 11,
+        "version": 55,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "My First Post"
+        },
+        "slug": {
+          "en-US": "my-first-post"
+        },
+        "content": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "This is the body of the blog, and it is only editable directly through Contentful. Let's work together to unlock in-context, visual editing using Stackbit. ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "data": {
+                      "uri": "https://docs.stackbit.com/integrations/contentful/"
+                    },
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Follow along here",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": ".",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-2",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Officia ipsum non ex",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Qui cupidatat aliquip incididunt tempor proident dolor anim aliquip cupidatat esse. Reprehenderit minim laboris fugiat consequat eiusmod occaecat Lorem non anim amet velit occaecat do officia. Ullamco anim nostrud magna cillum exercitation consequat proident cupidatat esse ea sit cillum voluptate elit. Id laborum pariatur et sunt laborum dolore mollit ad.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Sit minim magna mollit occaecat eu cillum culpa. Sunt anim ex id velit aliquip do quis duis veniam. Proident qui deserunt fugiat veniam cupidatat irure laboris elit occaecat occaecat aliqua. Velit dolor nisi aliqua exercitation nostrud culpa ea minim mollit qui minim amet officia.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-2",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Do non nostrud est deserunt",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Magna culpa aliqua dolor pariatur. Dolor ad proident magna labore et nulla deserunt enim. Ipsum occaecat sunt laboris ad. Duis est ea nulla nostrud sunt consectetur qui. Consectetur laborum do ipsum sit ea aliquip amet. Adipisicing excepteur nulla aliquip aliquip Lorem.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "excerpt": {
+          "en-US": "This is a static post excerpt. It is not editable yet. Neither is the title, author, or any of the other content. Let's change that."
+        },
+        "coverImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3Gv4ZWJcVWTsLww0JwwgMD"
+            }
+          }
+        },
+        "date": {
+          "en-US": "2022-04-27T00:00-04:00"
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7sYgWGOW4g7fJfQsOYkqmk"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2damo5wqg14d"
+          }
+        },
+        "id": "7sYgWGOW4g7fJfQsOYkqmk",
+        "type": "Entry",
+        "createdAt": "2022-04-28T18:56:55.695Z",
+        "updatedAt": "2022-05-20T19:36:13.442Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2022-05-20T19:36:13.442Z",
+        "firstPublishedAt": "2022-04-28T18:57:55.007Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Author Name"
+        },
+        "picture": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6fBY15xufvFxIG61mlLU3B"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2damo5wqg14d"
+          }
+        },
+        "id": "3Gv4ZWJcVWTsLww0JwwgMD",
+        "type": "Asset",
+        "createdAt": "2022-04-28T18:56:25.623Z",
+        "updatedAt": "2022-05-24T19:53:12.604Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 12,
+        "publishedAt": "2022-05-24T19:53:12.604Z",
+        "firstPublishedAt": "2022-04-28T18:56:46.543Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Stackbit + Contentful"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2damo5wqg14d/3Gv4ZWJcVWTsLww0JwwgMD/ced48d694c0b8a8818e2a2856e6edb92/stackbit_contentful.png",
+            "details": {
+              "size": 57320,
+              "image": {
+                "width": 1200,
+                "height": 627
+              }
+            },
+            "fileName": "stackbit+contentful.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2damo5wqg14d"
+          }
+        },
+        "id": "6fBY15xufvFxIG61mlLU3B",
+        "type": "Asset",
+        "createdAt": "2022-04-28T18:57:44.167Z",
+        "updatedAt": "2022-05-24T20:04:29.275Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 20,
+        "publishedAt": "2022-05-24T20:04:29.275Z",
+        "firstPublishedAt": "2022-04-28T18:57:50.000Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "author-avatar"
+        },
+        "description": {
+          "en-US": "Source: https://unsplash.com/photos/L2dTmhQzx4Q"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2damo5wqg14d/6fBY15xufvFxIG61mlLU3B/69547a83eccc2d04cc1e06ce73ad55cf/author-avatar.jpg",
+            "details": {
+              "size": 2309954,
+              "image": {
+                "width": 4000,
+                "height": 4000
+              }
+            },
+            "fileName": "author-avatar.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
     }
   ],
   "locales": [
@@ -424,601 +879,39 @@
       "optional": false,
       "sys": {
         "type": "Locale",
-        "id": "09Kvvkay28CRdOt7j8Ze7V",
+        "id": "6yacH693bsDghgPzm9Ek5d",
         "version": 1,
         "space": {
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "p5asbbjx1p90"
+            "id": "2damo5wqg14d"
           }
         },
         "environment": {
           "sys": {
             "type": "Link",
             "linkType": "Environment",
-            "id": "master"
+            "id": "master",
+            "uuid": "6341f221-67b9-4646-8a8f-8fbf1ef10ada"
           }
         },
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "createdAt": "2020-04-22T09:10:22Z",
+        "createdAt": "2022-04-28T18:35:02Z",
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
+            "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "updatedAt": "2020-04-22T09:10:22Z"
-      }
-    }
-  ],
-  "webhooks": [],
-  "roles": [
-    {
-      "name": "Author",
-      "description": "Allows editing of content",
-      "policies": [
-        {
-          "effect": "allow",
-          "actions": ["create"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["read"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["update"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["create"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["read"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["update"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              }
-            ]
-          }
-        }
-      ],
-      "permissions": {
-        "ContentModel": ["read"],
-        "Settings": [],
-        "ContentDelivery": [],
-        "Environments": [],
-        "EnvironmentAliases": []
-      },
-      "sys": {
-        "type": "Role",
-        "id": "09Ly1xcRRW9vpcvEXo7Q9R",
-        "version": 0,
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "p5asbbjx1p90"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "createdAt": "2020-04-22T09:10:22Z",
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "updatedAt": "2020-04-22T09:10:22Z"
-      }
-    },
-    {
-      "name": "Editor",
-      "description": "Allows editing, publishing and archiving of content",
-      "policies": [
-        {
-          "effect": "allow",
-          "actions": "all",
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": "all",
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              }
-            ]
-          }
-        }
-      ],
-      "permissions": {
-        "ContentModel": ["read"],
-        "Settings": [],
-        "ContentDelivery": [],
-        "Environments": [],
-        "EnvironmentAliases": []
-      },
-      "sys": {
-        "type": "Role",
-        "id": "09M0BGG76Wp2UNMBgSxKGv",
-        "version": 0,
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "p5asbbjx1p90"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "createdAt": "2020-04-22T09:10:22Z",
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "updatedAt": "2020-04-22T09:10:22Z"
-      }
-    },
-    {
-      "name": "Freelancer",
-      "description": "Allows only editing of content they created themselves",
-      "policies": [
-        {
-          "effect": "allow",
-          "actions": ["create"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["create"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["read"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              },
-              {
-                "equals": [
-                  {
-                    "doc": "sys.createdBy.sys.id"
-                  },
-                  "User.current()"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["update"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              },
-              {
-                "equals": [
-                  {
-                    "doc": "sys.createdBy.sys.id"
-                  },
-                  "User.current()"
-                ]
-              },
-              {
-                "paths": [
-                  {
-                    "doc": "fields.%.%"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["delete"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              },
-              {
-                "equals": [
-                  {
-                    "doc": "sys.createdBy.sys.id"
-                  },
-                  "User.current()"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["read"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              },
-              {
-                "equals": [
-                  {
-                    "doc": "sys.createdBy.sys.id"
-                  },
-                  "User.current()"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["update"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              },
-              {
-                "equals": [
-                  {
-                    "doc": "sys.createdBy.sys.id"
-                  },
-                  "User.current()"
-                ]
-              },
-              {
-                "paths": [
-                  {
-                    "doc": "fields.%.%"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["delete"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              },
-              {
-                "equals": [
-                  {
-                    "doc": "sys.createdBy.sys.id"
-                  },
-                  "User.current()"
-                ]
-              }
-            ]
-          }
-        }
-      ],
-      "permissions": {
-        "ContentModel": ["read"],
-        "Settings": [],
-        "ContentDelivery": [],
-        "Environments": [],
-        "EnvironmentAliases": []
-      },
-      "sys": {
-        "type": "Role",
-        "id": "09MrKDfvFxjsr5PMEJjLBN",
-        "version": 0,
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "p5asbbjx1p90"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "createdAt": "2020-04-22T09:10:22Z",
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "updatedAt": "2020-04-22T09:10:22Z"
-      }
-    },
-    {
-      "name": "Translator",
-      "description": "Allows editing of localized fields in the specified language",
-      "policies": [
-        {
-          "effect": "allow",
-          "actions": ["read"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["read"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["update"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Entry"
-                ]
-              },
-              {
-                "paths": [
-                  {
-                    "doc": "fields.%.%"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "effect": "allow",
-          "actions": ["update"],
-          "constraint": {
-            "and": [
-              {
-                "equals": [
-                  {
-                    "doc": "sys.type"
-                  },
-                  "Asset"
-                ]
-              },
-              {
-                "paths": [
-                  {
-                    "doc": "fields.%.%"
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ],
-      "permissions": {
-        "ContentModel": ["read"],
-        "Settings": [],
-        "ContentDelivery": [],
-        "Environments": [],
-        "EnvironmentAliases": []
-      },
-      "sys": {
-        "type": "Role",
-        "id": "09MWbiu0nlnFuYVtcAU3wf",
-        "version": 0,
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "p5asbbjx1p90"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "createdAt": "2020-04-22T09:10:22Z",
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "066RqBikAjzKy0SWUEtFvH"
-          }
-        },
-        "updatedAt": "2020-04-22T09:10:22Z"
+        "updatedAt": "2022-04-28T18:35:02Z"
       }
     }
   ]
