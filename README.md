@@ -28,15 +28,6 @@ The code references are below. Although you can run these locally, each of these
 | [`small-business-nextjs-theme`](https://github.com/stackbit-themes/small-business-nextjs-theme) | Pages and components meant to help small business spin up new sites quickly. |
 | [`starter-nextjs-theme`](https://github.com/stackbit-themes/starter-nextjs-theme)               | A beautifully simple site that can be flexed to fit your needs.              |
 
-## Components
-
-These examples bring a single, interactive and visually-editable component.
-
-| Example                                                                                | Description                                                                    |
-| :------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
-| [`sb-countdown`](https://github.com/stackbit/stackbit-examples/tree/main/sb-countdown) | A `CountdownSection` component for counting down to a specified date and time. |
-| [`sb-typist`](https://github.com/stackbit/stackbit-examples/tree/main/sb-typist)       | A `TypistSection` component for a typing animation based on react-typist.      |
-
 ## Projects
 
 Project-based examples are built to show one or two patterns in practice.
@@ -54,3 +45,12 @@ Examples used as starting points for tutorials and other guides in our documenta
 | :--------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
 | [`nextjs-starter`](https://github.com/stackbit-themes/nextjs-starter)                                | Our minimal starter, used in the getting started tutorial.                                |
 | [`tutorial-contentful`](https://github.com/stackbit/stackbit-examples/tree/main/tutorial-contentful) | Starting point for a demonstration on how to add Stackbit to a Next.js + Contentful site. |
+
+## Components
+
+These examples bring a single, interactive and visually-editable component.
+
+| Example                                                                                | Description                                                                    |
+| :------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
+| [`sb-countdown`](https://github.com/stackbit/stackbit-examples/tree/main/sb-countdown) | A `CountdownSection` component for counting down to a specified date and time. |
+| [`sb-typist`](https://github.com/stackbit/stackbit-examples/tree/main/sb-typist)       | A `TypistSection` component for a typing animation based on react-typist.      |
