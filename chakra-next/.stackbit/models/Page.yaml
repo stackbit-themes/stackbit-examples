@@ -1,0 +1,15 @@
+name: Page
+layout: Page
+hideContent: true
+fields:
+  - type: string
+    name: title
+    default: This is a new page
+    required: true
+  - type: list
+    name: sections
+    label: Sections
+    items:
+      type: model
+      groups:
+        - sectionComponent
