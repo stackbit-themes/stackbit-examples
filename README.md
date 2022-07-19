@@ -4,7 +4,7 @@ A collection of examples that can be used to learn more about Stackbit or to be 
 
 They are broken down into various categories below for easier navigation.
 
-Have an idea of an example we should add? [Create an issue](https://github.com/stackbit/stackbit-examples/issues/new) or [join us on Discord](https://discord.gg/HUNhjVkznH) to discuss.
+Have an idea of an example we should add? [Create an issue](https://github.com/stackbit-themes/stackbit-examples/issues/new) or [join us on Discord](https://discord.gg/HUNhjVkznH) to discuss.
 
 ## Minimal Starters
 
@@ -32,25 +32,26 @@ The code references are below. Although you can run these locally, each of these
 
 Project-based examples are built to show one or two patterns in practice.
 
-| Example                                                                                    | Description                                                                         |
-| :----------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
-| [`dynamic-app`](https://github.com/stackbit/stackbit-examples/tree/main/dynamic-app)       | A showcase of multiple capabilities like authentication and workflow-based content. |
-| [`algolia-search`](https://github.com/stackbit/stackbit-examples/tree/main/algolia-search) | On-demand statically generated pages, searchable with Algolia                       |
+| Example                                                                                           | Description                                                                         |
+| :------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------- |
+| [`dynamic-app`](https://github.com/stackbit-themes/stackbit-examples/tree/main/dynamic-app)       | A showcase of multiple capabilities like authentication and workflow-based content. |
+| [`algolia-search`](https://github.com/stackbit-themes/stackbit-examples/tree/main/algolia-search) | On-demand statically generated pages, searchable with Algolia                       |
+| [`chakra-next`](https://github.com/stackbit-themes/stackbit-examples/tree/main/chakra-next)       | Simple project using [Chakra UI](https://chakra-ui.com/)                            |
 
 ## Tutorials
 
 Examples used as starting points for tutorials and other guides in our documentation.
 
-| Example                                                                                              | Description                                                                               |
-| :--------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
-| [`nextjs-starter`](https://github.com/stackbit-themes/nextjs-starter)                                | Our minimal starter, used in the getting started tutorial.                                |
-| [`tutorial-contentful`](https://github.com/stackbit/stackbit-examples/tree/main/tutorial-contentful) | Starting point for a demonstration on how to add Stackbit to a Next.js + Contentful site. |
+| Example                                                                                                     | Description                                                                               |
+| :---------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
+| [`nextjs-starter`](https://github.com/stackbit-themes/nextjs-starter)                                       | Our minimal starter, used in the getting started tutorial.                                |
+| [`tutorial-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-contentful) | Starting point for a demonstration on how to add Stackbit to a Next.js + Contentful site. |
 
 ## Components
 
 These examples bring a single, interactive and visually-editable component.
 
-| Example                                                                                | Description                                                                    |
-| :------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
-| [`sb-countdown`](https://github.com/stackbit/stackbit-examples/tree/main/sb-countdown) | A `CountdownSection` component for counting down to a specified date and time. |
-| [`sb-typist`](https://github.com/stackbit/stackbit-examples/tree/main/sb-typist)       | A `TypistSection` component for a typing animation based on react-typist.      |
+| Example                                                                                       | Description                                                                    |
+| :-------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
+| [`sb-countdown`](https://github.com/stackbit-themes/stackbit-examples/tree/main/sb-countdown) | A `CountdownSection` component for counting down to a specified date and time. |
+| [`sb-typist`](https://github.com/stackbit-themes/stackbit-examples/tree/main/sb-typist)       | A `TypistSection` component for a typing animation based on react-typist.      |
