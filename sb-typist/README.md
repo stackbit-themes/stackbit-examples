@@ -16,7 +16,7 @@ The component isn't meant to be a extensive solution. Use as-is or extend to you
 npm install stackbit-typist
 ```
 
-When you push these changes to the `preview` branch, the visual editor should automatically install the package on the preview server and restart it. This can take several minutes. 
+When you push these changes to the `preview` branch, the visual editor should automatically install the package on the preview server and restart it. This can take several minutes.
 
 **If working with the online code editor:**
 
@@ -39,9 +39,10 @@ modelsSource:
 
 ### 3. Registering components
 
-Open the file `src/components/components-registry.js` in your project (assuming the project is based on one of our themes). Locate the `components` object. 
+Open the file `src/components/components-registry.js` in your project (assuming the project is based on one of our themes). Locate the `components` object.
 
 Add the following line to to the `components` object:
+
 ```js
 const components = {
     'TypistSection': dynamic(() => import('../../node_modules/stackbit-typist')), // Added line
@@ -55,7 +56,7 @@ This will map the model name `TypistSection` to the React functional component. 
 Open the file `tailwind.config.js` in your project.
 
 Locate the array `purge.content` inside the `module.exports` object, and add this value to the array:
-`'./node_modules/stackbit-typist/dist/components/**/*.js'`. 
+`'./node_modules/stackbit-typist/dist/components/**/*.js'`.
 
 Here's how the code should look like:
 
@@ -64,15 +65,15 @@ Here's how the code should look like:
 module.exports = {
     mode: 'jit',
     purge: {
-        content: ['./src/**/*.{js,ts,jsx,tsx}', 
-                  './content/**/*', 
+        content: ['./src/**/*.{js,ts,jsx,tsx}',
+                  './content/**/*',
                   './node_modules/stackbit-typist/dist/components/**/*.js'], // This item added now
         // ...
 ```
 
 ### 5. Adding the CSS file (optional)
 
-To add a blinking cursor effect to the animation, react-typist provides a vanilla CSS file. 
+To add a blinking cursor effect to the animation, react-typist provides a vanilla CSS file.
 
 Since Next.js only allows loading global CSS files from the App module. To enabled this effect, add the following import to your `src/pages/_app.js` file:
 
@@ -82,7 +83,7 @@ import 'stackbit-typist/dist/Typist.css';
 
 ## Using the component
 
-Now, head over to the visual editor and add you should be able to add the new __Typist__ component to your pages - anywhere adding sections is allowed.
+Now, head over to the visual editor and add you should be able to add the new **Typist** component to your pages - anywhere adding sections is allowed.
 
 You can now add items to the elements field, change styles, etc. On any change to the content, the animation will start over to reflect the change.
 
