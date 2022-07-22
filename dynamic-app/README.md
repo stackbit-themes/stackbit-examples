@@ -76,12 +76,11 @@ If you'd like to see something added to the example, or have any questions, hit 
 Clone the repository & switch to the `preview` branch:
 
 ```
-git clone git@github.com:stackbit/dynamic-example-app
-cd dynamic-example-app
-git checkout preview
+npx create-stackbit-app@latest --example dynamic-app
+cd dynamic-app
 ```
 
-If you have `nvm` installed, run `nvm use` to ensure you're using the recommended versions of Node & NPM.
+If you have `nvm` installed, run `nvm use` to ensure you're using the recommended versions of Node and NPM.
 
 Let's run the website, without configuring any authentication providers yet:
 

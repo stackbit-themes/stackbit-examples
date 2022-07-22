@@ -16,7 +16,7 @@ This component uses [Countdown.js](https://github.com/mckamey/countdownjs) for a
 npm install stackbit-countdown
 ```
 
-When you push these changes to the `preview` branch, the visual editor should automatically install the package on the preview server and restart it. This can take several minutes. 
+When you push these changes to the `preview` branch, the visual editor should automatically install the package on the preview server and restart it. This can take several minutes.
 
 **If working with the online code editor:**
 
@@ -39,9 +39,10 @@ modelsSource:
 
 ### 3. Registering components
 
-Open the file `src/components/components-registry.js` in your project (assuming the project is based on one of our themes). Locate the `components` object. 
+Open the file `src/components/components-registry.js` in your project (assuming the project is based on one of our themes). Locate the `components` object.
 
 Add the following line to to the `components` object:
+
 ```js
 const components = {
     'CountdownSection': dynamic(() => import('../../node_modules/stackbit-countdown')), // Added line
@@ -55,7 +56,7 @@ This will map the model name `CountdownSection` to the React functional componen
 Open the file `tailwind.config.js` in your project.
 
 Locate the array `purge.content` inside the `module.exports` object, and add this value to the array:
-`'./node_modules/stackbit-countdown/dist/components/**/*.js'`. 
+`'./node_modules/stackbit-countdown/dist/components/**/*.js'`.
 
 Here's how the code should look like:
 
@@ -64,13 +65,12 @@ Here's how the code should look like:
 module.exports = {
     mode: 'jit',
     purge: {
-        content: ['./src/**/*.{js,ts,jsx,tsx}', 
-                  './content/**/*', 
+        content: ['./src/**/*.{js,ts,jsx,tsx}',
+                  './content/**/*',
                   './node_modules/stackbit-countdown/dist/components/**/*.js'], // This item added now
         // ...
 ```
 
 ## Using the component
 
-Now, head over to the visual editor and add you should be able to add the new __Countdown__ component to your pages - anywhere adding sections is allowed. Set the field `End date` to start the countdown.
-
+Now, head over to the visual editor and add you should be able to add the new **Countdown** component to your pages - anywhere adding sections is allowed. Set the field `End date` to start the countdown.

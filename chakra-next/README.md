@@ -15,9 +15,10 @@ In addition to Chakra UI support, this project contains the following:
 
 ## Quickstart
 
-To get started after cloning this repository, first install dependencies:
+Use `create-stackbit-app` to create a new local project:
 
-    npm install
+    npx create-stackbit-app@latest --example chakra-next
+    cd chakra-next
 
 Then you can run the Next.js development server:
 
@@ -25,23 +26,14 @@ Then you can run the Next.js development server:
 
 ### Stackbit Local Development
 
-If you'd also like to run Stackbit Dev locally, first ensure the Stackbit CLI.
+Install the Stackbit CLI. Then open a new terminal window in the same project directory and run the Stackbit Dev server:
 
     npm install -g @stackbit/cli
-
-Then start Stackbit's development server in another terminal window/tab:
-
     stackbit dev
 
-This will provide an `app.stackbit.com...` URL to open and work with Stackbit locally.
+This outputs your own Stackbit URL. Open this, register or sign in, and you will be directed to Stackbit's visual editor for your new project. [Learn more about local development with Stackbit](https://docs.stackbit.com/how-to-guides/local-development/).
 
-[Learn more about local development with Stackbit](https://docs.stackbit.com/how-to-guides/local-development/).
-
-## Learn the Basics
-
-Follow the [getting started tutorial](https://docs.stackbit.com/getting-started/) while running this project locally to get a feel for how Stackbit works.
-
-Or jump to individual topics [in the docs](https://docs.stackbit.com/).
+![Next.js Dev + Stackbit Dev](https://assets.stackbit.com/docs/next-dev-stackbit-dev.png)
 
 ## Support & Feedback
 
