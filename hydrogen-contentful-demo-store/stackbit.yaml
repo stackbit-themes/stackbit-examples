@@ -1,0 +1,39 @@
+# The stackbit.yaml file lets you define the characteristic of your website
+# needed to make your theme, or project, work with Stackbit. For more info about
+# stackbit.yaml configuration visit https://docs.stackbit.com/reference/stackbit-yaml/
+stackbitVersion: ~0.5.0
+ssgName: custom
+cmsName: contentful
+nodeVersion: '16'
+devCommand: echo Starting && APP_PORT={PORT} npm run dev-sb
+
+__unsafe_internal_stackbitRunnerOptions:
+  displayName: Hydrogen
+  patterns:
+    doneStart: ['Local: http']
+
+# The "buildCommand" and the "publishDir" properties are used to configure the
+# serverless deployment platform when Stackbit creates a new site from this theme.
+buildCommand: npm run build
+publishDir: out
+
+# The "import" object defines how Stackbit should provision Contentful when
+# creating a new site from this theme via https://app.stackbit.com/create.
+import:
+  type: contentful
+  contentFile: contentful/export.json
+  uploadAssets: true
+  assetsDirectory: contentful
+  spaceIdEnvVar: CONTENTFUL_SPACE_ID
+  deliveryTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+
+styleObjectModelName: ThemeStyle
+
+modelsSource:
+  type: contentful
+
+# These models are merged with Contentful models
+models:
+  PostLayout:
+    type: page
+    urlPath: '/journal/{slug}'
