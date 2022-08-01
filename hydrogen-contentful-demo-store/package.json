@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "shopify hydrogen dev",
-    "dev-sb": "mkdir -p node_modules/.bin && touch node_modules/.bin/xdg-open && chmod +x node_modules/.bin/xdg-open && npm run dev",
+    "dev-no-window": "mkdir -p node_modules/.bin && touch node_modules/.bin/xdg-open && chmod +x node_modules/.bin/xdg-open && npm run dev",
     "build": "shopify hydrogen build",
     "preview": "shopify hydrogen preview",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
