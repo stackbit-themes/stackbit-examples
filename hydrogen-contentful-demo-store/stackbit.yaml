@@ -5,7 +5,7 @@ stackbitVersion: ~0.5.0
 ssgName: custom
 cmsName: contentful
 nodeVersion: '16'
-devCommand: echo Starting && APP_PORT={PORT} npm run dev-sb
+devCommand: echo Starting && APP_PORT={PORT} npm run dev-no-window
 
 __unsafe_internal_stackbitRunnerOptions:
   displayName: Hydrogen
