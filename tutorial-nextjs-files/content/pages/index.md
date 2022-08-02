@@ -9,7 +9,7 @@ sections:
       - type: Button
         label: Book Now
         url: /
-        theme: primary
+        theme: default
     image: /images/fpo-sandwich.jpg
     theme: imgLeft
   - type: stats
