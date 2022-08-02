@@ -1,4 +1,5 @@
-import Markdown from 'markdown-to-jsx';
+import { Hero } from '../components/Hero.jsx';
+import { Stats } from '../components/Stats.jsx';
 import { getPageFromSlug, getPagePaths } from '../utils/content.js';
 
 export function getStaticPaths() {
@@ -11,11 +12,18 @@ export function getStaticProps({ params }) {
   return { props: { page } };
 }
 
+const componentMap = {
+  hero: Hero,
+  stats: Stats,
+};
+
 export default function ComposablePage({ page }) {
   return (
     <div>
-      <h1>{page.title}</h1>
-      <Markdown>{page.body}</Markdown>
+      {page.sections.map((section, idx) => {
+        const Component = componentMap[section.type];
+        return <Component key={idx} {...section} />;
+      })}
     </div>
   );
 }
