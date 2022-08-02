@@ -25,5 +25,5 @@ sections:
       - type: stat
         label: Prefer Ohio-made sandwiches
         value: 98%
-    theme: flat
+    theme: dark
 ---
