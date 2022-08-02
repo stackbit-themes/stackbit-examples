@@ -6,7 +6,6 @@ const themeClassMap = {
 };
 
 export const Button = ({ label, url, theme }) => {
-  console.log(theme);
   return (
     <Link href={url}>
       <a
