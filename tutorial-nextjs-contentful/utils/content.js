@@ -28,8 +28,8 @@ export async function getPageFromSlug(slug) {
 
 function mapEntry(entry) {
   return {
-    id: entry.sys?.id,
-    type: entry.sys?.contentType?.sys?.id || entry.sys?.type,
+    _id: entry.sys?.id,
+    _type: entry.sys?.contentType?.sys?.id || entry.sys?.type,
     ...Object.fromEntries(Object.entries(entry.fields).map(([key, value]) => [key, parseField(value)])),
   };
 }

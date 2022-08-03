@@ -22,7 +22,7 @@ export default function ComposablePage({ page }) {
   return (
     <div>
       {page.sections.map((section, idx) => {
-        const Component = componentMap[section.type];
+        const Component = componentMap[section._type];
         return <Component key={idx} {...section} />;
       })}
     </div>
