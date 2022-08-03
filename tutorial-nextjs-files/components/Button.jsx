@@ -5,15 +5,15 @@ const themeClassMap = {
   outline: 'border-purple-700 bg-transparent text-purple-700 hover:text-purple-500 hover:border-purple-500',
 };
 
-export const Button = ({ label, url, theme }) => {
+export const Button = (props) => {
   return (
-    <Link href={url}>
+    <Link href={props.url}>
       <a
         className={`py-3 px-6 inline-block border-2 font-semibold rounded-md transition-all duration-300 ${
-          themeClassMap[theme] ?? themeClassMap['default']
+          themeClassMap[props.theme] ?? themeClassMap['default']
         }`}
       >
-        {label}
+        {props.label}
       </a>
     </Link>
   );
