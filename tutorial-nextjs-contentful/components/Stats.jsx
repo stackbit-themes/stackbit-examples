@@ -10,10 +10,10 @@ export const Stats = ({ heading, body, stats, theme }) => {
     <div className={`py-24 px-12 text-center ${themeClassMap[theme] ?? themeClassMap['primary']}`}>
       <div className="mx-auto">
         <div className="mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">{heading}</h2>
+          <h2 className="mb-4 text-4xl font-bold sm:text-5xl">{heading}</h2>
           <Markdown className="sm:text-lg">{body}</Markdown>
         </div>
-        <div className="grid gap-12 sm:grid-cols-3 max-w-3xl mx-auto">
+        <div className="grid max-w-3xl gap-12 mx-auto sm:grid-cols-3">
           {stats.length > 0 && stats.map((stat, idx) => <StatItem key={idx} {...stat} />)}
         </div>
       </div>
@@ -24,7 +24,7 @@ export const Stats = ({ heading, body, stats, theme }) => {
 const StatItem = ({ value, label }) => {
   return (
     <div>
-      <div className="text-4xl sm:text-5xl font-bold mb-3">{value}</div>
+      <div className="mb-3 text-4xl font-bold sm:text-5xl">{value}</div>
       <div>{label}</div>
     </div>
   );

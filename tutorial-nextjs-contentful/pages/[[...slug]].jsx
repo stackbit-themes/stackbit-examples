@@ -2,28 +2,30 @@ import { Hero } from '../components/Hero.jsx';
 import { Stats } from '../components/Stats.jsx';
 import { getPageFromSlug, getPagePaths } from '../utils/content.js';
 
-export function getStaticPaths() {
-  return { paths: getPagePaths(), fallback: false };
+export async function getStaticPaths() {
+  const paths = await getPagePaths();
+  return { paths, fallback: false };
 }
 
-export function getStaticProps({ params }) {
+export async function getStaticProps({ params }) {
   const slug = '/' + (params?.slug ?? ['']).join('/');
-  const page = getPageFromSlug(slug);
+  const page = await getPageFromSlug(slug);
   return { props: { page } };
 }
 
 const componentMap = {
-  Hero: Hero,
-  Stats: Stats,
+  hero: Hero,
+  stats: Stats,
 };
 
 export default function ComposablePage({ page }) {
   return (
     <div>
-      {page.sections.map((section, idx) => {
-        const Component = componentMap[section.type];
-        return <Component key={idx} {...section} />;
-      })}
+      {page.sections?.length > 0 &&
+        page.sections.map((section, idx) => {
+          const Component = componentMap[section._type];
+          return <Component key={idx} {...section} />;
+        })}
     </div>
   );
 }

@@ -1,33 +1,41 @@
-import path from 'path';
-import fs from 'fs';
-import glob from 'glob';
-import matter from 'gray-matter';
+import { createClient } from 'contentful';
 
-const PAGES_DIR = path.join(process.cwd(), 'content/pages');
+const PAGE_CONTENT_TYPE_ID = 'page';
+const IS_DEV = process.env.NODE_ENV === 'development';
 
-function relativePathFromFile(file) {
-  return file
-    .replace(PAGES_DIR, '')
-    .replace(path.extname(file), '')
-    .replace(/\/index$/g, '/');
+async function getEntries(content_type, queryParams) {
+  const client = createClient({
+    accessToken: IS_DEV ? process.env.CONTENTFUL_PREVIEW_TOKEN : process.env.CONTENTFUL_DELIVERY_TOKEN,
+    space: process.env.CONTENTFUL_SPACE_ID,
+    host: IS_DEV ? 'preview.contentful.com' : 'cdn.contentful.com',
+  });
+
+  const entries = await client.getEntries({ content_type, ...queryParams, include: 10 });
+  return entries;
 }
 
-function pagePathMap() {
-  const allPagePaths = glob.sync(path.join(PAGES_DIR, '**/*.md'));
-  return Object.fromEntries(allPagePaths.map((file) => [relativePathFromFile(file), file]));
+export async function getPagePaths() {
+  const { items } = await getEntries(PAGE_CONTENT_TYPE_ID);
+  return items.map((page) => page.fields.slug);
 }
 
-export function getPagePaths() {
-  return Object.keys(pagePathMap());
+export async function getPageFromSlug(slug) {
+  const { items } = await getEntries(PAGE_CONTENT_TYPE_ID, { 'fields.slug': slug });
+  const page = (items ?? [])[0];
+  if (!page) throw new Error(`Page not found for slug: ${slug}`);
+  return mapEntry(page);
 }
 
-export function getPageFromSlug(slug) {
-  const absPath = pagePathMap()[slug];
-  const rawContent = fs.readFileSync(absPath, 'utf8');
-  const { data, content } = matter(rawContent);
-
+function mapEntry(entry) {
   return {
-    ...data,
-    body: content,
+    _id: entry.sys?.id,
+    _type: entry.sys?.contentType?.sys?.id || entry.sys?.type,
+    ...Object.fromEntries(Object.entries(entry.fields).map(([key, value]) => [key, parseField(value)])),
   };
+}
+
+function parseField(value) {
+  if (typeof value === 'object' && value.sys) return mapEntry(value);
+  if (Array.isArray(value)) return value.map(mapEntry);
+  return value;
 }
