@@ -1,0 +1,1273 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "q3gk03l5ysy8"
+          }
+        },
+        "id": "PostLayout",
+        "type": "ContentType",
+        "createdAt": "2022-07-24T16:24:15.579Z",
+        "updatedAt": "2022-07-27T16:37:44.673Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2022-07-27T16:37:44.673Z",
+        "firstPublishedAt": "2022-07-24T16:24:15.775Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "PostLayout",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Title"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "author",
+          "name": "Author",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "Person"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "date",
+          "name": "Date",
+          "type": "Date",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Content"
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "q3gk03l5ysy8"
+          }
+        },
+        "id": "Person",
+        "type": "ContentType",
+        "createdAt": "2022-07-24T16:26:55.242Z",
+        "updatedAt": "2022-07-24T16:26:55.470Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-07-24T16:26:55.470Z",
+        "firstPublishedAt": "2022-07-24T16:26:55.470Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        }
+      },
+      "displayField": "firstName",
+      "name": "Person",
+      "description": "",
+      "fields": [
+        {
+          "id": "firstName",
+          "name": "First name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "lastName",
+          "name": "Last name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "q3gk03l5ysy8",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 14,
+        "createdAt": "2022-07-24T16:24:15.818Z",
+        "createdBy": {
+          "sys": {
+            "id": "55FCSUZlKk9fYaazRZP4Ui",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-07-27T16:37:45.384Z",
+        "updatedBy": {
+          "sys": {
+            "id": "55FCSUZlKk9fYaazRZP4Ui",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "PostLayout",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "author",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "date",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "q3gk03l5ysy8",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2022-07-24T16:26:55.510Z",
+        "createdBy": {
+          "sys": {
+            "id": "55FCSUZlKk9fYaazRZP4Ui",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-07-24T16:26:55.783Z",
+        "updatedBy": {
+          "sys": {
+            "id": "55FCSUZlKk9fYaazRZP4Ui",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "Person",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "firstName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "lastName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "q3gk03l5ysy8"
+          }
+        },
+        "id": "1pxAwZCABdCLwCqClUNga5",
+        "type": "Entry",
+        "createdAt": "2022-07-24T16:28:09.660Z",
+        "updatedAt": "2022-07-24T16:28:17.128Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-07-24T16:28:17.128Z",
+        "firstPublishedAt": "2022-07-24T16:28:17.128Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "Person"
+          }
+        }
+      },
+      "fields": {
+        "firstName": {
+          "en-US": "Ben"
+        },
+        "lastName": {
+          "en-US": "Sehl"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "q3gk03l5ysy8"
+          }
+        },
+        "id": "14dkP0G4eVBoxHvwa0vqau",
+        "type": "Entry",
+        "createdAt": "2022-07-24T16:28:32.234Z",
+        "updatedAt": "2022-07-27T17:39:42.884Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 35,
+        "publishedAt": "2022-07-27T17:39:42.884Z",
+        "firstPublishedAt": "2022-07-24T16:33:04.190Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 36,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "PostLayout"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "The Best Places for Backcountry Snowboarding"
+        },
+        "slug": {
+          "en-US": "our-story"
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1pxAwZCABdCLwCqClUNga5"
+            }
+          }
+        },
+        "date": {
+          "en-US": "2022-06-11"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "713mk97JrkWHbaQDsU0IHS"
+            }
+          }
+        },
+        "content": {
+          "en-US": "Snowboarding is a great way to get out and enjoy the fresh air and beautiful scenery of the mountains. Whether you're looking for some tips on how to be a good snowboarder, the best mountains for back country snowboarding, or just want to know who the top freestyle snowboarders are, we've got you covered!\n\n![bradley-dunn-9SGGun3iIig-unsplash](//images.ctfassets.net/q3gk03l5ysy8/4OwbXh1XAF9vXfkwOyoCQv/d4f92f26709d0c218bb7bcf51221514e/bradley-dunn-9SGGun3iIig-unsplash.webp)\n\nLet's start with some basics: How do you even begin? Well, first you'll need to get yourself a snowboard. Snowboards come in all different shapes and sizes depending on what kind of riding you want to do. If you're just starting out, then a soft-flexing board will be easier for your feet to grip onto. If you're planning on hitting up some steeper terrain or going off jumps, then a stiffer board will give you more stability when carving down steeps. Once you've picked out your board, it's time to hit the slopes!\n\n## Helpful Tips\n\nYou may be nervous at first but don't worry—there are plenty of places that offer lessons for beginners so that novices can start off with confidence. At our local ski resort we've got everything from private lessons with instructors who will teach you how to ride safely and correctly all the way through group lessons.\n\n![oliver-schwendener-9lcWCCRXiKU-unsplash 2048x2048](//images.ctfassets.net/q3gk03l5ysy8/1hMFm9B00uoVDDpLTZee7T/1ff40ccd0123b0105f0b4f229ac8163c/oliver-schwendener-9lcWCCRXiKU-unsplash_2048x2048.webp)\n\nSnowboarding is one of the most fun things you can do in the winter, and it's also a great way to get into shape. So we put together this guide to help you get started on your own snowboarding journey. We've covered everything from the best mountains for back country snowboarding to the top freestyle snowboarders—and we even included some tips that will make sure you're a good snowboarder! We hope you enjoy this guide and have a blast exploring all the options available to you when it comes to snowboarding.\n\nSnowboarding is one of the most thrilling sports on the planet. The freedom you have on the mountain is almost unimaginable and the feeling of being completely in control of your own destiny while you're zipping down the slopes is intoxicating.\n\nBut how do you get started? What are some of the basics? And what are some of the best mountains for backcountry snowboarding? We've got you covered. Here are our top tips for snowboarding:\n\n- Get a board that fits you! Boards come in all shapes and sizes, so make sure you pick one that feels comfortable for your height and weight.\n- Always wear a helmet! It's simple: helmets save lives. And if your head isn't protected, neither is anyone else's!\n- If you're going downhill, always point your toes downhill—and try to keep them flexed at all times! This will help keep your balance and prevent injuries like torn ligaments or broken bones when you fall down unexpectedly.\n- The best mountains for back country snowboarding are pretty much everywhere outside of cities (where there aren't any mountains). But if we had to pick just one place, it would be Whistler.\n\nDepending on your willingness to travel and your financial resources, you may need to do some planning before you make any final decisions. But even with all the research in the world, there is no way to guarantee a pleasant day of snowboarding. Weather conditions, physical strength, and skill level are just a few factors that could affect your overall experience. That being said, if you are hoping to explore untouched powder and enjoy pristine views, back country snowboarding may be the right option for you."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "q3gk03l5ysy8"
+          }
+        },
+        "id": "7Ce7RZaRdVWfv1SHwm2U5V",
+        "type": "Entry",
+        "createdAt": "2022-07-25T12:45:34.344Z",
+        "updatedAt": "2022-07-27T15:23:15.531Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 60,
+        "publishedAt": "2022-07-27T15:23:15.531Z",
+        "firstPublishedAt": "2022-07-25T12:46:34.727Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 61,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "PostLayout"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "10 Tips for Better Snowboarding"
+        },
+        "slug": {
+          "en-US": "10-tips-for-better-snowboarding"
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1pxAwZCABdCLwCqClUNga5"
+            }
+          }
+        },
+        "date": {
+          "en-US": "2022-06-11"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "QX9yMJjBBnmn1NckrfygL"
+            }
+          }
+        },
+        "content": {
+          "en-US": "Snowboarding is a great way to get out and enjoy the fresh air and beautiful scenery of the mountains. Whether you're looking for some tips on how to be a good snowboarder, the best mountains for back country snowboarding, or just want to know who the top freestyle snowboarders are, we've got you covered!\n\n![bradley-dunn-9SGGun3iIig-unsplash](//images.ctfassets.net/q3gk03l5ysy8/4OwbXh1XAF9vXfkwOyoCQv/d4f92f26709d0c218bb7bcf51221514e/bradley-dunn-9SGGun3iIig-unsplash.webp)\n\nLet's start with some basics: How do you even begin? Well, first you'll need to get yourself a snowboard. Snowboards come in all different shapes and sizes depending on what kind of riding you want to do. If you're just starting out, then a soft-flexing board will be easier for your feet to grip onto. If you're planning on hitting up some steeper terrain or going off jumps, then a stiffer board will give you more stability when carving down steeps. Once you've picked out your board, it's time to hit the slopes!\n\n## Helpful Tips\n\nYou may be nervous at first but don't worry—there are plenty of places that offer lessons for beginners so that novices can start off with confidence. At our local ski resort we've got everything from private lessons with instructors who will teach you how to ride safely and correctly all the way through group lessons.\n\n![oliver-schwendener-9lcWCCRXiKU-unsplash 2048x2048](//images.ctfassets.net/q3gk03l5ysy8/1hMFm9B00uoVDDpLTZee7T/1ff40ccd0123b0105f0b4f229ac8163c/oliver-schwendener-9lcWCCRXiKU-unsplash_2048x2048.webp)\n\nSnowboarding is one of the most fun things you can do in the winter, and it's also a great way to get into shape. So we put together this guide to help you get started on your own snowboarding journey. We've covered everything from the best mountains for back country snowboarding to the top freestyle snowboarders—and we even included some tips that will make sure you're a good snowboarder! We hope you enjoy this guide and have a blast exploring all the options available to you when it comes to snowboarding.\n\nSnowboarding is one of the most thrilling sports on the planet. The freedom you have on the mountain is almost unimaginable and the feeling of being completely in control of your own destiny while you're zipping down the slopes is intoxicating.\n\nBut how do you get started? What are some of the basics? And what are some of the best mountains for backcountry snowboarding? We've got you covered. Here are our top tips for snowboarding:\n\n- Get a board that fits you! Boards come in all shapes and sizes, so make sure you pick one that feels comfortable for your height and weight.\n- Always wear a helmet! It's simple: helmets save lives. And if your head isn't protected, neither is anyone else's!\n- If you're going downhill, always point your toes downhill—and try to keep them flexed at all times! This will help keep your balance and prevent injuries like torn ligaments or broken bones when you fall down unexpectedly.\n- The best mountains for back country snowboarding are pretty much everywhere outside of cities (where there aren't any mountains). But if we had to pick just one place, it would be Whistler.\n\nDepending on your willingness to travel and your financial resources, you may need to do some planning before you make any final decisions. But even with all the research in the world, there is no way to guarantee a pleasant day of snowboarding. Weather conditions, physical strength, and skill level are just a few factors that could affect your overall experience. That being said, if you are hoping to explore untouched powder and enjoy pristine views, back country snowboarding may be the right option for you."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "q3gk03l5ysy8"
+          }
+        },
+        "id": "6wFpqOIKIx2UIgAHwrDwO0",
+        "type": "Entry",
+        "createdAt": "2022-07-25T12:46:43.402Z",
+        "updatedAt": "2022-07-27T17:39:02.133Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2022-07-27T17:39:02.133Z",
+        "firstPublishedAt": "2022-07-25T12:47:13.291Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "PostLayout"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Finding Your Balance"
+        },
+        "slug": {
+          "en-US": "finding-your-balance"
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1pxAwZCABdCLwCqClUNga5"
+            }
+          }
+        },
+        "date": {
+          "en-US": "2022-06-11"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4OwbXh1XAF9vXfkwOyoCQv"
+            }
+          }
+        },
+        "content": {
+          "en-US": "Snowboarding is a great way to get out and enjoy the fresh air and beautiful scenery of the mountains. Whether you're looking for some tips on how to be a good snowboarder, the best mountains for back country snowboarding, or just want to know who the top freestyle snowboarders are, we've got you covered!\n\n![bradley-dunn-9SGGun3iIig-unsplash](//images.ctfassets.net/q3gk03l5ysy8/4OwbXh1XAF9vXfkwOyoCQv/d4f92f26709d0c218bb7bcf51221514e/bradley-dunn-9SGGun3iIig-unsplash.webp)\n\nLet's start with some basics: How do you even begin? Well, first you'll need to get yourself a snowboard. Snowboards come in all different shapes and sizes depending on what kind of riding you want to do. If you're just starting out, then a soft-flexing board will be easier for your feet to grip onto. If you're planning on hitting up some steeper terrain or going off jumps, then a stiffer board will give you more stability when carving down steeps. Once you've picked out your board, it's time to hit the slopes!\n\n## Helpful Tips\n\nYou may be nervous at first but don't worry—there are plenty of places that offer lessons for beginners so that novices can start off with confidence. At our local ski resort we've got everything from private lessons with instructors who will teach you how to ride safely and correctly all the way through group lessons.\n\n![oliver-schwendener-9lcWCCRXiKU-unsplash 2048x2048](//images.ctfassets.net/q3gk03l5ysy8/1hMFm9B00uoVDDpLTZee7T/1ff40ccd0123b0105f0b4f229ac8163c/oliver-schwendener-9lcWCCRXiKU-unsplash_2048x2048.webp)\n\nSnowboarding is one of the most fun things you can do in the winter, and it's also a great way to get into shape. So we put together this guide to help you get started on your own snowboarding journey. We've covered everything from the best mountains for back country snowboarding to the top freestyle snowboarders—and we even included some tips that will make sure you're a good snowboarder! We hope you enjoy this guide and have a blast exploring all the options available to you when it comes to snowboarding.\n\nSnowboarding is one of the most thrilling sports on the planet. The freedom you have on the mountain is almost unimaginable and the feeling of being completely in control of your own destiny while you're zipping down the slopes is intoxicating.\n\nBut how do you get started? What are some of the basics? And what are some of the best mountains for backcountry snowboarding? We've got you covered. Here are our top tips for snowboarding:\n\n- Get a board that fits you! Boards come in all shapes and sizes, so make sure you pick one that feels comfortable for your height and weight.\n- Always wear a helmet! It's simple: helmets save lives. And if your head isn't protected, neither is anyone else's!\n- If you're going downhill, always point your toes downhill—and try to keep them flexed at all times! This will help keep your balance and prevent injuries like torn ligaments or broken bones when you fall down unexpectedly.\n- The best mountains for back country snowboarding are pretty much everywhere outside of cities (where there aren't any mountains). But if we had to pick just one place, it would be Whistler.\n\nDepending on your willingness to travel and your financial resources, you may need to do some planning before you make any final decisions. But even with all the research in the world, there is no way to guarantee a pleasant day of snowboarding. Weather conditions, physical strength, and skill level are just a few factors that could affect your overall experience. That being said, if you are hoping to explore untouched powder and enjoy pristine views, back country snowboarding may be the right option for you."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "q3gk03l5ysy8"
+          }
+        },
+        "id": "1AzLw8djZdPdHwYMFJMAkA",
+        "type": "Entry",
+        "createdAt": "2022-07-25T12:47:16.798Z",
+        "updatedAt": "2022-07-25T20:09:46.393Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2022-07-25T20:09:46.393Z",
+        "firstPublishedAt": "2022-07-25T12:47:34.650Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "PostLayout"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "The 5 Snowboarders to watch in the Olympics"
+        },
+        "slug": {
+          "en-US": "the-5-snowboarders-to-watch-in-the-olympics"
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1pxAwZCABdCLwCqClUNga5"
+            }
+          }
+        },
+        "date": {
+          "en-US": "2022-06-11"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "31bPXkGVfEym7WAGXs2OY0"
+            }
+          }
+        },
+        "content": {
+          "en-US": "Snowboarding is a great way to get out and enjoy the fresh air and beautiful scenery of the mountains. Whether you're looking for some tips on how to be a good snowboarder, the best mountains for back country snowboarding, or just want to know who the top freestyle snowboarders are, we've got you covered!\n\n![bradley-dunn-9SGGun3iIig-unsplash](//images.ctfassets.net/q3gk03l5ysy8/4OwbXh1XAF9vXfkwOyoCQv/d4f92f26709d0c218bb7bcf51221514e/bradley-dunn-9SGGun3iIig-unsplash.webp)\n\nLet's start with some basics: How do you even begin? Well, first you'll need to get yourself a snowboard. Snowboards come in all different shapes and sizes depending on what kind of riding you want to do. If you're just starting out, then a soft-flexing board will be easier for your feet to grip onto. If you're planning on hitting up some steeper terrain or going off jumps, then a stiffer board will give you more stability when carving down steeps. Once you've picked out your board, it's time to hit the slopes!\n\n## Helpful Tips\n\nYou may be nervous at first but don't worry—there are plenty of places that offer lessons for beginners so that novices can start off with confidence. At our local ski resort we've got everything from private lessons with instructors who will teach you how to ride safely and correctly all the way through group lessons.\n\n![oliver-schwendener-9lcWCCRXiKU-unsplash 2048x2048](//images.ctfassets.net/q3gk03l5ysy8/1hMFm9B00uoVDDpLTZee7T/1ff40ccd0123b0105f0b4f229ac8163c/oliver-schwendener-9lcWCCRXiKU-unsplash_2048x2048.webp)\n\nSnowboarding is one of the most fun things you can do in the winter, and it's also a great way to get into shape. So we put together this guide to help you get started on your own snowboarding journey. We've covered everything from the best mountains for back country snowboarding to the top freestyle snowboarders—and we even included some tips that will make sure you're a good snowboarder! We hope you enjoy this guide and have a blast exploring all the options available to you when it comes to snowboarding.\n\nSnowboarding is one of the most thrilling sports on the planet. The freedom you have on the mountain is almost unimaginable and the feeling of being completely in control of your own destiny while you're zipping down the slopes is intoxicating.\n\nBut how do you get started? What are some of the basics? And what are some of the best mountains for backcountry snowboarding? We've got you covered. Here are our top tips for snowboarding:\n\n- Get a board that fits you! Boards come in all shapes and sizes, so make sure you pick one that feels comfortable for your height and weight.\n- Always wear a helmet! It's simple: helmets save lives. And if your head isn't protected, neither is anyone else's!\n- If you're going downhill, always point your toes downhill—and try to keep them flexed at all times! This will help keep your balance and prevent injuries like torn ligaments or broken bones when you fall down unexpectedly.\n- The best mountains for back country snowboarding are pretty much everywhere outside of cities (where there aren't any mountains). But if we had to pick just one place, it would be Whistler.\n\nDepending on your willingness to travel and your financial resources, you may need to do some planning before you make any final decisions. But even with all the research in the world, there is no way to guarantee a pleasant day of snowboarding. Weather conditions, physical strength, and skill level are just a few factors that could affect your overall experience. That being said, if you are hoping to explore untouched powder and enjoy pristine views, back country snowboarding may be the right option for you."
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "q3gk03l5ysy8"
+          }
+        },
+        "id": "713mk97JrkWHbaQDsU0IHS",
+        "type": "Asset",
+        "createdAt": "2022-07-24T16:29:16.217Z",
+        "updatedAt": "2022-07-24T16:30:19.332Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-07-24T16:30:19.332Z",
+        "firstPublishedAt": "2022-07-24T16:30:19.332Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "felipe-giacometti-q80sx583gzE-unsplash"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/q3gk03l5ysy8/713mk97JrkWHbaQDsU0IHS/f2d85ec10a2dbac6de214862f30fe414/felipe-giacometti-q80sx583gzE-unsplash.jpeg",
+            "details": {
+              "size": 472164,
+              "image": {
+                "width": 2400,
+                "height": 2400
+              }
+            },
+            "fileName": "felipe-giacometti-q80sx583gzE-unsplash.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "q3gk03l5ysy8"
+          }
+        },
+        "id": "4OwbXh1XAF9vXfkwOyoCQv",
+        "type": "Asset",
+        "createdAt": "2022-07-24T16:30:22.965Z",
+        "updatedAt": "2022-07-24T16:30:45.821Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-07-24T16:30:45.821Z",
+        "firstPublishedAt": "2022-07-24T16:30:45.821Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "bradley-dunn-9SGGun3iIig-unsplash"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/q3gk03l5ysy8/4OwbXh1XAF9vXfkwOyoCQv/d4f92f26709d0c218bb7bcf51221514e/bradley-dunn-9SGGun3iIig-unsplash.webp",
+            "details": {
+              "size": 1678152,
+              "image": {
+                "width": 4500,
+                "height": 3004
+              }
+            },
+            "fileName": "bradley-dunn-9SGGun3iIig-unsplash.webp",
+            "contentType": "image/webp"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "q3gk03l5ysy8"
+          }
+        },
+        "id": "1hMFm9B00uoVDDpLTZee7T",
+        "type": "Asset",
+        "createdAt": "2022-07-24T16:30:50.937Z",
+        "updatedAt": "2022-07-24T16:30:55.676Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-07-24T16:30:55.676Z",
+        "firstPublishedAt": "2022-07-24T16:30:55.676Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "oliver-schwendener-9lcWCCRXiKU-unsplash 2048x2048"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/q3gk03l5ysy8/1hMFm9B00uoVDDpLTZee7T/1ff40ccd0123b0105f0b4f229ac8163c/oliver-schwendener-9lcWCCRXiKU-unsplash_2048x2048.webp",
+            "details": {
+              "size": 59664,
+              "image": {
+                "width": 2048,
+                "height": 1365
+              }
+            },
+            "fileName": "oliver-schwendener-9lcWCCRXiKU-unsplash_2048x2048.webp",
+            "contentType": "image/webp"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "q3gk03l5ysy8"
+          }
+        },
+        "id": "QX9yMJjBBnmn1NckrfygL",
+        "type": "Asset",
+        "createdAt": "2022-07-25T12:45:02.209Z",
+        "updatedAt": "2022-07-25T12:46:30.879Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-07-25T12:46:30.879Z",
+        "firstPublishedAt": "2022-07-25T12:46:30.879Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "mads-schmidt-rasmussen-tSp5 w9h5TQ-unsplash"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/q3gk03l5ysy8/QX9yMJjBBnmn1NckrfygL/5f5f3b1e6c2482dd0001e518bdc93b3a/mads-schmidt-rasmussen-tSp5_w9h5TQ-unsplash.webp",
+            "details": {
+              "size": 359556,
+              "image": {
+                "width": 2400,
+                "height": 2400
+              }
+            },
+            "fileName": "mads-schmidt-rasmussen-tSp5_w9h5TQ-unsplash.webp",
+            "contentType": "image/webp"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "q3gk03l5ysy8"
+          }
+        },
+        "id": "31bPXkGVfEym7WAGXs2OY0",
+        "type": "Asset",
+        "createdAt": "2022-07-25T12:45:02.215Z",
+        "updatedAt": "2022-07-25T12:46:30.869Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-07-25T12:46:30.869Z",
+        "firstPublishedAt": "2022-07-25T12:46:30.869Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "henry-perks-T-1t1Q1rBn4-unsplash"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/q3gk03l5ysy8/31bPXkGVfEym7WAGXs2OY0/6ead937129936ba5c738709a41c8cb10/henry-perks-T-1t1Q1rBn4-unsplash.webp",
+            "details": {
+              "size": 212648,
+              "image": {
+                "width": 2400,
+                "height": 2400
+              }
+            },
+            "fileName": "henry-perks-T-1t1Q1rBn4-unsplash.webp",
+            "contentType": "image/webp"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "0x8CBPj1YVpw3sAjqFNTNi",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "q3gk03l5ysy8"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "c79ea151-4782-4299-895f-30f2ed87a10c"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "createdAt": "2022-07-24T16:17:42Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "updatedAt": "2022-07-24T16:17:42Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "0xbfpcP4jEnL5hkLVjIydS",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "q3gk03l5ysy8"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "createdAt": "2022-07-24T16:17:42Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "55FCSUZlKk9fYaazRZP4Ui"
+          }
+        },
+        "updatedAt": "2022-07-24T16:17:42Z"
+      }
+    }
+  ]
+}
