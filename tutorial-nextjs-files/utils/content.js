@@ -27,6 +27,7 @@ export function getPageFromSlug(slug) {
   const { data, content } = matter(rawContent);
 
   return {
+    _id: absPath.replace(`${process.cwd()}/`, ''),
     ...data,
     body: content,
   };
