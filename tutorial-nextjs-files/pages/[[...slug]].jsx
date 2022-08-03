@@ -13,8 +13,8 @@ export function getStaticProps({ params }) {
 }
 
 const componentMap = {
-  hero: Hero,
-  stats: Stats,
+  Hero: Hero,
+  Stats: Stats,
 };
 
 export default function ComposablePage({ page }) {
