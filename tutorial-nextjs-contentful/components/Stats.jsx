@@ -11,7 +11,9 @@ export const Stats = ({ heading, body, stats, theme }) => {
       <div className="mx-auto">
         <div className="mb-16">
           <h2 className="mb-4 text-4xl font-bold sm:text-5xl">{heading}</h2>
-          <Markdown className="sm:text-lg">{body}</Markdown>
+          <Markdown options={{ forceBlock: true }} className="sm:text-lg">
+            {body}
+          </Markdown>
         </div>
         <div className="grid max-w-3xl gap-12 mx-auto sm:grid-cols-3">
           {stats.length > 0 && stats.map((stat, idx) => <StatItem key={idx} {...stat} />)}
