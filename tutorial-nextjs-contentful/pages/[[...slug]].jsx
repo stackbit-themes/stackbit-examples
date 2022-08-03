@@ -21,11 +21,10 @@ const componentMap = {
 export default function ComposablePage({ page }) {
   return (
     <div>
-      {page.sections?.length > 0 &&
-        page.sections.map((section, idx) => {
-          const Component = componentMap[section._type];
-          return <Component key={idx} {...section} />;
-        })}
+      {page.sections.map((section, idx) => {
+        const Component = componentMap[section._type];
+        return <Component key={idx} {...section} />;
+      })}
     </div>
   );
 }
