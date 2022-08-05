@@ -1,4 +1,4 @@
-# Stackbit's Getting Started Tutorial
+# Stackbit Tutorial
 
 🚧 WIP ...
 
