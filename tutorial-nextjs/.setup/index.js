@@ -47,5 +47,8 @@ if (templateFiles && templateFiles.length) {
   }
 }
 
+console.log('Adding optional catch all page ...');
+fs.copyFileSync(path.join(__dirname, 'templates/[[...slug]].jsx'), path.join(pagesDir, '[[...slug]].jsx'));
+
 console.log('Removing placeholder home page ...');
 fs.rmSync(path.join(pagesDir, 'index.jsx'));
