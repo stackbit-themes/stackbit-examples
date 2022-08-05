@@ -9,7 +9,9 @@ sections:
       label: Book Now
       url: /
       theme: default
-    image: /images/fpo-sandwich.jpg
+    image:
+      src: /images/fpo-sandwich.jpg
+      alt: Hero Sandwich
     theme: imgLeft
   - type: Stats
     heading: Don't take our word for it

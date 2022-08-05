@@ -19,7 +19,7 @@ export const Hero = (props) => {
           {props.button && <Button {...props.button} />}
         </div>
         <div className="relative hidden w-full overflow-hidden rounded-md lg:block">
-          <Image src={`https:${props.image.file.url}`} alt={props.image.title} layout="fill" objectFit="cover" />
+          <Image src={props.image.src} alt={props.image.alt} layout="fill" objectFit="cover" />
         </div>
       </div>
     </div>

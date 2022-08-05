@@ -1,6 +1,6 @@
 import { Hero } from '../components/Hero.jsx';
 import { Stats } from '../components/Stats.jsx';
-import { getPageFromSlug, getPagePaths } from '../utils/content.js';
+import { getPageFromSlug, getPagePaths } from '../utils/content-files.js';
 
 export function getStaticPaths() {
   return { paths: getPagePaths(), fallback: false };
