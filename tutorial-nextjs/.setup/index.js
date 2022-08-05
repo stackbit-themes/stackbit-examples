@@ -2,7 +2,7 @@ const { argv } = require('process');
 const { exec } = require('child_process');
 const config = require('./config');
 const path = require('path');
-const fs = require('fs');
+const fs = require('fs-extra');
 
 const supportedSources = Object.keys(config);
 const sourceName = argv[argv.length - 1];
@@ -19,7 +19,7 @@ if (!supportedSources.includes(sourceName)) {
   process.exit(1);
 }
 
-const { devDependencies, dependencies, setupCommand, templateFiles } = config[sourceName];
+const { devDependencies, dependencies, setupCommand, templateFiles, scripts } = config[sourceName];
 
 if (devDependencies && devDependencies.length) {
   console.log('Installing devDependencies ...');
@@ -29,6 +29,15 @@ if (devDependencies && devDependencies.length) {
 if (dependencies && dependencies.length) {
   console.log('Installing dependencies ...');
   exec(`npm install ${dependencies.join(' ')}`);
+}
+
+if (scripts) {
+  const packageJsonPath = path.join(projectDir, 'package.json');
+  let packageJson = require(packageJsonPath);
+  for (const [key, value] of Object.entries(scripts)) {
+    packageJson.scripts[key] = value;
+  }
+  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 }
 
 if (setupCommand) {
@@ -43,7 +52,7 @@ if (templateFiles && templateFiles.length) {
     const destPath = path.join(projectDir, file);
     const destDir = path.dirname(destPath);
     if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
-    fs.copyFileSync(srcPath, destPath);
+    fs.copySync(srcPath, destPath);
   }
 }
 
