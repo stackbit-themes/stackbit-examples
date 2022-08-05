@@ -17,11 +17,11 @@ function pagePathMap() {
   return Object.fromEntries(allPagePaths.map((file) => [relativePathFromFile(file), file]));
 }
 
-export function getPagePaths() {
+export async function getPagePaths() {
   return Object.keys(pagePathMap());
 }
 
-export function getPageFromSlug(slug) {
+export async function getPageFromSlug(slug) {
   const absPath = pagePathMap()[slug];
   const rawContent = fs.readFileSync(absPath, 'utf8');
   const { data, content } = matter(rawContent);

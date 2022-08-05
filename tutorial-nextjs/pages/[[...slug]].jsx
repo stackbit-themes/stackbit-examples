@@ -2,13 +2,14 @@ import { Hero } from '../components/Hero.jsx';
 import { Stats } from '../components/Stats.jsx';
 import { getPageFromSlug, getPagePaths } from '../utils/content-files.js';
 
-export function getStaticPaths() {
-  return { paths: getPagePaths(), fallback: false };
+export async function getStaticPaths() {
+  const paths = await getPagePaths();
+  return { paths, fallback: false };
 }
 
-export function getStaticProps({ params }) {
+export async function getStaticProps({ params }) {
   const slug = '/' + (params?.slug ?? ['']).join('/');
-  const page = getPageFromSlug(slug);
+  const page = await getPageFromSlug(slug);
   return { props: { page } };
 }
 
