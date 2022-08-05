@@ -1,7 +1,7 @@
 ---
 title: Home Page
 sections:
-  - type: Hero
+  - type: hero
     heading: Can you make the perfect sandwich?
     body: >
       HandSandwich™️ is Central Southwestern Ohio's most highly attended sandwich-making class. Don't delay your ability to craft the perfect sandwich.
@@ -13,7 +13,7 @@ sections:
       src: /images/fpo-sandwich.jpg
       alt: Hero Sandwich
     theme: imgLeft
-  - type: Stats
+  - type: stats
     heading: Don't take our word for it
     body: Because we definitely didn't make up these numbers.
     stats:

@@ -9,7 +9,7 @@ module.exports = {
   contentful: {
     devDependencies: ['contentful-import', 'contentful-export'],
     dependencies: ['contentful'],
-    templateFiles: ['contentful', 'utils/content.js', '.env'],
+    templateFiles: ['contentful', 'utils/content.js', '.env', 'next.config.js'],
     scripts: {
       'contentful-export':
         'contentful-export --space-id $CONTENTFUL_SPACE_ID --management-token $CONTENTFUL_MANAGEMENT_TOKEN --config ./contentful/export-config.json',

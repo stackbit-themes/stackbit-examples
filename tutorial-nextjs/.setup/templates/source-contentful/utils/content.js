@@ -27,9 +27,21 @@ export async function getPageFromSlug(slug) {
 }
 
 function mapEntry(entry) {
+  const id = entry.sys?.id;
+  const type = entry.sys?.contentType?.sys?.id || entry.sys?.type;
+
+  if (entry.sys?.type === 'Asset') {
+    return {
+      id,
+      type,
+      src: `https:${entry.fields.file.url}`,
+      alt: entry.fields.title,
+    };
+  }
+
   return {
-    _id: entry.sys?.id,
-    _type: entry.sys?.contentType?.sys?.id || entry.sys?.type,
+    id,
+    type,
     ...Object.fromEntries(Object.entries(entry.fields).map(([key, value]) => [key, parseField(value)])),
   };
 }
