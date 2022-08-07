@@ -9,8 +9,6 @@ experimental:
     name: Hydrogen
     logPatterns:
       up: 'Local: http'
-    passthrough:  
-      - '/vite-hmr/**'
 
 import:
   type: contentful
