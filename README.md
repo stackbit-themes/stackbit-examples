@@ -15,8 +15,6 @@ Starters are basic Stackbit projects that bring some specific combination of _th
 | [`nextjs-starter`](https://github.com/stackbit-themes/nextjs-starter)               | The essential JavaScript building blocks. |
 | [`ts-mui-nextjs-starter`](https://github.com/stackbit-themes/ts-mui-nextjs-starter) | TypeScript + MUI components.               |
 | [`contentful-starter`](https://github.com/stackbit-themes/contentful-starter)       | Minimal Next.js site with Contentful as the content source.         |
-| [`angular-contentful-starter`](https://github.com/stackbit-themes/stackbit-examples/tree/main/angular-contentful)       | Basic Angular & Contentful-based Product Catalog site.         |
-| [`sveltekit-contentful-starter`](https://github.com/stackbit-themes/stackbit-examples/tree/main/sveltekit-contentful)       | Basic SvelteKit & Contentful-based content site.         |
 
 ## Full Websites Demos
 
@@ -36,12 +34,14 @@ Showcase implementation & integration patterns in practice.
 
 | Example                                                                                           | Description                                                                         |
 | :------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------- |
-| [`hydrogen-contentful-demo-store`](https://github.com/stackbit-themes/stackbit-examples/tree/main/hydrogen-contentful-demo-store) | Built on Shopify's Hydrogen framework & Contentful for editorial content                  |
 | [`algolia-search`](https://github.com/stackbit-themes/stackbit-examples/tree/main/algolia-search) | On-demand statically generated pages, searchable with Algolia                       |
-| [`cloudinary-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/cloudinary-contentful) | Image management & per-device responsive optimization with Cloudinary.                       |
-| [`ninetailed-personalization`](https://github.com/stackbit-themes/stackbit-examples/tree/main/ninetailed-personalization) | Audience-based personalization with Ninetailed, with built-in support in the visual editor.                       |
+| [`angular-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/angular-contentful)       | Basic Angular & Contentful-based Product Catalog site.         |
 | [`chakra-ui`](https://github.com/stackbit-themes/stackbit-examples/tree/main/chakra-ui)       | A simple site using [Chakra UI](https://chakra-ui.com/).                            |
+| [`cloudinary-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/cloudinary-contentful) | Image management & per-device responsive optimization with Cloudinary.                       |
+| [`hydrogen-contentful-demo-store`](https://github.com/stackbit-themes/stackbit-examples/tree/main/hydrogen-contentful-demo-store) | Built on Shopify's Hydrogen framework & Contentful for editorial content                  |
+| [`ninetailed-personalization`](https://github.com/stackbit-themes/stackbit-examples/tree/main/ninetailed-personalization) | Audience-based personalization with Ninetailed, with built-in support in the visual editor.                       |
 | [`onboarding-webapp`](https://github.com/stackbit-themes/stackbit-examples/tree/main/onboarding-webapp)       | Showcasing advanced capabilities e.g. auth, DB access through API endpoints, and wizard-based onboarding flows with editor-only screens. |
+| [`sveltekit-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/sveltekit-contentful)       | Basic SvelteKit & Contentful-based content site.         |
 
 ## Tutorials
 

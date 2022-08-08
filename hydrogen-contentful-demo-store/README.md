@@ -82,10 +82,6 @@ CONTENTFUL_SPACE_ID="..."
 CONTENTFUL_PREVIEW_TOKEN="..."
 ```
 
-The API keys (both delivery and preview) can be copied from the API screen you see after creating a new key.
-
-![Copy API key values](../tutorial-contentful/docs/copy-api-keys.png)
-
 ## Running the dev server
 
 Then `cd` into the new directory and run:

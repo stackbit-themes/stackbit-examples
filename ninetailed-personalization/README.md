@@ -78,10 +78,6 @@ CONTENTFUL_MANAGEMENT_TOKEN="..."
 CONTENTFUL_PREVIEW_TOKEN="..."
 ```
 
-The API keys (both delivery and preview) can be copied from the API screen you see after creating a new key.
-
-![Copy API key values](./docs/copy-api-keys.png)
-
 ### Run the Project
 
 Now you should be able to run the Next.js development server and see your content.
