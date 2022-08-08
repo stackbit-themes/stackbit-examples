@@ -1,0 +1,37 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1281px) {
+  .cards > * {
+    flex-basis: calc(32% - 2px);
+  }
+
+  .cards > :nth-child(3n + 2) {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .cards > * {
+    flex-basis: calc(49% - 2px);
+  }
+
+  .cards > :nth-child(2n) {
+    margin-left: 2%;
+    margin-right: 0%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    display: block;
+  }
+
+  .cards > * {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}

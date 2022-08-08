@@ -1,0 +1,22 @@
+.wrapper {
+  margin-bottom: 50px;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5em;
+  display: flex;
+  align-items: baseline;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.logoImage {
+  height: 1.5em;
+}
+
+.logoLabel {
+  margin-left: 1em;
+}
+
+a.item {
+  text-decoration: none;
+  margin-left: 2em;
+}

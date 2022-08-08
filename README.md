@@ -8,35 +8,40 @@ Have an idea of an example we should add? [Create an issue](https://github.com/s
 
 ## Minimal Starters
 
-Starters are basic Stackbit projects that bring some specific combination of _the basics_.
+Starters are basic Stackbit projects that bring some specific combination of _the basics_. These are good starting points for developers and easy to get around.
 
 | Example                                                                             | Description                               |
 | :---------------------------------------------------------------------------------- | :---------------------------------------- |
 | [`nextjs-starter`](https://github.com/stackbit-themes/nextjs-starter)               | The essential JavaScript building blocks. |
-| [`ts-mui-nextjs-starter`](https://github.com/stackbit-themes/ts-mui-nextjs-starter) | TypeScript + MUI components               |
-| [`contentful-starter`](https://github.com/stackbit-themes/contentful-starter)       | Contentful as the content source.         |
+| [`ts-mui-nextjs-starter`](https://github.com/stackbit-themes/ts-mui-nextjs-starter) | TypeScript + MUI components.               |
+| [`contentful-starter`](https://github.com/stackbit-themes/contentful-starter)       | Minimal Next.js site with Contentful as the content source.         |
+| [`angular-contentful-starter`](https://github.com/stackbit-themes/stackbit-examples/tree/main/angular-contentful)       | Basic Angular & Contentful-based Product Catalog site.         |
+| [`sveltekit-contentful-starter`](https://github.com/stackbit-themes/stackbit-examples/tree/main/sveltekit-contentful)       | Basic SvelteKit & Contentful-based content site.         |
 
-## Full Starters
+## Full Websites Demos
 
-Themes are bigger, more opinionated projects, that are all production-ready and built for scale. These are great options for non-technical content editors to get an immediate feel for Stackbit.
+Bigger, more opinionated sites that are production-ready and built to scale. These are good options for non-technical content editors to get an immediate feel for Stackbit.
 
-The code references are below. Although you can run these locally, each of these themes is available to [demo immediately in the Stackbit app](https://jamstack.new/).
+You can run these locally, but each of these sites is available to [demo immediately in the Stackbit app](https://jamstack.new/).
 
 | Example                                                                                         | Description                                                                  |
 | :---------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
-| [`personal-nextjs-theme`](https://github.com/stackbit-themes/personal-nextjs-theme)             | A stylistic site to showcase a portfolio.                                    |
-| [`small-business-nextjs-theme`](https://github.com/stackbit-themes/small-business-nextjs-theme) | Pages and components meant to help small business spin up new sites quickly. |
 | [`starter-nextjs-theme`](https://github.com/stackbit-themes/starter-nextjs-theme)               | A beautifully simple site that can be flexed to fit your needs.              |
+| [`small-business-nextjs-theme`](https://github.com/stackbit-themes/small-business-nextjs-theme) | Pages and components meant to help small business spin up new sites quickly. |
+| [`personal-nextjs-theme`](https://github.com/stackbit-themes/personal-nextjs-theme)             | A stylistic site to showcase a portfolio.                                    |
 
-## Projects
+## Example Projects
 
-Project-based examples are built to show one or two patterns in practice.
+Showcase implementation & integration patterns in practice.
 
 | Example                                                                                           | Description                                                                         |
 | :------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------- |
-| [`dynamic-app`](https://github.com/stackbit-themes/stackbit-examples/tree/main/dynamic-app)       | A showcase of multiple capabilities like authentication and workflow-based content. |
+| [`hydrogen-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/hydrogen-contentful) | Built on Shopify's Hydrogen framework & Contentful for editorial content                  |
 | [`algolia-search`](https://github.com/stackbit-themes/stackbit-examples/tree/main/algolia-search) | On-demand statically generated pages, searchable with Algolia                       |
-| [`chakra-next`](https://github.com/stackbit-themes/stackbit-examples/tree/main/chakra-next)       | Simple project using [Chakra UI](https://chakra-ui.com/)                            |
+| [`cloudinary-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/cloudinary-contentful) | Image management & per-device responsive optimization with Cloudinary.                       |
+| [`ninetailed-personalization`](https://github.com/stackbit-themes/stackbit-examples/tree/main/ninetailed-personalization) | Audience-based personalization with Ninetailed, with built-in support in the visual editor.                       |
+| [`chakra-ui`](https://github.com/stackbit-themes/stackbit-examples/tree/main/chakra-ui)       | A simple site using [Chakra UI](https://chakra-ui.com/).                            |
+| [`onboarding-webapp`](https://github.com/stackbit-themes/stackbit-examples/tree/main/onboarding-webapp)       | Showcasing advanced capabilities e.g. auth, DB access through API endpoints, and wizard-based onboarding flows with editor-only screens. |
 
 ## Tutorials
 
@@ -53,5 +58,5 @@ These examples bring a single, interactive and visually-editable component.
 
 | Example                                                                                       | Description                                                                    |
 | :-------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
-| [`sb-countdown`](https://github.com/stackbit-themes/stackbit-examples/tree/main/sb-countdown) | A `CountdownSection` component for counting down to a specified date and time. |
-| [`sb-typist`](https://github.com/stackbit-themes/stackbit-examples/tree/main/sb-typist)       | A `TypistSection` component for a typing animation based on react-typist.      |
+| [`component-countdown`](https://github.com/stackbit-themes/stackbit-examples/tree/main/component-countdown) | A `CountdownSection` component for counting down to a specified date and time. |
+| [`component-typist`](https://github.com/stackbit-themes/stackbit-examples/tree/main/component-typist)       | A `TypistSection` component for a typing animation based on react-typist.      |

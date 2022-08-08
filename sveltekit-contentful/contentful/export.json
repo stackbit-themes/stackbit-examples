@@ -1,0 +1,1225 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3jnrqi0b8jmc"
+          }
+        },
+        "id": "blog-post",
+        "type": "ContentType",
+        "createdAt": "2022-03-31T07:45:42.710Z",
+        "updatedAt": "2022-03-31T14:05:21.227Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2022-03-31T14:05:21.227Z",
+        "firstPublishedAt": "2022-03-31T07:45:43.065Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Blog Post",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "excerpt",
+          "name": "Excerpt",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "3jnrqi0b8jmc",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 12,
+        "createdAt": "2022-03-31T07:45:43.114Z",
+        "createdBy": {
+          "sys": {
+            "id": "3yH28hagbJUisL2SMUD1Sn",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-03-31T14:05:21.765Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3yH28hagbJUisL2SMUD1Sn",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "blog-post",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "settings": {
+            "trackingFieldId": "title"
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "excerpt",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3jnrqi0b8jmc"
+          }
+        },
+        "id": "7jgVWjvnbv2NwTWz0pNyRA",
+        "type": "Entry",
+        "createdAt": "2022-03-31T14:20:23.430Z",
+        "updatedAt": "2022-03-31T18:54:11.866Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2022-03-31T18:54:11.866Z",
+        "firstPublishedAt": "2022-03-31T14:20:39.248Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blog-post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Lorem Ipsum"
+        },
+        "content": {
+          "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu scelerisque felis imperdiet proin fermentum leo vel. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper eget. Amet nisl purus in mollis nunc sed id. Ut tortor pretium viverra suspendisse potenti nullam ac. Auctor neque vitae tempus quam pellentesque nec nam. Lobortis mattis aliquam faucibus purus in massa. Penatibus et magnis dis parturient montes. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Magna eget est lorem ipsum dolor sit amet.\n\nArcu dictum varius duis at consectetur lorem donec massa sapien. Placerat vestibulum lectus mauris ultrices eros in. Cursus metus aliquam eleifend mi in nulla posuere. Tempor nec feugiat nisl pretium fusce. Pellentesque sit amet porttitor eget dolor morbi non arcu. Rhoncus aenean vel elit scelerisque mauris. Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur. Aliquam purus sit amet luctus venenatis lectus. Dictum non consectetur a erat. Laoreet suspendisse interdum consectetur libero id. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Aliquam purus sit amet luctus venenatis. Habitant morbi tristique senectus et netus. Egestas erat imperdiet sed euismod nisi.\n\nAmet tellus cras adipiscing enim eu. Eu scelerisque felis imperdiet proin fermentum leo vel. Lacinia quis vel eros donec ac odio tempor. Nunc lobortis mattis aliquam faucibus purus in massa tempor nec. In egestas erat imperdiet sed euismod nisi porta. Molestie at elementum eu facilisis sed odio morbi quis commodo. Integer malesuada nunc vel risus commodo viverra maecenas accumsan. Lacus luctus accumsan tortor posuere ac ut consequat semper. Natoque penatibus et magnis dis parturient. Purus sit amet luctus venenatis lectus magna fringilla urna. Donec ac odio tempor orci dapibus ultrices in. Condimentum vitae sapien pellentesque habitant. Imperdiet sed euismod nisi porta lorem. Nulla facilisi morbi tempus iaculis urna id volutpat lacus. Eu turpis egestas pretium aenean pharetra magna ac placerat. Risus at ultrices mi tempus. Risus quis varius quam quisque id diam vel quam. Nunc sed blandit libero volutpat sed cras ornare. Commodo odio aenean sed adipiscing.\n\nAliquet risus feugiat in ante. Tristique senectus et netus et malesuada fames. A diam sollicitudin tempor id eu nisl nunc mi. Rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Et malesuada fames ac turpis egestas. Malesuada fames ac turpis egestas maecenas pharetra. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Mattis molestie a iaculis at erat. Est ante in nibh mauris cursus mattis molestie a. Dictum varius duis at consectetur lorem. Congue mauris rhoncus aenean vel elit scelerisque mauris. Rhoncus est pellentesque elit ullamcorper dignissim cras. Ut tortor pretium viverra suspendisse potenti nullam ac tortor. Ipsum nunc aliquet bibendum enim facilisis. Facilisis volutpat est velit egestas dui id ornare arcu odio. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Ut aliquam purus sit amet luctus.\n\nTortor condimentum lacinia quis vel eros donec ac odio. Porttitor rhoncus dolor purus non. Odio ut enim blandit volutpat maecenas volutpat blandit. Non consectetur a erat nam. Duis convallis convallis tellus id interdum. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. Massa ultricies mi quis hendrerit. Etiam dignissim diam quis enim lobortis scelerisque fermentum. Id neque aliquam vestibulum morbi blandit cursus risus at ultrices. Pretium nibh ipsum consequat nisl vel pretium lectus quam. Malesuada fames ac turpis egestas sed tempus urna et. Massa massa ultricies mi quis. Gravida neque convallis a cras semper auctor neque vitae tempus. Semper viverra nam libero justo laoreet sit amet cursus. Cursus risus at ultrices mi. Adipiscing elit ut aliquam purus sit amet luctus venenatis. In dictum non consectetur a erat nam at. Purus in mollis nunc sed id semper risus. Neque viverra justo nec ultrices dui sapien eget. Nec dui nunc mattis enim ut tellus elementum.\n"
+        },
+        "slug": {
+          "en-US": "lorem-ipsum"
+        },
+        "excerpt": {
+          "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac ut consequat semper viverra nam libero justo laoreet sit."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3jnrqi0b8jmc"
+          }
+        },
+        "id": "4cuydghn6WOpCmsVP7A2OW",
+        "type": "Entry",
+        "createdAt": "2022-03-31T14:21:26.410Z",
+        "updatedAt": "2022-03-31T18:54:06.097Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 58,
+        "publishedAt": "2022-03-31T18:54:06.097Z",
+        "firstPublishedAt": "2022-03-31T18:54:06.097Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 59,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blog-post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "SSG"
+        },
+        "content": {
+          "en-US": "Static Site Generation (SSG) is a term that refers to a site where every page is prerendered. This is what SvelteKit's `adapter-static` does. SvelteKit was not built to do only static site generation like some tools and so may not scale as well to efficiently render a very large number of pages as tools built specifically for that purpose. However, in contrast to most purpose-built SSGs, SvelteKit does nicely allow for mixing and matching different rendering types on different pages. One benefit of fully prerendering a site is that you do not need to maintain or pay for servers to perform SSR. Once generated, the site can be served from CDNs, leading to great \"time to first byte\" performance. This delivery model is often referred to as JAMstack.\n"
+        },
+        "slug": {
+          "en-US": "ssg"
+        },
+        "excerpt": {
+          "en-US": "Static Site Generation (SSG) is a term that refers to a site where every page is prerendered"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3jnrqi0b8jmc"
+          }
+        },
+        "id": "6xGuxs8sXfDh2HTavLQOIu",
+        "type": "Entry",
+        "createdAt": "2022-03-31T15:08:42.813Z",
+        "updatedAt": "2022-03-31T18:54:06.199Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2022-03-31T18:54:06.199Z",
+        "firstPublishedAt": "2022-03-31T18:54:06.199Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blog-post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Routing"
+        },
+        "content": {
+          "en-US": "By default, when you navigate to a new page (by clicking on a link or using the browser's forward or back buttons), SvelteKit will intercept the attempted navigation and handle it instead of allowing the browser to send a request to the server for the destination page. SvelteKit will then update the displayed contents on the client by rendering the component for the new page, which in turn can make calls to the necessary API endpoints. This process of updating the page on the client in response to attempted navigation is called client-side routing.\n"
+        },
+        "slug": {
+          "en-US": "routing"
+        },
+        "excerpt": {
+          "en-US": "Routing Excerpt :)"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3jnrqi0b8jmc"
+          }
+        },
+        "id": "AWWDE3UHLMuSzyP4WFpgX",
+        "type": "Entry",
+        "createdAt": "2022-03-31T15:50:42.103Z",
+        "updatedAt": "2022-03-31T18:54:06.227Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2022-03-31T18:54:06.227Z",
+        "firstPublishedAt": "2022-03-31T18:54:06.227Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blog-post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Prerendering"
+        },
+        "content": {
+          "en-US": "Prerendering means computing the contents of a page at build time and saving the HTML for display. This approach has the same benefits as traditional server-rendered pages, but avoids recomputing the page for each visitor and so scales nearly for free as the number of visitors increases. The tradeoff is that the build process is more expensive and prerendered content can only be updated by building and deploying a new version of the application.\n\nNot all pages can be prerendered. The basic rule is this: for content to be prerenderable, any two users hitting it directly must get the same content from the server. Note that you can still prerender content that is loaded based on the page's parameters as long as all users will be seeing the same prerendered content.\n\nPre-rendered pages are not limited to static content. You can build personalized pages if user-specific data is fetched and rendered client-side. This is subject to the caveat that you will experience the downsides of not doing SSR for that content as discussed above.\n"
+        },
+        "slug": {
+          "en-US": "prerendering"
+        },
+        "excerpt": {
+          "en-US": "Computing the contents of a page at build time and saving the HTML for display"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3jnrqi0b8jmc"
+          }
+        },
+        "id": "3Omp7F6PlLKIjc17W2k0Rl",
+        "type": "Entry",
+        "createdAt": "2022-03-31T18:34:04.426Z",
+        "updatedAt": "2022-03-31T18:54:06.168Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2022-03-31T18:54:06.168Z",
+        "firstPublishedAt": "2022-03-31T18:54:06.168Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blog-post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Hydration"
+        },
+        "content": {
+          "en-US": "Svelte components store some state and update the DOM when the state is updated. When fetching data during SSR, by default SvelteKit will store this data and transmit it to the client along with the server-rendered HTML. The components can then be initialized on the client with that data without having to call the same API endpoints again. Svelte will then check that the DOM is in the expected state and attach event listeners in a process called hydration. Once the components are fully hydrated, they can react to changes to their properties just like any newly created Svelte component.\n"
+        },
+        "slug": {
+          "en-US": "hydration"
+        },
+        "excerpt": {
+          "en-US": "What's \"Hydration\" and it's benefits"
+        }
+      }
+    }
+  ],
+  "assets": [
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "2GaYKG19c4bhtrfLRBSX2J",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3jnrqi0b8jmc"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "395ff560-d4ab-462a-8a2a-5a098d6e2a52"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "createdAt": "2022-03-31T07:44:39Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "updatedAt": "2022-03-31T07:44:39Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Author",
+      "description": "Allows editing of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2GfsfoJLt5Wi359NqFKRTf",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3jnrqi0b8jmc"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "createdAt": "2022-03-31T07:44:39Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "updatedAt": "2022-03-31T07:44:39Z"
+      }
+    },
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2GgdsY0IAz8hjMKW10O08l",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3jnrqi0b8jmc"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "createdAt": "2022-03-31T07:44:39Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "updatedAt": "2022-03-31T07:44:39Z"
+      }
+    },
+    {
+      "name": "Freelancer",
+      "description": "Allows only editing of content they created themselves",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "delete"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "delete"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2GgJ16XU7hTLVIiCKnRzIp",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3jnrqi0b8jmc"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "createdAt": "2022-03-31T07:44:39Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "updatedAt": "2022-03-31T07:44:39Z"
+      }
+    },
+    {
+      "name": "Translator",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2Ghz1TI95e4UPfIFeQ6jFb",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3jnrqi0b8jmc"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "createdAt": "2022-03-31T07:44:39Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3yH28hagbJUisL2SMUD1Sn"
+          }
+        },
+        "updatedAt": "2022-03-31T07:44:39Z"
+      }
+    }
+  ]
+}

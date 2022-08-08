@@ -1,0 +1,31 @@
+stackbitVersion: ~0.5.0
+cmsName: contentful
+nodeVersion: '16'
+
+ssgName: custom
+devCommand: ./node_modules/.bin/vite --port {PORT}
+experimental:
+  ssg:
+    name: sveltekit
+    logPatterns:
+      up: ' ready in '
+    passthrough:  
+      - '/vite-hmr/**'
+
+import:
+  type: contentful
+  contentFile: contentful/export.json
+  uploadAssets: true
+  assetsDirectory: contentful
+  spaceIdEnvVar: CONTENTFUL_SPACE_ID
+  accessTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+  previewTokenEnvVar: CONTENTFUL_PREVIEW_TOKEN
+
+modelsSource:
+  type: contentful
+
+# These models are merged with Contentful models
+models:
+  blog-post:
+    type: page
+    urlPath: '/{slug}'
