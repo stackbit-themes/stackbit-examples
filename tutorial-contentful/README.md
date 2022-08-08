@@ -80,7 +80,7 @@ CONTENTFUL_PREVIEW_ACCESS_TOKEN="..."
 CONTENTFUL_PREVIEW_SECRET="..."
 ```
 
-The API keys (both delivery and preview) can be copied from the API screen you see after creating a new key.
+The preview API key can be copied from the API screen you see after creating a new key.
 
 ![Copy API key values](./docs/copy-api-keys.png)
 

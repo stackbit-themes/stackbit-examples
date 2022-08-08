@@ -7,7 +7,8 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "import": "node ./contentful/import.js $CONTENTFUL_SPACE_ID $CONTENTFUL_ACCESS_TOKEN"
   },
   "dependencies": {
     "@stackbit/annotations": "^0.1.1",

@@ -17,8 +17,8 @@ In addition to Chakra UI support, this project contains the following:
 
 Use `create-stackbit-app` to create a new local project:
 
-    npx create-stackbit-app@latest --example chakra-next
-    cd chakra-next
+    npx create-stackbit-app@latest --example chakra-ui
+    cd chakra-ui
 
 Then you can run the Next.js development server:
 

@@ -1,8 +1,8 @@
-# Hydrogen + Stackbit Demo Store
+# Hydrogen & Contentful Demo Store
 
-Hydrogen is a React framework and SDK that you can use to build fast and dynamic Shopify custom storefronts.
+Hydrogen is a React framework by Shopify that you can use to build fast and dynamic custom storefronts.
 
-Journal contents coming from Contentful CMS and equipped with visual editing capabilities using Stackbit.
+This site is adopted from the original [demo store](https://github.com/Shopify/hydrogen/tree/main/templates/demo-store) site by Shopify. Journal content has been moved to Contentful CMS for easy visual editing via Stackbit.
 
 [Check out the Hydrogen docs](https://shopify.dev/custom-storefronts/hydrogen)
 
@@ -12,12 +12,12 @@ Journal contents coming from Contentful CMS and equipped with visual editing cap
 
 **Requirements:**
 
-- Node.js version 16.5.0 or higher
+- Node.js version 16 or higher
 - Contentful account
 
 ## Setup Instructions
 
-The following sections take you through the process of getting this project set up and wired up to Contentful so you can begin the tutorial.
+The following sections take you through the process of getting this project set up and wired up to Contentful.
 
 ### Create New Project
 
@@ -56,7 +56,7 @@ Your new project already contains the content. You can import this into Contentf
 
 ```txt
 cd hydrogen-contentful-demo-store
-npx cross-env CONTENTFUL_SPACE_ID={...} CONTENTFUL_MANAGEMENT_TOKEN={...} npm run setup
+npx cross-env CONTENTFUL_SPACE_ID={...} CONTENTFUL_MANAGEMENT_TOKEN={...} npm run import
 ```
 
 Replace the `{...}` with the appropriate values:
@@ -86,8 +86,6 @@ The API keys (both delivery and preview) can be copied from the API screen you s
 
 ![Copy API key values](../tutorial-contentful/docs/copy-api-keys.png)
 
-Note that the `CONTENTFUL_PREVIEW_SECRET` can be any string.
-
 ## Running the dev server
 
 Then `cd` into the new directory and run:
@@ -97,7 +95,7 @@ npm install
 npm run dev
 ```
 
-Remember to update `hydrogen.config.js` with your shop's domain and Storefront API token!
+Optional: to use your own store contents, update `hydrogen.config.js` with your shop's domain and Storefront API token!
 
 ## Building for production
 
@@ -113,39 +111,3 @@ To run a local preview of your Hydrogen app in an environment similar to Oxygen,
 npm run build
 npm run preview
 ```
-
-## Importing Contentful Content
-
-If you don't have a Contentful space set up and ready to go, you can import the starting content provided by this project.
-
-1. Create a new Space in Contentful
-1. Create new Contentful Personal Access Tokens [here](https://app.contentful.com/account/profile/cma_tokens/).
-1. Import the Contentful data stored in the `contentful/export.json` file to the new space by running the following command. Replace the `<management_token>` with your Personal Access Token and the `<space_id>` with the new space ID.
-
-   ```txt
-   ./contentful/import.js <management_token> <space_id>
-   ```
-
-1. Create **Content Preview API - Access Token** for the new space via Contentful app **Settings** => **API Keys** => **Content delivery / preview tokens** => **Add API Key**. Add these keys to `.env` file(s) as mentioned above.
-
-## Next Steps
-
-Here are a few suggestions on what to do next if you're new to Stackbit:
-
-- Learn [how Stackbit works](https://docs.stackbit.com/conceptual-guides/how-stackbit-works/)
-- Follow the [_Getting Started_ tutorial](https://docs.stackbit.com/getting-started/)
-- Explore the [how-to guides](https://docs.stackbit.com/how-to-guides/) for help while developing your site
-
-## Other Stackbit Projects
-
-Stackbit has a number of examples that you can use to create a new project or evaluate Stackbit. Run the following command to see a list of available examples:
-
-```txt
-npx create-stackbit-app@latest --help
-```
-
-You can also visit [our `stackbit-themes` GitHub organization](https://github.com/stackbit-themes)
-
-## Join the Community
-
-[Join us on Discord](https://discord.gg/HUNhjVkznH) for community support and to showcase what you build with this starter.

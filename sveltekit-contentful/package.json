@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "[ -e .env.local ] && set -o allexport && source .env.local && set +o allexport; vite dev --port 3000",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "import": "node ./contentful/import.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",

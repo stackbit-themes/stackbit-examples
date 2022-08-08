@@ -9,7 +9,8 @@
     "build": "npm run config && ng build",
     "test": "npm run config && ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "import": "node ./contentful/import.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN"
   },
   "dependencies": {
     "@angular/animations": "^14.0.2",

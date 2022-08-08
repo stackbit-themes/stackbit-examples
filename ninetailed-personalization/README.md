@@ -1,124 +1,97 @@
-# A New Stackbit Project
+# Ninetailed Personalization
 
-Welcome to your new project created with Stackbit!
+Modern audience-based personalization with [Ninetailed](https://ninetailed.io/), with content editing support in the visual editor.
 
-Here are a few useful tips & links:
+## Prerequisites
 
-## Set up
+Before you begin, please make sure you have the following:
 
-1. If you haven't yet transferred this project to your GitHub account, click on the **Gear** icon in the visual editor to open **Project Settings** and start the transfer. [Learn More](https://docs.stackbit.com/how-to-guides/transfer-repo/).
-1. Once the repository is in your account, the Project Settings window will show you the commands to run for setting up your local environment. [Learn More](https://docs.stackbit.com/how-to-guides/local-development/).
+- **A Ninetailed API Key**
+- Contentful account
+- Node v16 or later
 
-## Develop with Stackbit Locally
-To spin up local dev, run:
-1. In terminal 1:\
-    1. `git clone`
-    2. `npm install`
-    3. Add the Contentful tokens to the `.env` file (see `.env.example` for reference)
-    4. `npm run dev`
+## Setup Instructions
 
-2. In terminal 2:\
-`sudo npm i -g @stackbit/cli@latest`
-```
-stackbit dev \
-    -c contentful \
-    --contentful-space-id <space_id> \
-    --contentful-preview-token <preview_token> \
-    --contentful-access-token <access_token>
+The following sections take you through the process of getting this project set up and wired up to Contentful.
+
+### Create New Project
+
+Use the `create-stackbit-app` command to create a new project:
+
+```txt
+npx create-stackbit-app@latest --example ninetailed-personalization
 ```
 
-## Learn the basics
+This will create a new instance of this project in a `ninetailed-personalization` directory.
 
-1. It's a good idea to go through our [Getting Started tutorial](https://docs.stackbit.com/getting-started/). It will give you a small taste of component development as well, and links for further reading.
-1. To go deeper into how things work, head to the [Conceptual Guides](https://docs.stackbit.com/conceptual-guides/).
-1. For more concise, practical information see the [How-to Guides](https://docs.stackbit.com/how-to-guides/).
+### Create Contentful Space
 
-## Get answers
+After signing into Contentful, create a new community (free) space. Note that if you already have an active Contentful account, you may want to [create an organization](https://app.contentful.com/account/organizations/new) to place your new space.
 
-[Join us on Discord](https://discord.gg/HUNhjVkznH) for community support.
+When you're within an organization, you can create a new community space with the web app package.
 
-## Building for production 🏗
+![Create new Contentful space](./docs/new-community-space.png)
 
-To build a static site for production, run the following command
+### Generate Management Token
 
-```shell
-npm run build
+If you don't already have a management token (or _personal access token_), you can generate one. To do so, go into your new empty space, then:
+
+1. Click Settings
+1. Chose API Keys
+1. Select the Content management tokens tab
+1. Click the button to generate a new token
+
+![Generate content management token](./docs/generate-mgmt-token.png)
+
+**⚠️ Take care to store this token as necessary. You will not be able to view again within Contentful.**
+
+### Import Content
+
+Your new project already contains the content for the tutorial. You can import this into Contentful by running the setup command.
+
+```txt
+cd tutorial-contentful
+npx cross-env CONTENTFUL_SPACE_ID={...} CONTENTFUL_MANAGEMENT_TOKEN={...} npm run import
 ```
 
-The generated site will be written to the `out` folder. The contents of this folder can be deployed by a serverless deployment platform such as [Netlify](https://www.netlify.com). You can start a local server serving the static files from the `out` folder, for example, by installing and running `http-server`:
+Replace the `{...}` with the appropriate values:
 
-```shell
-npm install http-server -g
-http-server out
+- Space ID can be found in the URL when inside a space.
+- Management token is the token you just created (or referenced).
+
+### Generate API Keys
+
+From the same place you generated the management token, you can now generate API access keys.
+
+1. Select the content delivery / preview tokens
+1. Choose Add API key
+
+![Generate new API keys](./docs/generate-api-keys.png)
+
+### Set Environment Variables
+
+In your project, duplicate `.env.local.example` to `.env.local`. Fill in the values:
+
+```txt
+CONTENTFUL_SPACE_ID="..."
+CONTENTFUL_MANAGEMENT_TOKEN="..."
+CONTENTFUL_PREVIEW_TOKEN="..."
 ```
 
-## Contributing 🙏
+The API keys (both delivery and preview) can be copied from the API screen you see after creating a new key.
 
-To contribute to this theme, please follow the following steps:
+![Copy API key values](./docs/copy-api-keys.png)
 
-1. Clone this repository locally
+### Run the Project
 
-2. Create a new Space in Contentful
+Now you should be able to run the Next.js development server and see your content.
 
-3. Create new Contentful Personal Access Tokens [here](https://app.contentful.com/account/profile/cma_tokens/)
+```txt
+npm run dev
+```
 
-4. Install dependencies
+Visit localhost:3000 and you should see the example content you imported into your new Contentful space.
 
-   ```shell
-   npm install
-   ```
+## Support
 
-5. Import the Contentful data stored in the `contentful/export.json` file to the new space by running the following command. Replace the `<management_token>` with your Personal Access Token and the `<space_id>` with the new space ID.
-
-   ```shell
-   ./contentful/import.js <management_token> <space_id>
-   ```
-
-6. Create "**Content Preview API - Access Token**" for the new space via Contentful app "Settings" => "API Keys" => "Content delivery / preview tokens" => "Add API Key".
-
-7. Define the following environment variables to allow Next.js to fetch the content from Contentful when developing or building the site. Replace the `{SPACE_ID}` with your Space ID and the `{CPA}` with the new **Content Preview API - Access Token**.
-
-   ```shell
-   export CONTENTFUL_SPACE_ID={SPACE_ID}
-   export CONTENTFUL_PREVIEW_TOKEN={CPA}
-   ```
-
-8. Lastly, run the Next.js development server:
-
-   ```shell
-   npm run dev
-   ```
-
-   Navigate to [http://localhost:3000](http://localhost:3000) to see the site.
-
-9. Now you can update site code, and the content in Contentful. The browser will automatically live-update your changes.
-
-10. Once you finish updating the code and contents, export the contents back to the `contentful/export.json` file by running the following command. Replace the `<management_token>` with your Personal Access Token and the `<space_id>` with the new space ID.
-
-    ```shell
-    ./contentful/export.js <management_token> <space_id>
-    ```
-
-11. Commit, push and submit a pull-request 🎉
-
-
-## Learn More 📚
-
-To learn more about Stackbit, take a look at the following resources:
-
-- [Stackbit Documentation](https://docs.stackbit.com)
-- Configure your theme using [stackbit.yaml](https://docs.stackbit.com/reference/stackbit-yaml/)
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-To learn more about Contentful, take a look at the following resources:
-
-- [Contentful Docs](https://www.contentful.com/developers/docs/)
-- [Importing and exporting content with the Contentful CLI](https://www.contentful.com/developers/docs/tutorials/cli/import-and-export/)
-
-To learn more about Netlify, take a look at the following resources:
-
-- [Netlify Docs](https://docs.netlify.com/)
+If you get stuck along the way, [drop into our Discord server](https://discord.gg/HUNhjVkznH) and send a message in the `#documentation` or `#help` channels.

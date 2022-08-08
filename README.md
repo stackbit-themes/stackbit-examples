@@ -36,7 +36,7 @@ Showcase implementation & integration patterns in practice.
 
 | Example                                                                                           | Description                                                                         |
 | :------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------- |
-| [`hydrogen-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/hydrogen-contentful) | Built on Shopify's Hydrogen framework & Contentful for editorial content                  |
+| [`hydrogen-contentful-demo-store`](https://github.com/stackbit-themes/stackbit-examples/tree/main/hydrogen-contentful-demo-store) | Built on Shopify's Hydrogen framework & Contentful for editorial content                  |
 | [`algolia-search`](https://github.com/stackbit-themes/stackbit-examples/tree/main/algolia-search) | On-demand statically generated pages, searchable with Algolia                       |
 | [`cloudinary-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/cloudinary-contentful) | Image management & per-device responsive optimization with Cloudinary.                       |
 | [`ninetailed-personalization`](https://github.com/stackbit-themes/stackbit-examples/tree/main/ninetailed-personalization) | Audience-based personalization with Ninetailed, with built-in support in the visual editor.                       |

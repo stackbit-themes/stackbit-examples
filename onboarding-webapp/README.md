@@ -1,4 +1,4 @@
-# Stackbit Dynamic Example App
+# Onboarding Webapp Example
 
 This is a showcase of multiple capabilities your Stackbit-based websites can have, beyond what our starter themes show.
 
@@ -76,8 +76,8 @@ If you'd like to see something added to the example, or have any questions, hit 
 Clone the repository & switch to the `preview` branch:
 
 ```
-npx create-stackbit-app@latest --example dynamic-app
-cd dynamic-app
+npx create-stackbit-app@latest --example onboarding-webapp
+cd onboarding-webapp
 ```
 
 If you have `nvm` installed, run `nvm use` to ensure you're using the recommended versions of Node and NPM.

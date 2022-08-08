@@ -12,7 +12,8 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "lint-ts": "tsc --noEmit",
     "test": "WATCH=true vitest",
-    "test:ci": "yarn build -t node && vitest run"
+    "test:ci": "yarn build -t node && vitest run",
+    "import": "node ./contentful/import.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN"
   },
   "devDependencies": {
     "@netlify/hydrogen-platform": "^1.0.0",
