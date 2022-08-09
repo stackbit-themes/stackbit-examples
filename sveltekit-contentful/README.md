@@ -1,29 +1,27 @@
-# Adding Stackbit to a Next.js + Contentful Site
+# SvelteKit & Contentful Starter
 
-**ℹ️ This project is used as a starting point for [our Contentful tutorial](https://docs.stackbit.com/integrations/contentful). If you would like to create a new project with Contentful as the content source, please use [the Contentful starter](https://github.com/stackbit-themes/contentful-starter).**
-
-The code here contains what could be reasonably borrowed from [the official Next.js + Contentful example](https://github.com/vercel/next.js/tree/canary/examples/cms-contentful). Changes made were to enhance the Stackbit integration guide.
+Originally adopted from [wesleymutwiri/content-kit](https://github.com/wesleymutwiri/content-kit), with added Stackbit support & modifications for compatibility with the latest version of SvelteKit.
 
 ## Prerequisites
 
 Before you begin, please make sure you have the following:
 
 - Contentful account
-- Node v14 or later
+- Node v16 or later
 
 ## Setup Instructions
 
-The following sections take you through the process of getting this project set up and wired up to Contentful so you can begin the tutorial.
+The following sections take you through the process of getting this project set up and wired up to Contentful.
 
 ### Create New Project
 
 Use the `create-stackbit-app` command to create a new project:
 
 ```txt
-npx create-stackbit-app@latest --example tutorial-contentful
+npx create-stackbit-app@latest --starter sveltekit-starter
 ```
 
-This will create a new instance of this project in a `tutorial-contentful` directory.
+This will create a new instance of this project in a `sveltekit-starter` directory.
 
 ### Create Contentful Space
 
@@ -52,7 +50,7 @@ Your new project already contains the content for the tutorial. You can import t
 
 ```txt
 cd tutorial-contentful
-npx cross-env CONTENTFUL_SPACE_ID={...} CONTENTFUL_MANAGEMENT_TOKEN={...} npm run setup
+npx cross-env CONTENTFUL_SPACE_ID={...} CONTENTFUL_MANAGEMENT_TOKEN={...} npm run import
 ```
 
 Replace the `{...}` with the appropriate values:
@@ -75,16 +73,9 @@ In your project, duplicate `.env.local.example` to `.env.local`. Fill in the val
 
 ```txt
 CONTENTFUL_SPACE_ID="..."
-CONTENTFUL_ACCESS_TOKEN="..."
-CONTENTFUL_PREVIEW_ACCESS_TOKEN="..."
-CONTENTFUL_PREVIEW_SECRET="..."
+CONTENTFUL_MANAGEMENT_TOKEN="..."
+CONTENTFUL_PREVIEW_TOKEN="..."
 ```
-
-The preview API key can be copied from the API screen you see after creating a new key.
-
-![Copy API key values](./docs/copy-api-keys.png)
-
-Note that the `CONTENTFUL_PREVIEW_SECRET` can be any string.
 
 ### Run the Project
 

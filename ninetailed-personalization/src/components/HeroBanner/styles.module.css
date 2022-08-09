@@ -1,0 +1,17 @@
+.hero {
+  background-size: cover;
+  aspect-ratio: 1600/550;
+}
+
+.heroInner {
+  padding: 5%;
+}
+
+.white {
+  text-shadow: 1px 1px 4px #000000;
+  color: #f3f4f6;
+}
+
+.black {
+  color: #02001d;
+}

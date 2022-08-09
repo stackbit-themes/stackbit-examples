@@ -1,0 +1,16 @@
+stackbitVersion: ~0.5.0
+cmsName: contentful
+ssgName: angular
+nodeVersion: '16'
+
+modelsSource:
+  type: contentful
+
+import:
+  type: contentful
+  contentFile: contentful/export.json
+  uploadAssets: true
+  assetsDirectory: contentful
+  spaceIdEnvVar: CONTENTFUL_SPACE_ID
+  deliveryTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+  previewTokenEnvVar: CONTENTFUL_PREVIEW_TOKEN

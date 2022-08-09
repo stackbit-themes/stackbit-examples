@@ -1,0 +1,20 @@
+.wrapper {
+  position: relative;
+}
+
+.controls {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 9999999;
+  border: 1px solid;
+  padding: 4px 8px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 4px 12px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.controls select {
+  outline: none;
+  margin-left: 5px;
+}
