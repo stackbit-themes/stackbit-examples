@@ -1,0 +1,23 @@
+name: GallerySection
+groups: [Sections]
+fields:
+  - name: imageFormat
+    description: "Should Cloudinary serve an optimal file format for the user's browser, or always use the original format."
+    options:
+      - label: Optimized to browser
+        value: auto
+      - label: Original format
+        value: original
+  - name: resizeMethod
+    description: Should each image include multiple source URLs for different widths, or alternatively always serve a single URL with no resize / an aggressive resize.
+    options:
+      - label: Responsive
+        value: responsive
+      - label: No resize
+        value: none
+      - label: Aggressive (fixed)
+        value: aggressive
+  - name: images
+    items:
+      type: model
+      models: [ImageDetails]

@@ -1,0 +1,49 @@
+/* Reset and some basics */
+html,
+body {
+  background-color: white;
+  color: black;
+  font-family: "Helvetica Neue",sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+p {
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Page layout */
+
+.page {
+  margin: 2vw 2vw;
+}
+
+.page-empty-state {
+  background-color: beige;
+  text-align: center;
+  margin: 0 3vw;
+  padding: 5rem 0;
+  border-radius: 15px;
+}

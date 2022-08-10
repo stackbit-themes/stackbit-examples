@@ -1,0 +1,52 @@
+.title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.grid {
+  display: flex;
+  margin: 0 0 0 -2vw;
+}
+
+.gridColumn {
+  padding-left: 2vw; /* gutter size */
+  background-clip: padding-box;
+}
+
+.gridColumn > div {
+  position: relative;
+  margin-bottom: 2vw;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: whitesmoke;
+  box-shadow: 5px 5px 12px #d1d1d1, -5px -5px 12px #ffffff;
+}
+
+.image {
+  object-fit: contain;
+  width: 100%;
+}
+
+.imageInfoOverlay {
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+  position: absolute;
+  font-size: 18px;
+  font-weight: 500;
+  top: 10px;
+  left: 16px;
+}
+
+.noImage {
+  background-color: beige;
+  padding: 60px 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.attribution {
+  display: block;
+  margin: 6px 15px 8px;
+  font-size: 12px;
+  color: darkslategrey;
+}

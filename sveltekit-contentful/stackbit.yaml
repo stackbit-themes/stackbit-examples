@@ -3,12 +3,14 @@ cmsName: contentful
 nodeVersion: '16'
 
 ssgName: custom
-devCommand: echo Starting && APP_PORT={PORT} npm run dev-no-window
+devCommand: ./node_modules/.bin/vite --port {PORT}
 experimental:
   ssg:
-    name: Hydrogen
+    name: sveltekit
     logPatterns:
-      up: 'Local: http'
+      up: ' ready in '
+    passthrough:  
+      - '/vite-hmr/**'
 
 import:
   type: contentful
@@ -16,13 +18,14 @@ import:
   uploadAssets: true
   assetsDirectory: contentful
   spaceIdEnvVar: CONTENTFUL_SPACE_ID
-  deliveryTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+  accessTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+  previewTokenEnvVar: CONTENTFUL_PREVIEW_TOKEN
 
 modelsSource:
   type: contentful
 
 # These models are merged with Contentful models
 models:
-  PostLayout:
+  blog-post:
     type: page
-    urlPath: '/journal/{slug}'
+    urlPath: '/{slug}'

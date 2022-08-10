@@ -1,0 +1,17 @@
+.button {
+  border: 1px solid #4c57c5;
+  color: #4c57c5;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.primary {
+  background-color: #4c57c5;
+  color: #f3f4f6;
+}

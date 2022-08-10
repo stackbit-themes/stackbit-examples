@@ -1,14 +1,7 @@
 stackbitVersion: ~0.5.0
-cmsName: contentful
+ssgName: nextjs
 nodeVersion: '16'
-
-ssgName: custom
-devCommand: echo Starting && APP_PORT={PORT} npm run dev-no-window
-experimental:
-  ssg:
-    name: Hydrogen
-    logPatterns:
-      up: 'Local: http'
+cmsName: contentful
 
 import:
   type: contentful
@@ -17,12 +10,12 @@ import:
   assetsDirectory: contentful
   spaceIdEnvVar: CONTENTFUL_SPACE_ID
   deliveryTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+  previewTokenEnvVar: CONTENTFUL_PREVIEW_TOKEN
 
 modelsSource:
   type: contentful
 
-# These models are merged with Contentful models
 models:
-  PostLayout:
+  page:
     type: page
-    urlPath: '/journal/{slug}'
+    urlPath: '/{slug}'

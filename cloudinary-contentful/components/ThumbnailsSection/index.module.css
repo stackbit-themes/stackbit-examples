@@ -1,0 +1,49 @@
+.section {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.sectionInner {
+  max-width: 700px;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+}
+
+.noImage {
+  text-align: center;
+}
+
+.imagesWrapper {
+  width: 100%;
+  column-gap: 6%;
+  display: flex;
+}
+
+.mainImageWrapper {
+  width: 73%;
+}
+
+.mainImage {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.thumbsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 27%;
+}
+
+.thumbLabel {
+  padding-bottom: 4px;
+}
+
+.thumbImage {
+  width: 100%;
+  border: 1px solid black;
+}
