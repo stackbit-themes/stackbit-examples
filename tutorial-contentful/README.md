@@ -1,7 +1,5 @@
 # Adding Stackbit to a Next.js + Contentful Site
 
-![Tutorial Screenshot](https://assets.stackbit.com/docs/tutorial-shared-thumb.png)
-
 **ℹ️ This project is used as a starting point for [our Contentful tutorial](https://docs.stackbit.com/integrations/contentful). If you would like to create a new project with Contentful as the content source, please use [the Contentful starter](https://github.com/stackbit-themes/contentful-starter).**
 
 The code here contains what could be reasonably borrowed from [the official Next.js + Contentful example](https://github.com/vercel/next.js/tree/canary/examples/cms-contentful). Changes made were to enhance the Stackbit integration guide.
