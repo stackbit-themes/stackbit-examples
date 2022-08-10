@@ -1,13 +1,12 @@
 {
-  "name": "tutorial-nextjs",
+  "name": "tutorial-nextjs-files",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "setup": "node .setup/index.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "glob": "^8.0.3",
