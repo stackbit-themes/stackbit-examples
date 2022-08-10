@@ -10,11 +10,11 @@ Have an idea of an example we should add? [Create an issue](https://github.com/s
 
 Starters are basic Stackbit projects that bring some specific combination of _the basics_. These are good starting points for developers and easy to get around.
 
-| Example                                                                             | Description                               |
-| :---------------------------------------------------------------------------------- | :---------------------------------------- |
-| [`nextjs-starter`](https://github.com/stackbit-themes/nextjs-starter)               | The essential JavaScript building blocks. |
-| [`ts-mui-nextjs-starter`](https://github.com/stackbit-themes/ts-mui-nextjs-starter) | TypeScript + MUI components.               |
-| [`contentful-starter`](https://github.com/stackbit-themes/contentful-starter)       | Minimal Next.js site with Contentful as the content source.         |
+| Example                                                                             | Description                                                 |
+| :---------------------------------------------------------------------------------- | :---------------------------------------------------------- |
+| [`nextjs-starter`](https://github.com/stackbit-themes/nextjs-starter)               | The essential JavaScript building blocks.                   |
+| [`ts-mui-nextjs-starter`](https://github.com/stackbit-themes/ts-mui-nextjs-starter) | TypeScript + MUI components.                                |
+| [`contentful-starter`](https://github.com/stackbit-themes/contentful-starter)       | Minimal Next.js site with Contentful as the content source. |
 
 ## Full Websites Demos
 
@@ -32,31 +32,32 @@ You can run these locally, but each of these sites is available to [demo immedia
 
 Showcase implementation & integration patterns in practice.
 
-| Example                                                                                           | Description                                                                         |
-| :------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------- |
-| [`algolia-search`](https://github.com/stackbit-themes/stackbit-examples/tree/main/algolia-search) | On-demand statically generated pages, searchable with Algolia                       |
-| [`angular-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/angular-contentful)       | Basic Angular & Contentful-based Product Catalog site.         |
-| [`chakra-ui`](https://github.com/stackbit-themes/stackbit-examples/tree/main/chakra-ui)       | A simple site using [Chakra UI](https://chakra-ui.com/).                            |
-| [`cloudinary-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/cloudinary-contentful) | Image management & per-device responsive optimization with Cloudinary.                       |
-| [`hydrogen-contentful-demo-store`](https://github.com/stackbit-themes/stackbit-examples/tree/main/hydrogen-contentful-demo-store) | Built on Shopify's Hydrogen framework & Contentful for editorial content                  |
-| [`ninetailed-personalization`](https://github.com/stackbit-themes/stackbit-examples/tree/main/ninetailed-personalization) | Audience-based personalization with Ninetailed, with built-in support in the visual editor.                       |
-| [`onboarding-webapp`](https://github.com/stackbit-themes/stackbit-examples/tree/main/onboarding-webapp)       | Showcasing advanced capabilities e.g. auth, DB access through API endpoints, and wizard-based onboarding flows with editor-only screens. |
-| [`sveltekit-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/sveltekit-contentful)       | Basic SvelteKit & Contentful-based content site.         |
+| Example                                                                                                                           | Description                                                                                                                              |
+| :-------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- |
+| [`algolia-search`](https://github.com/stackbit-themes/stackbit-examples/tree/main/algolia-search)                                 | On-demand statically generated pages, searchable with Algolia                                                                            |
+| [`angular-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/angular-contentful)                         | Basic Angular & Contentful-based Product Catalog site.                                                                                   |
+| [`chakra-ui`](https://github.com/stackbit-themes/stackbit-examples/tree/main/chakra-ui)                                           | A simple site using [Chakra UI](https://chakra-ui.com/).                                                                                 |
+| [`cloudinary-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/cloudinary-contentful)                   | Image management & per-device responsive optimization with Cloudinary.                                                                   |
+| [`hydrogen-contentful-demo-store`](https://github.com/stackbit-themes/stackbit-examples/tree/main/hydrogen-contentful-demo-store) | Built on Shopify's Hydrogen framework & Contentful for editorial content                                                                 |
+| [`ninetailed-personalization`](https://github.com/stackbit-themes/stackbit-examples/tree/main/ninetailed-personalization)         | Audience-based personalization with Ninetailed, with built-in support in the visual editor.                                              |
+| [`onboarding-webapp`](https://github.com/stackbit-themes/stackbit-examples/tree/main/onboarding-webapp)                           | Showcasing advanced capabilities e.g. auth, DB access through API endpoints, and wizard-based onboarding flows with editor-only screens. |
+| [`sveltekit-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/sveltekit-contentful)                     | Basic SvelteKit & Contentful-based content site.                                                                                         |
 
 ## Tutorials
 
 Examples used as starting points for tutorials and other guides in our documentation.
 
-| Example                                                                                                     | Description                                                                               |
-| :---------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
-| [`nextjs-starter`](https://github.com/stackbit-themes/nextjs-starter)                                       | Our minimal starter, used in the getting started tutorial.                                |
-| [`tutorial-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-contentful) | Starting point for a demonstration on how to add Stackbit to a Next.js + Contentful site. |
+| Example                                                                                                              | Description                                                                                                          |
+| :------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |
+| 💥 [Next.js + Files](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-files)           | The starting point for following the file-based (Git CMS) getting started tutorial. (Coming Soon)                    |
+| 💥 [Next.js + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-contentful) | Use Contentful as the content source with the getting started tutorial. (Coming Soon)                                |
+| ⚠️ [`tutorial-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-contentful)       | Starting point for a demonstration on how to add Stackbit to a Next.js + Contentful site. (Will soon be deprecated.) |
 
 ## Components
 
 These examples bring a single, interactive and visually-editable component.
 
-| Example                                                                                       | Description                                                                    |
-| :-------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
+| Example                                                                                                     | Description                                                                    |
+| :---------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
 | [`component-countdown`](https://github.com/stackbit-themes/stackbit-examples/tree/main/component-countdown) | A `CountdownSection` component for counting down to a specified date and time. |
 | [`component-typist`](https://github.com/stackbit-themes/stackbit-examples/tree/main/component-typist)       | A `TypistSection` component for a typing animation based on react-typist.      |
