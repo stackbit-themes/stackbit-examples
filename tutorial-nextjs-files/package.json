@@ -10,6 +10,8 @@
     "setup": "node .setup/index.js"
   },
   "dependencies": {
+    "glob": "^8.0.3",
+    "gray-matter": "^4.0.3",
     "markdown-to-jsx": "^7.1.7",
     "next": "12.2.3",
     "react": "18.2.0",
