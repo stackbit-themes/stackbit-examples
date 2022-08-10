@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "setup": "node .setup/index.js"
+    "setup": "node .setup/index.js",
+    "contentful-export": "contentful-export --space-id $CONTENTFUL_SPACE_ID --management-token $CONTENTFUL_MANAGEMENT_TOKEN --config ./contentful/export-config.json",
+    "contentful-import": "node ./contentful/import.js"
   },
   "dependencies": {
     "markdown-to-jsx": "^7.1.7",
@@ -17,6 +19,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
+    "contentful-export": "^7.18.0",
+    "contentful-import": "^8.3.2",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.3",
     "fs-extra": "^10.1.0",
