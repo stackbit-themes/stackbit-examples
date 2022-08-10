@@ -1,24 +1,11 @@
-# Stackbit Tutorial
+# Stackbit Tutorial [Next.js + Files]
 
-🚧 WIP ...
+**ℹ️ This project is used as a starting point for [our getting started tutorial](https://docs.stackbit.com/getting-started) using files (Git CMS) as the content source. If you would like to create a new file-based project, please use [the minimal Next.js starter](https://github.com/stackbit-themes/nextjs-starter).**
 
-This is going to be awesome. 😎
+## Setup
 
-## Files
+This project requires no additional setup beyond what you will find [in the tutorial](https://docs.stackbit.com/getting-started).
 
-    npm run setup files
+## Support
 
-## Contentful
-
-    npm run setup contentful
-
-Add contentful setup directions
-
-Setup space
-
-Env vars ...
-
-Copy `.env.example` to `.env`
-Add env vars
-
-Import ...
+If you get stuck along the way, [drop into our Discord server](https://discord.gg/HUNhjVkznH) and send a message in the `#documentation` or `#help` channels.
