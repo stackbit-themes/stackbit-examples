@@ -13,13 +13,15 @@ export const Hero = (props) => {
       <div className={`flex mx-auto max-w-6xl gap-12 ${themeClassMap[props.theme] ?? themeClassMap['imgRight']}`}>
         <div className="max-w-xl py-20 mx-auto lg:shrink-0">
           <h1 className="mb-6 text-5xl font-bold">{props.heading}</h1>
-          <Markdown options={{ forceBlock: true }} className="mb-4 text-lg">
-            {props.body}
-          </Markdown>
+          {props.body && (
+            <Markdown options={{ forceBlock: true }} className="mb-4 text-lg">
+              {props.body}
+            </Markdown>
+          )}
           {props.button && <Button {...props.button} />}
         </div>
         <div className="relative hidden w-full overflow-hidden rounded-md lg:block">
-          <Image src={props.image.src} alt={props.image.alt} layout="fill" objectFit="cover" />
+          {props.image && <Image src={props.image.src} alt={props.image.alt} layout="fill" objectFit="cover" />}
         </div>
       </div>
     </div>
