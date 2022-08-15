@@ -16,12 +16,19 @@ async function getEntries(content_type, queryParams) {
 
 export async function getPagePaths() {
   const { items } = await getEntries(PAGE_CONTENT_TYPE_ID);
-  return items.map((page) => page.fields.slug);
+  return items.map((page) => {
+    const slug = page.fields.slug;
+    return slug.startsWith('/') ? slug : `/${slug}`;
+  });
 }
 
 export async function getPageFromSlug(slug) {
   const { items } = await getEntries(PAGE_CONTENT_TYPE_ID, { 'fields.slug': slug });
-  const page = (items ?? [])[0];
+  let page = (items ?? [])[0];
+  if (!page && slug !== '/' && slug.startsWith('/')) {
+    const { items } = await getEntries(PAGE_CONTENT_TYPE_ID, { 'fields.slug': slug.slice(1) });
+    page = (items ?? [])[0];
+  }
   if (!page) throw new Error(`Page not found for slug: ${slug}`);
   return mapEntry(page);
 }
