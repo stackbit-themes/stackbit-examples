@@ -1,76 +1,48 @@
-import fs from 'fs';
-import path from 'path';
-import yaml from 'js-yaml';
-import glob from 'glob';
-import frontmatter from 'front-matter';
+import frontmatter from "front-matter";
 
-export const sbConfig = yaml.load(fs.readFileSync('./stackbit.yaml', 'utf8'));
-if (!sbConfig.pagesDir || !sbConfig.dataDir)
-  throw new Error('Invalid Stackbit config file');
+const sbConfig = {
+  pagesDir: "content/pages",
+  dataDir: "content/data",
+};
 
-export const siteConfigFile = sbConfig.dataDir + '/config.json';
+/*
+Loading local content from files: while in dev you could simply read files, for production you should:
+(a) include needed files as server-side assets (see nitro.config.ts)
+(b) read the file content via useStorage().getItem()
+See: https://nitro.unjs.io/guide/introduction/assets
+*/
 
-const supportedFileTypes = ['md', 'json'];
+async function readContent(itemName) {
+  const storageKey = `assets/${itemName}`;
+  const rawContent = await useStorage().getItem(storageKey);
+  console.log(itemName, rawContent);
 
-function contentFilesInPath(dir) {
-  const globPattern = `${dir}/**/*.{${supportedFileTypes.join(',')}}`;
-  return glob.sync(globPattern);
-}
-
-function readContent(file) {
-  const rawContent = fs.readFileSync(file, 'utf8');
   let content = null;
-  switch (path.extname(file).substring(1)) {
-    case 'md':
+  const extension = itemName.split(".").pop();
+  switch (extension) {
+    case "md":
       const parsedMd = frontmatter(rawContent);
       content = {
         ...parsedMd.attributes,
         body: parsedMd.body,
       };
       break;
-    case 'json':
+    case "json":
       content = JSON.parse(rawContent);
       break;
     default:
-      throw Error(`Unhandled file type: ${file}`);
+      throw Error(`Unhandled item type: ${itemName}`);
   }
 
-  content.__id = file;
-  content.__url = fileToUrl(file);
+  content.__id = itemName;
   return content;
 }
 
-function fileToUrl(file) {
-  if (!file.startsWith(sbConfig.pagesDir)) return null;
+export async function urlToContent(url) {
+  let itemName = sbConfig.pagesDir + url;
+  if (itemName.endsWith("/")) itemName += "index";
+  itemName += ".md";
 
-  let url = file.slice(sbConfig.pagesDir.length);
-  url = url.split('.')[0];
-  if (url.endsWith('/index')) {
-    url = url.slice(0, -6) || '/';
-  }
-  return url;
-}
-
-function urlToFilePairs() {
-  const pageFiles = contentFilesInPath(sbConfig.pagesDir);
-  return pageFiles.map((file) => [fileToUrl(file), file]);
-}
-
-export function urlToContent(url) {
-  const urlToFile = Object.fromEntries(urlToFilePairs());
-  const file = urlToFile[url];
-  return readContent(file);
-}
-
-export function pagesByType(contentType) {
-  let result = {};
-  for (const [url, file] of urlToFilePairs()) {
-    const content = readContent(file);
-    if (content.type === contentType) result[url] = content;
-  }
-  return result;
-}
-
-export function siteConfig() {
-  return readContent(siteConfigFile);
+  const content = await readContent(itemName);
+  return content;
 }
