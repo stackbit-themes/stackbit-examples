@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0-rc.9"
+  },
+  "dependencies": {
+    "front-matter": "^4.0.2",
+    "glob": "^8.0.3",
+    "js-yaml": "^4.1.0",
+    "tiny-emitter": "^2.1.0"
+  }
+}
