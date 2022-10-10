@@ -47,11 +47,10 @@ Showcase implementation & integration patterns in practice.
 
 Examples used as starting points for tutorials and other guides in our documentation.
 
-| Example                                                                                                              | Description                                                                                                          |
-| :------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |
-| 💥 [Next.js + Files](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-files)           | The starting point for following the file-based (Git CMS) getting started tutorial. (Coming Soon)                    |
-| 💥 [Next.js + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-contentful) | Use Contentful as the content source with the getting started tutorial. (Coming Soon)                                |
-| ⚠️ [`tutorial-contentful`](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-contentful)       | Starting point for a demonstration on how to add Stackbit to a Next.js + Contentful site. (Will soon be deprecated.) |
+| Example                                                                                                           | Description                                                                         |
+| :---------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+| [Next.js + Files](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-files)           | The starting point for following the file-based (Git CMS) getting started tutorial. |
+| [Next.js + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-contentful) | Use Contentful as the content source with the getting started tutorial.             |
 
 ## Components
 
