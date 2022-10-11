@@ -1,14 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-import yaml from 'js-yaml';
 import glob from 'glob';
 import frontmatter from 'front-matter';
+import sbConfig from '../stackbit.config';
 
-export const sbConfig = yaml.load(fs.readFileSync('./stackbit.yaml', 'utf8'));
-if (!sbConfig.pagesDir || !sbConfig.dataDir)
-  throw new Error('Invalid Stackbit config file');
-
-export const siteConfigFile = sbConfig.dataDir + '/config.json';
+const { dataDir, pagesDir } = sbConfig;
+export const siteConfigFile = dataDir + '/config.json';
 
 const supportedFileTypes = ['md', 'json'];
 
@@ -22,7 +19,7 @@ function readContent(file) {
   let content = null;
   switch (path.extname(file).substring(1)) {
     case 'md':
-      const parsedMd = frontmatter(rawContent);
+      const parsedMd = frontmatter(rawContent) as any;
       content = {
         ...parsedMd.attributes,
         body: parsedMd.body,
@@ -41,9 +38,9 @@ function readContent(file) {
 }
 
 function fileToUrl(file) {
-  if (!file.startsWith(sbConfig.pagesDir)) return null;
+  if (!file.startsWith(pagesDir)) return null;
 
-  let url = file.slice(sbConfig.pagesDir.length);
+  let url = file.slice(pagesDir.length);
   url = url.split('.')[0];
   if (url.endsWith('/index')) {
     url = url.slice(0, -6) || '/';
@@ -52,7 +49,7 @@ function fileToUrl(file) {
 }
 
 function urlToFilePairs() {
-  const pageFiles = contentFilesInPath(sbConfig.pagesDir);
+  const pageFiles = contentFilesInPath(pagesDir);
   return pageFiles.map((file) => [fileToUrl(file), file]);
 }
 

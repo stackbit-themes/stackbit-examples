@@ -37,8 +37,5 @@ export function getStaticProps({ params }) {
 
 export function getStaticPaths() {
   const pages = pagesByType('Page');
-  return {
-    paths: Object.keys(pages),
-    fallback: false,
-  };
+  return { paths: Object.keys(pages), fallback: false };
 }
