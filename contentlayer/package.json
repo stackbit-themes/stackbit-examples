@@ -11,14 +11,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "contentlayer": "^0.2.8",
     "front-matter": "^4.0.2",
     "glob": "^8.0.3",
     "markdown-to-jsx": "^7.1.7",
     "next": "^12.1.0",
+    "next-contentlayer": "^0.2.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@contentlayer/experimental-source-files-stackbit": "^0.2.8",
     "@stackbit/sdk": "^0.3.1",
     "@types/node": "^18.8.3",
     "@types/react": "^18.0.21",
