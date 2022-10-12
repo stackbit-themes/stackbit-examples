@@ -11,6 +11,7 @@
     "setup": "node ./contentful/import.js"
   },
   "dependencies": {
+    "@stackbit/cms-contentful": "^0.0.29",
     "markdown-to-jsx": "^7.1.7",
     "next": "12.2.3",
     "react": "18.2.0",
