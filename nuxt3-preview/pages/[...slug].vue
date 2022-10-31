@@ -6,7 +6,7 @@
     Error: {{ error }}
   </main>
   <main v-else :data-sb-object-id="page.__id">
-    <h1 data-sb-field-path="title">{{ page.title }}</h1>
+    <h1 data-sb-field-path="title">{{ page.title }}!!!!</h1>
   </main>
 </template>
 

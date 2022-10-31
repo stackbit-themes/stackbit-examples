@@ -1,0 +1,4 @@
+---
+type: Page
+title: CoursePageTestBadge
+---
