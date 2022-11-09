@@ -9,6 +9,7 @@ const stackbitConfig: Stackbit.RawConfig = {
   dataDir: 'content/data',
   pagesDir: 'content/pages',
   models,
+  customContentReload: true,
 };
 
 export default stackbitConfig;

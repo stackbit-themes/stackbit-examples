@@ -1,19 +1,29 @@
-// NOTE the APIs in this file are an early draft and should evolve based on feedback
 import { makeSource } from 'contentlayer/source-files';
 import { stackbitConfigToDocumentTypes } from '@contentlayer/experimental-source-files-stackbit';
 import stackbitConfig from './stackbit.config.js';
 
-// import type * as Stackbit from '@stackbit/sdk';
-
-const documentTypes = stackbitConfigToDocumentTypes(stackbitConfig as any, {
+const documentTypes = stackbitConfigToDocumentTypes(stackbitConfig, {
   documentTypes: {
     SiteConfig: {
-      filePathPattern: 'data/config.yaml',
+      computedFields: {
+        stackbitObjectId: {
+          type: 'string',
+          resolve: (doc) => `content/${doc._raw.sourceFilePath}`,
+        },
+      },
     },
-    // Page: {
-    //   filePathPattern: 'pages/**/*.md',
-    //   computedFields: {},
-    // },
+    Page: {
+      computedFields: {
+        url: {
+          type: 'string',
+          resolve: (doc) => doc._raw.flattenedPath.replace(/^pages\/?/, '/'),
+        },
+        stackbitObjectId: {
+          type: 'string',
+          resolve: (doc) => `content/${doc._raw.sourceFilePath}`,
+        },
+      },
+    },
   },
 });
 

@@ -1,9 +1,9 @@
 import * as React from 'react';
-import Markdown from 'markdown-to-jsx';
+import * as types from 'contentlayer/generated';
 
 import { Button } from './Button';
 
-export const HeroSection = (props) => {
+export const HeroSection: React.FC<types.HeroSection> = (props) => {
   return (
     <div
       className="hero outer"
@@ -16,12 +16,11 @@ export const HeroSection = (props) => {
           </h1>
         )}
         {props.subheading && (
-          <Markdown
+          <div
+            dangerouslySetInnerHTML={{ __html: props.subheading.html }}
             className="hero-subheading"
             data-sb-field-path=".subheading"
-          >
-            {props.subheading}
-          </Markdown>
+          />
         )}
         {props.buttons?.length > 0 && (
           <div className="hero-buttons" data-sb-field-path=".buttons">

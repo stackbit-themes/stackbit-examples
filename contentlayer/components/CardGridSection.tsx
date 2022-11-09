@@ -1,9 +1,9 @@
 import * as React from 'react';
-import Markdown from 'markdown-to-jsx';
+import * as types from 'contentlayer/generated';
 
 import { Card } from './Card';
 
-export const CardGridSection = (props) => {
+export const CardGridSection: React.FC<types.CardGridSection> = (props) => {
   return (
     <div
       className="card-grid outer"
@@ -16,12 +16,11 @@ export const CardGridSection = (props) => {
           </h2>
         )}
         {props.subheading && (
-          <Markdown
+          <div
+            dangerouslySetInnerHTML={{ __html: props.subheading.html }}
             className="card-grid-subheading"
             data-sb-field-path=".subheading"
-          >
-            {props.subheading}
-          </Markdown>
+          />
         )}
         {props.cards?.length > 0 && (
           <div className="card-grid-cards" data-sb-field-path=".cards">

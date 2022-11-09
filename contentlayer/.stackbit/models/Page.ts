@@ -14,7 +14,7 @@ export const Page: Stackbit.YamlPageModel = {
     {
       type: 'list',
       name: 'sections',
-      items: { type: 'model', groups: ['SectionComponents'] },
+      items: { type: 'model', groups: ['SectionComponents'], models: [] },
     },
   ],
 };
