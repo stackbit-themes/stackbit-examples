@@ -19,7 +19,7 @@ sections:
     subheading: |
       Or jump right to a specific topic to help you build your site.
     cards:
-      - heading: How Stackbit Works 13 →
+      - heading: How Stackbit Works →
         subheading: |
           Follow an end-to-end guide to learn the inner-workings of Stackbit.
         url: 'https://docs.stackbit.com/conceptual-guides/how-stackbit-works/'
