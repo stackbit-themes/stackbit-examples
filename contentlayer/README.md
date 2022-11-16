@@ -1,61 +1,33 @@
-# Minimal Next.js Stackbit Starter
+# Stackbit + Contentlayer Example Project
 
-<div style="text-align: center">
+This project takes [our minimal JavaScript starter](https://github.com/stackbit-themes/nextjs-starter), and presents the following adjustments:
 
-![Full Stackbit Starter](https://assets.stackbit.com/docs/nextjs-starter-thumb.png)
+- Adds Contentlayer configuration on top of Stackbit config
+- Uses Contentlayer to import content into pages
+- Converts project to TypeScript and uses Contentlayer's generated types to add type safety to pages and components
+- Automatically loads Stackbit's development environment when running the Next.js development server
 
-</div>
+## Setup
 
-This is a minimal starting point for new Stackbit projects. It is built with Next.js and equipped with visual editing capabilities using Stackbit. It uses markdown files as the content source. See below for [other Stackbit example projects](#other-stackbit-projects).
-
-**⚡ Demo:** [stackbit-nextjs-starter.netlify.app](https://stackbit-nextjs-starter.netlify.app/)
-
-## Getting Started
-
-The typical development process is to begin by working locally.
-
-Create local Stackbit project from this repo:
+Use the `create-stackbit-app` command to create a new project:
 
 ```txt
-npx create-stackbit-app@latest --starter nextjs
+npx create-stackbit-app@latest --example contentlayer contentlayer-stackbit-example
 ```
 
-Run the Next.js development server:
+This will create a new instance of this project in a `contentlayer-stackbit-example` directory, and will install dependencies along the way.
+
+Change into the directory and run the development server.
 
 ```txt
-cd my-stackbit-site
+cd contentlayer-stackbit-example
 npm run dev
 ```
 
-Install the Stackbit CLI. Then open a new terminal window in the same project directory and run the Stackbit Dev server:
+This outputs your own Stackbit URL. Open this, register or sign in, and you will be directed to Stackbit's visual editor for your new project. [Learn more about local development with Stackbit](https://docs.stackbit.com/how-to-guides/local-development/).
 
-```txt
-npm install -g @stackbit/cli
-stackbit dev
-```
+Note that you can also visit localhost:3000 in your browser to see the Next.js project running without Stackbit.
 
-This outputs your own Stackbit URL. Open this, register or sign in, and you will be directed to Stackbit's visual editor for your new project.
+## Support & Feedback
 
-![Next.js Dev + Stackbit Dev](https://assets.stackbit.com/docs/next-dev-stackbit-dev.png)
-
-## Next Steps
-
-Here are a few suggestions on what to do next if you're new to Stackbit:
-
-- Learn [how Stackbit works](https://docs.stackbit.com/conceptual-guides/how-stackbit-works/)
-- Follow the [_Getting Started_ tutorial](https://docs.stackbit.com/getting-started/)
-- Explore the [how-to guides](https://docs.stackbit.com/how-to-guides/) for help while developing your site
-
-## Other Stackbit Projects
-
-Stackbit has a number of examples that you can use to create a new project or evaluate Stackbit. Run the following command to see a list of available examples:
-
-```txt
-npx create-stackbit-app@latest --help
-```
-
-You can also visit [our `stackbit-themes` GitHub organization](https://github.com/stackbit-themes)
-
-## Join the Community
-
-[Join us on Discord](https://discord.gg/HUNhjVkznH) for community support and to showcase what you build with this starter.
+[Join us on Discord](https://discord.gg/HUNhjVkznH) for community support and to provide feedback to us.
