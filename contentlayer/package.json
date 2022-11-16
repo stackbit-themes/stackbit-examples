@@ -1,0 +1,30 @@
+{
+  "name": "stackbit-contentlayer-example",
+  "version": "0.1.0",
+  "repository": "https://github.com/stackbit-themes/stackbit-examples/tree/main/contentlayer",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "contentlayer": "^0.2.10-dev.1",
+    "next": "^13.0.2",
+    "next-contentlayer": "^0.2.10-dev.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@contentlayer/experimental-source-files-stackbit": "^0.2.10-dev.1",
+    "@stackbit/sdk": "^0.3.3",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "eslint": "^8.27.0",
+    "eslint-config-next": "^13.0.2",
+    "experimental-next-stackbit": "^0.0.2",
+    "typescript": "^4.8.4"
+  }
+}

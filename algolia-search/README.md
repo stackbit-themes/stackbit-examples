@@ -6,7 +6,7 @@
 
 **Live demo:** [search-example.stackbit.app](https://search-example.stackbit.app/).
 
-<img width="1423" alt="image" src="https://user-images.githubusercontent.com/2673881/158059043-32ff7359-f008-4ed4-80be-db5691ac7a11.png">
+<img width="1423" alt="image" src="https://user-images.githubusercontent.com/2673881/158059043-32ff7359-f008-4ed4-80be-db5691ac7a11.png" />
 
 Details of all themes in [jamstackthemes.dev](https://jamstackthemes.dev) are copied into this repository (under `/content`).<br/>
 Individual themes can be then added & edited within the Stackbit UI, and are indexed to Algolia to power a fast search.
