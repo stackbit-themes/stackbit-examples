@@ -840,7 +840,7 @@
         "id": "4pQBscyvi608EAd3KNoxt9",
         "type": "Entry",
         "createdAt": "2022-08-03T17:17:41.428Z",
-        "updatedAt": "2022-08-03T17:20:14.643Z",
+        "updatedAt": "2022-11-29T16:28:28.478Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -848,8 +848,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2022-08-03T17:20:14.643Z",
+        "publishedVersion": 7,
+        "publishedAt": "2022-11-29T16:28:28.478Z",
         "firstPublishedAt": "2022-08-03T17:20:14.643Z",
         "createdBy": {
           "sys": {
@@ -865,8 +865,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -925,7 +925,7 @@
         "id": "1waD7wlBFDmDTKcI18NXO0",
         "type": "Entry",
         "createdAt": "2022-08-03T17:17:52.042Z",
-        "updatedAt": "2022-08-03T17:19:04.707Z",
+        "updatedAt": "2022-11-29T16:32:07.239Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -933,8 +933,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2022-08-03T17:19:04.707Z",
+        "publishedVersion": 23,
+        "publishedAt": "2022-11-29T16:32:07.239Z",
         "firstPublishedAt": "2022-08-03T17:19:04.707Z",
         "createdBy": {
           "sys": {
@@ -950,8 +950,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 5,
+        "version": 24,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -969,10 +969,10 @@
       },
       "fields": {
         "heading": {
-          "en-US": "Can you make the perfect sandwich?"
+          "en-US": "This is your main value proposition"
         },
         "body": {
-          "en-US": "HandSandwich™️ is Central Southwestern Ohio's most highly attended sandwich-making class. Don't delay your ability to craft the perfect sandwich."
+          "en-US": "And a super compelling supporting paragraph (fetched from Contentful) that makes the user immediately want to click the button below."
         },
         "image": {
           "en-US": {
@@ -993,7 +993,7 @@
           }
         },
         "theme": {
-          "en-US": "imgLeft"
+          "en-US": "imgRight"
         }
       }
     },
@@ -1013,7 +1013,7 @@
         "id": "36U7omnF7aFEHjVKwEhJI7",
         "type": "Entry",
         "createdAt": "2022-08-03T17:18:18.054Z",
-        "updatedAt": "2022-08-03T17:18:27.983Z",
+        "updatedAt": "2022-11-29T16:32:02.633Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1021,8 +1021,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 2,
-        "publishedAt": "2022-08-03T17:18:27.983Z",
+        "publishedVersion": 7,
+        "publishedAt": "2022-11-29T16:32:02.633Z",
         "firstPublishedAt": "2022-08-03T17:18:27.983Z",
         "createdBy": {
           "sys": {
@@ -1038,8 +1038,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 3,
+        "publishedCounter": 3,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1057,13 +1057,13 @@
       },
       "fields": {
         "label": {
-          "en-US": "Book Now"
+          "en-US": "Get Started"
         },
         "url": {
           "en-US": "/"
         },
         "theme": {
-          "en-US": "default"
+          "en-US": "outline"
         }
       }
     },
@@ -1083,7 +1083,7 @@
         "id": "55B39LpWGFDQvt4kYYif6g",
         "type": "Entry",
         "createdAt": "2022-08-03T17:19:08.815Z",
-        "updatedAt": "2022-08-03T17:20:12.061Z",
+        "updatedAt": "2022-11-29T16:29:55.688Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1091,8 +1091,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2022-08-03T17:20:12.061Z",
+        "publishedVersion": 8,
+        "publishedAt": "2022-11-29T16:29:55.688Z",
         "firstPublishedAt": "2022-08-03T17:20:12.061Z",
         "createdBy": {
           "sys": {
@@ -1108,8 +1108,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 2,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1178,7 +1178,7 @@
         "id": "4kqY1iB0OrQxrIfptA3THs",
         "type": "Entry",
         "createdAt": "2022-08-03T17:19:26.303Z",
-        "updatedAt": "2022-08-03T17:19:36.858Z",
+        "updatedAt": "2022-11-29T16:29:01.909Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1186,8 +1186,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 2,
-        "publishedAt": "2022-08-03T17:19:36.858Z",
+        "publishedVersion": 4,
+        "publishedAt": "2022-11-29T16:29:01.909Z",
         "firstPublishedAt": "2022-08-03T17:19:36.858Z",
         "createdBy": {
           "sys": {
@@ -1203,8 +1203,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 3,
+        "publishedCounter": 2,
+        "version": 5,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1222,7 +1222,7 @@
       },
       "fields": {
         "label": {
-          "en-US": "Graduation rate"
+          "en-US": "Conversion rate"
         },
         "value": {
           "en-US": "100%"
@@ -1245,7 +1245,7 @@
         "id": "3LwBRMadcjbZOr9AHo2KYM",
         "type": "Entry",
         "createdAt": "2022-08-03T17:19:42.298Z",
-        "updatedAt": "2022-08-03T17:19:52.198Z",
+        "updatedAt": "2022-11-29T16:28:51.948Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1253,8 +1253,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 2,
-        "publishedAt": "2022-08-03T17:19:52.198Z",
+        "publishedVersion": 4,
+        "publishedAt": "2022-11-29T16:28:51.948Z",
         "firstPublishedAt": "2022-08-03T17:19:52.198Z",
         "createdBy": {
           "sys": {
@@ -1270,8 +1270,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 3,
+        "publishedCounter": 2,
+        "version": 5,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1289,7 +1289,7 @@
       },
       "fields": {
         "label": {
-          "en-US": "Five-star reviews on Yelp"
+          "en-US": "Five-star reviews"
         },
         "value": {
           "en-US": "4M"
@@ -1312,7 +1312,7 @@
         "id": "tnUnQwb0YfqbfdVAtCGSE",
         "type": "Entry",
         "createdAt": "2022-08-03T17:19:57.796Z",
-        "updatedAt": "2022-08-03T17:20:06.072Z",
+        "updatedAt": "2022-11-29T16:28:43.664Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1320,8 +1320,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 2,
-        "publishedAt": "2022-08-03T17:20:06.072Z",
+        "publishedVersion": 5,
+        "publishedAt": "2022-11-29T16:28:43.664Z",
         "firstPublishedAt": "2022-08-03T17:20:06.072Z",
         "createdBy": {
           "sys": {
@@ -1337,8 +1337,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 3,
+        "publishedCounter": 2,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1356,10 +1356,10 @@
       },
       "fields": {
         "label": {
-          "en-US": "Prefer Ohio-made sandwiches"
+          "en-US": "Prefer our product"
         },
         "value": {
-          "en-US": "98%"
+          "en-US": "5 of 5"
         }
       }
     }
@@ -1381,7 +1381,7 @@
         "id": "o1G1j1B3fpZyVGa33M1zJ",
         "type": "Asset",
         "createdAt": "2022-08-03T17:18:36.383Z",
-        "updatedAt": "2022-08-03T17:19:00.516Z",
+        "updatedAt": "2022-11-29T16:27:48.978Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1389,8 +1389,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2022-08-03T17:19:00.516Z",
+        "publishedVersion": 8,
+        "publishedAt": "2022-11-29T16:27:48.978Z",
         "firstPublishedAt": "2022-08-03T17:19:00.516Z",
         "createdBy": {
           "sys": {
@@ -1406,8 +1406,8 @@
             "id": "7zhoOzOJYq0RqY5mshy4HK"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1425,16 +1425,16 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/6pj5epr6vowr/o1G1j1B3fpZyVGa33M1zJ/48c90e36085e571f1ddd819b55871cb8/fpo-sandwich.jpg",
+            "url": "//images.ctfassets.net/6pj5epr6vowr/o1G1j1B3fpZyVGa33M1zJ/8e316d18e25ab4cb540d396875444916/fpo-shapes.png",
             "details": {
-              "size": 2148104,
+              "size": 33924,
               "image": {
-                "width": 5000,
-                "height": 4000
+                "width": 800,
+                "height": 791
               }
             },
-            "fileName": "fpo-sandwich.jpg",
-            "contentType": "image/jpeg"
+            "fileName": "fpo-shapes.png",
+            "contentType": "image/png"
           }
         }
       }
