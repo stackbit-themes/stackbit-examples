@@ -2,26 +2,26 @@
 title: Home Page
 sections:
   - type: hero
-    heading: Can you make the perfect sandwich?
+    heading: This is your main value proposition
     body: >
-      HandSandwich™️ is Central Southwestern Ohio's most highly attended sandwich-making class. Don't delay your ability to craft the perfect sandwich.
+      And a super compelling supporting paragraph that makes the user immediately want to click the button below.
     button:
-      label: Book Now
+      label: Get Started
       url: /
-      theme: default
+      theme: outline
     image:
-      src: /images/fpo-sandwich.jpg
-      alt: Hero Sandwich
-    theme: imgLeft
+      src: /images/fpo-shapes.png
+      alt: Stackbit Shapes
+    theme: imgRight
   - type: stats
     heading: Don't take our word for it
-    body: Because we definitely didn't make up these numbers.
+    body: Look at these amazing numbers!
     stats:
-      - label: Graduation rate
+      - label: Conversion rate
         value: 100%
-      - label: Five-star reviews on Yelp
+      - label: Five-star reviews
         value: 4M
-      - label: Prefer Ohio-made sandwiches
-        value: 98%
+      - label: Prefer our product
+        value: 5 of 5
     theme: dark
 ---
