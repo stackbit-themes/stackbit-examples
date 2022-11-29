@@ -1,6 +1,6 @@
 # Stackbit Tutorial [Next.js + Contentful]
 
-![Tutorial Screenshot](https://assets.stackbit.com/docs/tutorial-shared-thumb.png)
+![Tutorial Screenshot](https://assets.stackbit.com/docs/tutorial-shared-thumb-v2.png)
 
 **ℹ️ This project is used as a starting point for [our getting started tutorial](https://docs.stackbit.com/getting-started) using Contentful as the content source. If you would like to create a new project with Contentful as the content source, please use [the Contentful starter](https://github.com/stackbit-themes/contentful-starter).**
 

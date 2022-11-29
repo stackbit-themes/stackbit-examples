@@ -1,6 +1,6 @@
 # Stackbit Tutorial [Next.js + Files]
 
-![Tutorial Screenshot](https://assets.stackbit.com/docs/tutorial-shared-thumb.png)
+![Tutorial Screenshot](https://assets.stackbit.com/docs/tutorial-shared-thumb-v2.png)
 
 **ℹ️ This project is used as a starting point for [our getting started tutorial](https://docs.stackbit.com/getting-started) using files (Git CMS) as the content source. If you would like to create a new file-based project, please use [the minimal Next.js starter](https://github.com/stackbit-themes/nextjs-starter).**
 
