@@ -56,7 +56,7 @@ The following diagram provides an overview of how this site works with Stackbit:
 
 ## Running Locally
 
-1. Clone this repo and install dependencies (e.g., `npm install`).
+1. Clone this repo and install dependencies (e.g., `npx create-stackbit-app@latest --example airtable`).
 2. Navigate to this Airtable link: https://airtable.com/shrJ396P8lPSm74ha and click "Copy base" on the top of the page (you will need to create an Airtable account).
 3. Write down the "Base ID" of your new Airtable Base. The Base ID is the first part between the slashes that comes after the airtable.com and starts with the letters `app`:
    ![Airtable Base ID](./docs/airtable-id.png)
