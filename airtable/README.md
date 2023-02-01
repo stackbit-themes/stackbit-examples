@@ -15,7 +15,7 @@ A [Linked Record Field](https://support.airtable.com/docs/linked-record-field) t
 
 The following diagram provides an overview of the content model in Airtable:
 
-![Airtable Content Model](./readme-images/airtable-content-model-example.png)
+![Airtable Content Model](./docs/airtable-content-model-example.png)
 
 The Airtable's [Long-text with Markdown](https://support.airtable.com/docs/markdown-rich-text-output-in-the-api) field is parsed using [`remark`](https://github.com/remarkjs/remark) and converted into HTML string using [`remark-html`](https://github.com/remarkjs/remark-html).
 
@@ -27,7 +27,7 @@ For example, assume you have updated a blog post that you aren't ready to publis
 
 To introduce content publishing capabilities to Airtable and allow Stackbit to leverage them, the **Posts** and the **Authors** tables have been extended with two additional fields - `State` and `Related`. The State field is a [Single select field](https://support.airtable.com/docs/single-select-field) that can have one of the six following states:
 
-![Airtable State Field](./readme-images/airtable-state-field.png)
+![Airtable State Field](./docs/airtable-state-field.png)
 
 - `draft` - a record that has never been published. A "production" site will never show records in this state, but a site running in the "preview" mode will show these records.
 - `published` - a record that has been published and has no pending changes. Sites running in both the "production" and the "preview" environments will show `published` records. Records must not be mutated in this state as they represent "production" data.
@@ -38,7 +38,7 @@ To introduce content publishing capabilities to Airtable and allow Stackbit to l
 
 The following diagram shows the state machine with these states and transitions between them:
 
-![Airtable Content States](./readme-images/airtable-content-states.png)
+![Airtable Content States](./docs/airtable-content-states.png)
 
 Of course, as an editor using Stackbit, you don't need to think about all the content states and don't need to edit Airtable records directly. The [`AirtableContentSource`](./airtable-content-source/airtable-content-source.ts) and the [`AirtableClient`](./lib/airtable-client.ts) provide a programmatic interface for Stackbit to manage all that for you while you can enjoy a delightful editing experience in Stackbit.
 
@@ -52,16 +52,16 @@ The [`stackbit.config.ts`](./stackbit.config.ts) file allows Stackbit to edit an
 
 The following diagram provides an overview of how this site works with Stackbit:
 
-![Airtable Content Source](./readme-images/stackbit-airtable.png)
+![Airtable Content Source](./docs/stackbit-airtable.png)
 
 ## Running Locally
 
 1. Clone this repo and install dependencies (e.g., `npm install`).
 2. Navigate to this Airtable link: https://airtable.com/shrJ396P8lPSm74ha and click "Copy base" on the top of the page (you will need to create an Airtable account).
 3. Write down the "Base ID" of your new Airtable Base. The Base ID is the first part between the slashes that comes after the airtable.com and starts with the letters `app`:
-   ![Airtable Base ID](./readme-images/airtable-id.png)
+   ![Airtable Base ID](./docs/airtable-id.png)
 4. Navigate to your Airtable account page (https://airtable.com/account) and click "Create token" to generate a Personal Access Token. Select all the "Scopes" and select the newly created base in the "Access" section:
-   ![Airtable Personal Access Token](./readme-images/airtable-personal-access-token-creation.png)
+   ![Airtable Personal Access Token](./docs/airtable-personal-access-token-creation.png)
 5. Create a `.env` file with the following environment variables in your cloned repository and paste your Airtable Base ID and Personal Access Token (for security concerns the `.env` file is included in .gitignore and is not committed to git):
 
    ```
@@ -87,7 +87,7 @@ After you have run your blog post locally and ensured that everything works as e
 2. Navigate to https://app.stackbit.com/import, select "Use my repository", and click "Next".
 3. Connect GitHub if needed, find and select your repository, and click "Next".
 4. In the "Configure" step, choose the project name, add the same environment variables you defined in your local `.env` file and click "Create Project".
-   ![Stackbit Import Config](./readme-images/stackbit-import-config.png)
+   ![Stackbit Import Config](./docs/stackbit-import-config.png)
 
 # Notes
 
