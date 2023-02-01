@@ -16,6 +16,14 @@ Starters are basic Stackbit projects that bring some specific combination of _th
 | [`ts-mui-nextjs-starter`](https://github.com/stackbit-themes/ts-mui-nextjs-starter) | TypeScript + MUI components.                                |
 | [`contentful-starter`](https://github.com/stackbit-themes/contentful-starter)       | Minimal Next.js site with Contentful as the content source. |
 
+## Custom Content Sources
+
+Stackbit's [Content Source Interface](https://docs.stackbit.com/features/content-source-interface) enables you to bring content sources that are not officially supported by Stackbit. These examples show how to do that.
+
+| Example                                                                                 | Description                                                          |
+| :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------- |
+| [`airtable-content-source`](https://github.com/stackbit-themes/airtable-content-source) | Use Airtable as a content source, built on the Next.js blog example. |
+
 ## Full Websites Demos
 
 Bigger, more opinionated sites that are production-ready and built to scale. These are good options for non-technical content editors to get an immediate feel for Stackbit.
