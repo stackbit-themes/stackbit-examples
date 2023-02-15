@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply leading-relaxed;
+    }
+
+    h1 {
+        @apply text-4xl
+            font-bold;
+    }
+
+    h2 {
+        @apply text-2xl
+            font-bold;
+    }
+
+    h3 {
+        @apply text-xl
+            font-bold;
+    }
+
+    h4 {
+        @apply text-lg
+            font-bold;
+    }
+
+    h5 {
+        @apply text-[1.0625rem]
+            font-semibold;
+    }
+
+    h6 {
+        @apply text-sm
+            font-semibold
+            uppercase;
+    }
+
+    code {
+        @apply border
+            inline-block
+            leading-none
+            px-2
+            py-[.125rem]
+            rounded-sm
+            text-sm
+            bg-slate-100
+            border-slate-200
+            dark:bg-slate-600
+            dark:text-slate-100
+            dark:border-slate-500;
+    }
+
+    pre > code {
+        @apply bg-transparent
+            dark:bg-transparent
+            border-none
+            p-0;
+    }
+
+    svg {
+        @apply w-full;
+    }
+
+    svg path {
+        fill: currentColor;
+    }
+}
+
+@layer components {
+    .section {
+        @apply last:mb-0
+            mb-5;
+    }
+
+    .section a {
+        @apply relative
+            text-indigo-600
+            dark:text-indigo-300;
+    }
+
+    .section a:hover:before {
+        @apply h-[.35rem];
+    }
+
+    .section a:before {
+        @apply absolute
+            bg-indigo-100
+            bottom-[-.125rem]
+            duration-300
+            h-[.125rem]
+            transition-all
+            w-full
+            z-[-1];
+
+        content: '';
+    }
+}
