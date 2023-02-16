@@ -20,18 +20,40 @@ type GallerySectionProps = Content;
 
 const GallerySection: React.FC<GallerySectionProps> = (props) => {
   const { title, cards } = props as GallerySection;
+  const [shouldOptimize, setShouldOptimize] = React.useState(true);
+  const [shouldSetWidths, setShouldSetWidths] = React.useState(true);
+
   return (
-    <div className="py-10" {...pickDataAttrs(props)}>
-      {title && (
-        <div
-          className="prose text-center flex justify-center w-full max-w-none pb-8"
-          data-sb-field-path=".title"
-        >
-          <h2>{title}</h2>
+    <div className="py-8" {...pickDataAttrs(props)}>
+      <div className="prose flex justify-center max-w-none pb-8">
+        <div className="flex flex-col gap-1">
+          {title && (
+            <h2 className="m-0 mb-1" data-sb-field-path=".title">
+              {title}
+            </h2>
+          )}
+          <div className="flex gap-4 justify-center">
+            <CheckboxControl
+              label="Optimize"
+              checked={shouldOptimize}
+              setChecked={setShouldOptimize}
+            />
+            <CheckboxControl
+              label="Multi-width"
+              disabled={!shouldOptimize}
+              checked={shouldOptimize && shouldSetWidths}
+              setChecked={setShouldSetWidths}
+            />
+          </div>
         </div>
-      )}
+      </div>
+
       {cards?.length ? (
-        <Cards cards={cards} />
+        <Cards
+          cards={cards}
+          shouldOptimize={shouldOptimize}
+          shouldSetWidths={shouldSetWidths}
+        />
       ) : (
         <h3 data-sb-field-path=".cards">Add the first image</h3>
       )}
@@ -41,7 +63,35 @@ const GallerySection: React.FC<GallerySectionProps> = (props) => {
 
 export default GallerySection;
 
-const Cards: React.FC<{ cards: ImageCard[] }> = ({ cards }) => {
+const CheckboxControl: React.FC<{
+  label: string;
+  disabled?: boolean;
+  checked: boolean;
+  setChecked: (value: boolean) => void;
+}> = ({ label, disabled = false, checked, setChecked }) => {
+  return (
+    <div className="form-control">
+      <label className="label cursor-pointer flex gap-1 pl-0">
+        <input
+          type="checkbox"
+          checked={checked}
+          disabled={disabled}
+          className="checkbox"
+          onChange={() => {
+            setChecked(!checked);
+          }}
+        />
+        <span className="label-text">{label}</span>
+      </label>
+    </div>
+  );
+};
+
+const Cards: React.FC<{
+  cards: ImageCard[];
+  shouldOptimize: boolean;
+  shouldSetWidths: boolean;
+}> = ({ cards, shouldOptimize, shouldSetWidths }) => {
   return (
     <Masonry
       breakpointCols={{
@@ -61,6 +111,8 @@ const Cards: React.FC<{ cards: ImageCard[] }> = ({ cards }) => {
             sizesHint={sizesHint}
             attribution={card.attribution}
             priority={idx < multiColumnCount * priorityRows}
+            shouldOptimize={shouldOptimize}
+            shouldSetWidths={shouldSetWidths}
             data-sb-field-path={`.${idx}`}
             key={`${idx}-${imageData?.url}`}
           />

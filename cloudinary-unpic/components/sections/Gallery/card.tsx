@@ -20,11 +20,21 @@ type ImageCardProps = {
   attribution?: string;
   sizesHint?: string;
   priority?: boolean;
+  shouldOptimize: boolean;
+  shouldSetWidths: boolean;
 };
 
 const ImageCard: React.FC<ImageCardProps> = (props) => {
   const sbDataAttributes = pickDataAttrs(props);
-  const { imageData, alt, attribution, sizesHint, priority } = props;
+  const {
+    imageData,
+    alt,
+    attribution,
+    sizesHint,
+    priority,
+    shouldOptimize = true,
+    shouldSetWidths = true,
+  } = props;
   const [loadedBytes, setLoadedBytes] = React.useState<number>();
   const imageRef = React.useRef<HTMLImageElement>(null);
 
@@ -59,17 +69,28 @@ const ImageCard: React.FC<ImageCardProps> = (props) => {
         className="card rounded-md shadow-xl relative overflow-hidden"
         {...sbDataAttributes}
       >
-        <Image
-          ref={imageRef}
-          src={imageData.url}
-          layout="fullWidth"
-          alt={alt}
-          onLoad={onImageLoaded}
-          priority={priority}
-          sizes={sizesHint}
-          breakpoints={widths}
-          aspectRatio={aspectRatio}
-        />
+        {shouldOptimize ? (
+          <Image
+            ref={imageRef}
+            src={imageData.url}
+            layout="fullWidth"
+            alt={alt}
+            onLoad={onImageLoaded}
+            priority={priority}
+            sizes={sizesHint}
+            breakpoints={shouldSetWidths ? widths : []}
+            aspectRatio={aspectRatio}
+          />
+        ) : (
+          <img
+            ref={imageRef}
+            src={imageData.url}
+            className="w-full object-cover"
+            alt={alt}
+            onLoad={onImageLoaded}
+            style={{ aspectRatio }}
+          />
+        )}
         {loadedBytes && (
           <div className="absolute top-3 left-3 text-neutral-content text-sm md:text-lg font-semibold info-text-shadow">
             {Math.ceil(loadedBytes / 1024)}kb

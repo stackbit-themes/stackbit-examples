@@ -7,13 +7,11 @@ sections:
     body: >
       A React-based masonry-grid image gallery that uses [unpic
       img](https://github.com/ascorbic/unpic-img) for image tag generation and
-      [Cloudinary](https://cloudinary.com/) as image CDN. Images are fetched in
-      the appropriate size and served in the best file format for your browser
-      (e.g.  AVIF for Chrome, WebP for Safari).
+      [Cloudinary](https://cloudinary.com/) as image CDN. Statically-generated with [Next.js](https://nextjs.org/) and *visually editable* via [Stackbit.](https://www.stackbit.com/)
+      
 
-
-      The site is statically generated with [Next.js](https://nextjs.org/) and
-      *visually editable* via [Stackbit.](https://www.stackbit.com/)
+      Images are fetched in the appropriate size and the best file format for your browser
+      (e.g. AVIF for Chrome, WebP for Safari).
 
 
       In Chrome, the size reduction is overlaid on each image. To see how the
