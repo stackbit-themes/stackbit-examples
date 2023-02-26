@@ -14,8 +14,8 @@ sections:
       (e.g. AVIF for Chrome, WebP for Safari).
 
 
-      In Chrome, the size reduction is overlaid on each image. To see how the
-      browser picks the appropriate image size, make the browser window narrow
+      In most browsers (except Safari at the time being) the size reduction is overlaid on each image. 
+      To see how the browser picks the appropriate image size, make the browser window narrow
       and load this site in a new tab. Then, gradually make the window wider.
   - type: GallerySection
     title: Responsive image gallery
