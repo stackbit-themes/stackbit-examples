@@ -71,15 +71,19 @@ In your project, duplicate `.env.example` to `.env`. Fill in the values:
 
 ```bash
 CONTENTFUL_SPACE_ID="..."
-CONTENTFUL_DELIVERY_TOKEN="..."
+CONTENTFUL_MANAGEMENT_TOKEN="..."
 CONTENTFUL_PREVIEW_TOKEN="..."
+CONTENTFUL_DELIVERY_TOKEN="..."
 ```
 
 The preview API key can be copied from the API screen you see after creating a new key.
 
 ![Copy API key values](./docs/copy-api-keys.png)
 
-Note that the `CONTENTFUL_PREVIEW_SECRET` can be any string.
+Note:
+1. The `.env` file is include in `.gitignore`. Always be careful not to commit any API keys to Git.
+1. The management token is only needed for running Stackbit in local development mode (see below). It is not used by the website code, nor is it required in production.
+1. When building for production, `CONTENTFUL_DELIVERY_TOKEN` is used to fetch content rather than `CONTENTFUL_PREVIEW_TOKEN`, so that only published content will be used.
 
 ### Run the Project
 
@@ -88,6 +92,18 @@ Now you should be able to run the Next.js development server and see your conten
     npm run dev
 
 Visit localhost:3000 and you should see the example content you imported into your new Contentful space. **Now you have everything you need to add Stackbit to your new project.** 🎉
+
+### Run Stackbit in local development mode
+
+To install the Stackbit CLI tool, run:
+
+    npm i -g @stackbit/cli@latest
+
+Keep Next.js running, open another terminal window and run:
+
+    stackbit dev
+
+Then, click on the output URL.
 
 ## Support
 

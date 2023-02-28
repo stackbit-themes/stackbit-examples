@@ -21,7 +21,7 @@ export const Hero = (props) => {
           {props.button && <Button {...props.button} />}
         </div>
         <div className="relative hidden w-full overflow-hidden rounded-md lg:block">
-          {props.image && <Image src={props.image.src} alt={props.image.alt} layout="fill" objectFit="contain" />}
+          {props.image && <Image src={props.image.src} alt={props.image.alt} fill style={{ objectFit: 'contain' }} />}
         </div>
       </div>
     </div>
