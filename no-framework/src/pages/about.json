@@ -1,11 +1,9 @@
 {
-    "title": "Home Page",
-    "type": "page",
-    "layout": "default",
+    "title": "About",
     "sections": [
         {
             "type": "heading",
-            "content": "Home Page",
+            "content": "Interior Page",
             "level": 1
         },
         {
