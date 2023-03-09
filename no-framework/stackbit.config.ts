@@ -1,50 +1,53 @@
-import { defineStackbitConfig } from '@stackbit/types';
+import { defineStackbitConfig } from "@stackbit/types";
 
 export const config = defineStackbitConfig({
-  stackbitVersion: '~0.6.0',
-  ssgName: 'nextjs',
-  cmsName: 'git',
-  nodeVersion: '16',
+  stackbitVersion: "~0.6.0",
+  ssgName: "nextjs",
+  cmsName: "git",
+  nodeVersion: "16",
   models: {
     page: {
-      type: 'page',
-      urlPath: '/{slug}',
-      filePath: '{slug}.json',
+      type: "page",
+      urlPath: "/{slug}",
+      filePath: "{slug}.json",
       hideContent: true,
       fields: [
-        { name: 'title', type: 'string', required: true },
+        { name: "title", type: "string", required: true },
         {
-          name: 'sections',
-          type: 'list',
-          items: { type: 'model', groups: ['Section'], models: [] },
+          name: "sections",
+          type: "list",
+          items: { type: "model", models: ["paragraph", "heading"] },
         },
       ],
     },
     paragraph: {
-      type: 'object',
-      groups: ['Section'],
-      labelField: 'content',
-      fields: [{ name: 'content', type: 'markdown', required: true }],
+      type: "object",
+      labelField: "content",
+      fields: [{ name: "content", type: "markdown", required: true }],
     },
     heading: {
-      type: 'object',
-      groups: ['Section'],
-      labelField: 'content',
+      type: "object",
+      labelField: "content",
       fields: [
-        { name: 'content', type: 'string', required: true },
-        { name: 'level', type: 'enum', required: true, options: [1, 2, 3, 4, 5, 6] },
+        { name: "content", type: "string", required: true },
+        {
+          name: "level",
+          type: "enum",
+          required: true,
+          options: [1, 2, 3, 4, 5, 6],
+        },
       ],
     },
   },
-  pagesDir: 'src/content/pages',
+  pagesDir: "src/content/pages",
   assets: {
-    referenceType: 'static',
-    staticDir: 'public',
-    uploadDir: 'images',
-    publicPath: '/',
+    referenceType: "static",
+    staticDir: "public",
+    uploadDir: "images",
+    publicPath: "/",
   },
-  pageLayoutKey: 'type',
-  objectTypeKey: 'type',
+  pageLayoutKey: "type",
+  objectTypeKey: "type",
 });
 
 export default config;
