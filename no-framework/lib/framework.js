@@ -5,6 +5,7 @@ import fs from "fs";
 import glob from "fast-glob";
 import liveServer from "live-server";
 import path from "path";
+import prettier from "prettier";
 
 /* ----- Constants ----- */
 
@@ -158,7 +159,7 @@ function buildPage(relSrcFilePath) {
   if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
   // Run page through EJS layout and write to file
   const html = ejs.render(layout, { page, component: renderComponent });
-  fs.writeFileSync(distFilePath, html);
+  fs.writeFileSync(distFilePath, prettier.format(html, { parser: "html" }));
 }
 
 /* ----- Watchers / Callers ----- */
