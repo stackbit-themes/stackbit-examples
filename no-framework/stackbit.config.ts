@@ -2,9 +2,8 @@ import { defineStackbitConfig } from "@stackbit/types";
 
 export const config = defineStackbitConfig({
   stackbitVersion: "~0.6.0",
-  ssgName: "nextjs",
   cmsName: "git",
-  nodeVersion: "16",
+  pagesDir: "src/content/pages",
   models: {
     page: {
       type: "page",
@@ -30,24 +29,10 @@ export const config = defineStackbitConfig({
       labelField: "content",
       fields: [
         { name: "content", type: "string", required: true },
-        {
-          name: "level",
-          type: "enum",
-          required: true,
-          options: [1, 2, 3, 4, 5, 6],
-        },
+        { name: "level", type: "enum", required: true, options: [1, 2, 3, 4, 5, 6] },
       ],
     },
   },
-  pagesDir: "src/content/pages",
-  assets: {
-    referenceType: "static",
-    staticDir: "public",
-    uploadDir: "images",
-    publicPath: "/",
-  },
-  pageLayoutKey: "type",
-  objectTypeKey: "type",
 });
 
 export default config;
