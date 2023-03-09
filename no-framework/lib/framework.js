@@ -12,14 +12,14 @@ import prettier from 'prettier';
 const IS_DEV = process.argv.includes('dev');
 const SRC_DIR = path.join(process.cwd(), 'src');
 const DIST_DIR = path.join(process.cwd(), 'dist');
-const PAGES_DIR = path.join(SRC_DIR, 'content/pages');
-const LAYOUTS_DIR = path.join(SRC_DIR, 'layouts');
+const PAGES_DIR = path.join(SRC_DIR, 'pages');
 const COMPONENTS_DIR = path.join(SRC_DIR, 'components');
+const LAYOUT_FILE = path.join(SRC_DIR, '_layout.ejs');
 
 /* ----- References ----- */
 
 // Shared across multiple functions and are populated by update functions.
-let layouts = {};
+let layout;
 let components = {};
 
 /* ----- Setup ----- */
@@ -40,30 +40,23 @@ fs.mkdirSync(DIST_DIR);
  */
 function updateSite(fileChanged, watchDir) {
     console.log(`[Source Change] ${path.relative(process.cwd(), path.join(watchDir, fileChanged))}`);
-    // If layout file or component is changed, rebuild the entire site
-    if ([LAYOUTS_DIR, COMPONENTS_DIR].includes(watchDir)) return buildSite();
+    // If template file is changed, rebuild the entire site
+    if (fileChanged.endsWith('.ejs')) return buildSite();
     // Otherwise, just rebuild the page that changed
     buildPage(fileChanged);
 }
 
 /**
- * Update `layouts` reference. Called on initial build and whenever a layout
- * file is changed.
+ * Read layout and update `layout` reference. Called on initial build and
+ * whenever a source file changes.
  */
-function updateLayoutsRef() {
-    const layoutFiles = glob.sync('**/*.ejs', { cwd: LAYOUTS_DIR });
-    layouts = Object.fromEntries(
-        layoutFiles.map((filePath) => {
-            const layoutName = path.basename(filePath, '.ejs');
-            const layout = fs.readFileSync(path.join(LAYOUTS_DIR, filePath), 'utf-8').toString();
-            return [layoutName, layout];
-        })
-    );
+function updateLayout() {
+    layout = fs.readFileSync(LAYOUT_FILE, 'utf-8').toString();
 }
 
 /**
- * Update `components` reference. Called on initial build and whenever a layout
- * file is changed.
+ * Update `components` reference. Called on initial build and whenever a
+ * components file is changed.
  */
 function updateComponentsRef() {
     const componentFiles = glob.sync('**/*.ejs', { cwd: COMPONENTS_DIR });
@@ -97,7 +90,7 @@ function renderComponent(props) {
  */
 function buildSite() {
     // Rebuild global references
-    updateLayoutsRef();
+    updateLayout();
     updateComponentsRef();
     // Get page files
     const pageFiles = glob.sync('**/*.json', { cwd: PAGES_DIR });
@@ -108,8 +101,8 @@ function buildSite() {
 }
 
 /**
- * Reads page content, runs it through the proper layout, and writes the result
- * to a file in the dist directory.
+ * Reads page content, runs it through the layout, and writes the result to a
+ * file in the dist directory.
  *
  * @param {string} relSrcFilePath - Path to page file, relative to PAGES_DIR
  */
@@ -128,15 +121,8 @@ function buildPage(relSrcFilePath) {
         if (fs.existsSync(distFilePath)) fs.rmSync(distFilePath);
         return;
     }
-    // Parse page and retrieve layout
-    const rawPageContent = fs.readFileSync(absSrcFilePath, 'utf-8').toString();
-    const page = JSON.parse(rawPageContent);
-    const layout = layouts[page.layout];
-    // Escape if layout doesn't exist
-    if (!layout) {
-        console.log(`[Error] Layout "${page.layout}" not found for page "${relSrcFilePath}"`);
-        return;
-    }
+    // Read and parse page
+    const page = JSON.parse(fs.readFileSync(absSrcFilePath, 'utf-8').toString());
     // Add meta information for the page
     page._meta = {
         // `id` is path from root of project (for inline editing)
@@ -155,8 +141,6 @@ function buildPage(relSrcFilePath) {
 if (IS_DEV) {
     // Watch for changes to content source files and rebuild
     fs.watch(PAGES_DIR, { recursive: true }, (_, filename) => updateSite(filename, PAGES_DIR));
-    // Watch for changes to layout files and rebuild
-    fs.watch(LAYOUTS_DIR, { recursive: true }, (_, filename) => updateSite(filename, LAYOUTS_DIR));
     // Watch for changes to component files and rebuild
     fs.watch(COMPONENTS_DIR, { recursive: true }, (_, filename) => updateSite(filename, COMPONENTS_DIR));
     // Start development server, which serves from and watches for changes in the
@@ -170,5 +154,4 @@ if (IS_DEV) {
 }
 
 // Do the initial build
-updateLayoutsRef();
 buildSite();
