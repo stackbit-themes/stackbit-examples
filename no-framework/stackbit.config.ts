@@ -1,9 +1,9 @@
 import { defineStackbitConfig } from '@stackbit/types';
 
-export const config = defineStackbitConfig({
+export default defineStackbitConfig({
     stackbitVersion: '~0.6.0',
     cmsName: 'git',
-    pagesDir: 'src/content/pages',
+    pagesDir: 'src/pages',
     models: {
         page: {
             type: 'page',
@@ -30,5 +30,3 @@ export const config = defineStackbitConfig({
         }
     }
 });
-
-export default config;
