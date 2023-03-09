@@ -1,38 +1,34 @@
-import { defineStackbitConfig } from "@stackbit/types";
+import { defineStackbitConfig } from '@stackbit/types';
 
 export const config = defineStackbitConfig({
-  stackbitVersion: "~0.6.0",
-  cmsName: "git",
-  pagesDir: "src/content/pages",
-  models: {
-    page: {
-      type: "page",
-      urlPath: "/{slug}",
-      filePath: "{slug}.json",
-      hideContent: true,
-      fields: [
-        { name: "title", type: "string", required: true },
-        {
-          name: "sections",
-          type: "list",
-          items: { type: "model", models: ["paragraph", "heading"] },
+    stackbitVersion: '~0.6.0',
+    cmsName: 'git',
+    pagesDir: 'src/content/pages',
+    models: {
+        page: {
+            type: 'page',
+            urlPath: '/{slug}',
+            filePath: '{slug}.json',
+            hideContent: true,
+            fields: [
+                { name: 'title', type: 'string', required: true },
+                { name: 'sections', type: 'list', items: { type: 'model', models: ['paragraph', 'heading'] } }
+            ]
         },
-      ],
-    },
-    paragraph: {
-      type: "object",
-      labelField: "content",
-      fields: [{ name: "content", type: "markdown", required: true }],
-    },
-    heading: {
-      type: "object",
-      labelField: "content",
-      fields: [
-        { name: "content", type: "string", required: true },
-        { name: "level", type: "enum", required: true, options: [1, 2, 3, 4, 5, 6] },
-      ],
-    },
-  },
+        paragraph: {
+            type: 'object',
+            labelField: 'content',
+            fields: [{ name: 'content', type: 'markdown', required: true }]
+        },
+        heading: {
+            type: 'object',
+            labelField: 'content',
+            fields: [
+                { name: 'content', type: 'string', required: true },
+                { name: 'level', type: 'enum', required: true, options: [1, 2, 3, 4, 5, 6] }
+            ]
+        }
+    }
 });
 
 export default config;
