@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-Before you begin, please make sure you are using Node v14 or newer.
+Before you begin, make sure you are using Node v14 or newer.
 
 ## Project Setup
 

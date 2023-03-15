@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-Before you begin, please make sure you have the following:
+Before you begin, make sure you have the following:
 
 - Contentful account
 - Node v14 or later
