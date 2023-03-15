@@ -11,5 +11,5 @@ dist/
 .stackbit/
 
 # env vars
-.env
+.env*
 !.env.example

@@ -4,13 +4,17 @@
     "type": "module",
     "scripts": {
         "dev": "node ./lib/framework.js dev",
-        "build": "node ./lib/framework.js build"
+        "build": "node ./lib/framework.js build",
+        "contentful-export": "contentful-export --space-id $CONTENTFUL_SPACE_ID --management-token $CONTENTFUL_MANAGEMENT_TOKEN --config ./.contentful/export-config.json",
+        "setup": "node ./.contentful/import.js"
     },
     "author": "Sean C Davis",
     "license": "MIT",
     "devDependencies": {
         "@stackbit/types": "^0.2.0",
         "contentful": "^9.3.5",
+        "contentful-export": "^7.19.37",
+        "contentful-import": "^8.5.34",
         "dotenv": "^16.0.3",
         "ejs": "^3.1.8",
         "fast-glob": "^3.2.12",
