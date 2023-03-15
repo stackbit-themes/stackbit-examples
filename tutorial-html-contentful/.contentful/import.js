@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-const path = require('path');
-const contentfulImport = require('contentful-import');
+import path from 'path';
+import contentfulImport from 'contentful-import';
+import dotenv from 'dotenv';
 
-require('dotenv').config();
+dotenv.config();
 
 const managementToken = process.env.CONTENTFUL_MANAGEMENT_TOKEN || process.argv[2];
 const spaceId = process.env.CONTENTFUL_SPACE_ID || process.argv[3];
@@ -14,11 +15,11 @@ if (!managementToken || !spaceId) {
 }
 
 const options = {
-    contentFile: path.join(__dirname, 'export.json'),
+    contentFile: path.join(process.cwd(), '.contentful', 'export.json'),
     spaceId: spaceId,
     managementToken: managementToken,
     uploadAssets: true,
-    assetsDirectory: __dirname
+    assetsDirectory: path.join(process.cwd(), '.contentful')
 };
 
 contentfulImport(options)

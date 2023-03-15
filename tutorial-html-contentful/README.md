@@ -46,7 +46,7 @@ CONTENTFUL_MANAGEMENT_TOKEN="..."
 
 Your new project already contains the content for the tutorial. You can import this into Contentful by running the setup command.
 
-    npx cross-env CONTENTFUL_SPACE_ID={...} CONTENTFUL_MANAGEMENT_TOKEN={...} npm run setup
+    npx cross-env npm run setup
 
 Replace the `{...}` with the appropriate values, noting that the `.env` file is not used when running this command.
 
