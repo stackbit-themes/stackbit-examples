@@ -9,3 +9,7 @@ dist/
 
 # Stackbit
 .stackbit/
+
+# env vars
+.env
+!.env.example

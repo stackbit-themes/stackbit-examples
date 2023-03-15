@@ -10,6 +10,8 @@
     "license": "MIT",
     "devDependencies": {
         "@stackbit/types": "^0.2.0",
+        "contentful": "^9.3.5",
+        "dotenv": "^16.0.3",
         "ejs": "^3.1.8",
         "fast-glob": "^3.2.12",
         "live-server": "^1.2.2",

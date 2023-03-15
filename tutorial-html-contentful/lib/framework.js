@@ -7,20 +7,14 @@ import liveServer from 'live-server';
 import path from 'path';
 import prettier from 'prettier';
 
+import { getPages } from './contentful.js';
+
 /* ----- Constants ----- */
 
 const IS_DEV = process.argv.includes('dev');
-const SRC_DIR = path.join(process.cwd(), 'src');
 const DIST_DIR = path.join(process.cwd(), 'dist');
-const PAGES_DIR = path.join(SRC_DIR, 'pages');
-const COMPONENTS_DIR = path.join(SRC_DIR, 'components');
-const LAYOUT_FILE = path.join(SRC_DIR, '_layout.ejs');
-
-/* ----- References ----- */
-
-// Shared across multiple functions and are populated by update functions.
-let layout;
-let components = {};
+const COMPONENTS_DIR = path.join(process.cwd(), 'components');
+const LAYOUT_FILE = path.join(process.cwd(), '_layout.ejs');
 
 /* ----- Setup ----- */
 
@@ -32,35 +26,23 @@ fs.mkdirSync(DIST_DIR);
 /* ----- Updaters ----- */
 
 /**
- * Function to call when a file changes while development server is running.
- * Determines what to do based on the file that changed.
+ * Callback when a file changes while development server is running.
  *
  * @param {string} fileChanged - Path to file that changed
  * @param {string} watchDir - Absolute path to directory being watched
  */
 function updateSite(fileChanged, watchDir) {
     console.log(`[Source Change] ${path.relative(process.cwd(), path.join(watchDir, fileChanged))}`);
-    // If template file is changed, rebuild the entire site
-    if (fileChanged.endsWith('.ejs')) return buildSite();
-    // Otherwise, just rebuild the page that changed
-    buildPage(fileChanged);
-}
-
-/**
- * Read layout and update `layout` reference. Called on initial build and
- * whenever a source file changes.
- */
-function updateLayout() {
-    layout = fs.readFileSync(LAYOUT_FILE, 'utf-8').toString();
+    buildSite();
 }
 
 /**
  * Update `components` reference. Called on initial build and whenever a
  * components file is changed.
  */
-function updateComponentsRef() {
+function getComponents() {
     const componentFiles = glob.sync('**/*.ejs', { cwd: COMPONENTS_DIR });
-    components = Object.fromEntries(
+    return Object.fromEntries(
         componentFiles.map((filePath) => {
             const componentName = path.basename(filePath, '.ejs');
             const component = fs.readFileSync(path.join(COMPONENTS_DIR, filePath), 'utf-8').toString();
@@ -69,78 +51,53 @@ function updateComponentsRef() {
     );
 }
 
-/* ----- Renderers----- */
-
-/**
- * Render a component with the given props.
- *
- * @param {Object} props Object of props to pass to component
- * @param {string} props.type Name of component to render
- * @returns
- */
-function renderComponent(props) {
-    return ejs.render(components[props.type], { ...props });
-}
-
 /* ----- Builders ----- */
 
 /**
- * Retrieve all page files and build each page. Called on initial build and
- * whenever a source file is changed.
+ * Retrieve all pages from Contentful and pass them to `buildPage`.
  */
-function buildSite() {
-    // Rebuild global references
-    updateLayout();
-    updateComponentsRef();
-    // Get page files
-    const pageFiles = glob.sync('**/*.json', { cwd: PAGES_DIR });
+async function buildSite() {
+    // Read layout file.
+    const layout = fs.readFileSync(LAYOUT_FILE, 'utf-8').toString();
+    // Read component files
+    const components = getComponents();
+    // Get pages from Contentful
+    const pages = await getPages();
     // Build each page
-    pageFiles.forEach(buildPage);
+    pages.forEach((page) => buildPage(page, layout, components));
     // Provide feedback
-    console.log(`Built ${pageFiles.length} pages`);
+    console.log(`Built ${pages.length} pages`);
 }
 
 /**
- * Reads page content, runs it through the layout, and writes the result to a
- * file in the dist directory.
+ * Runs transformed Contentful page through the layout, and writes the result to
+ * a file in the dist directory.
  *
- * @param {string} relSrcFilePath - Path to page file, relative to PAGES_DIR
+ * @param {Object} page - Page object from Contentful
+ * @param {string} layout - Layout file contents
+ * @param {Object} components - Components map with component name as key and
+ * component file contents as value
  */
-function buildPage(relSrcFilePath) {
-    const absSrcFilePath = path.join(PAGES_DIR, relSrcFilePath);
-    // Get and set urlPath on page from file path
-    const urlPath = relSrcFilePath
-        .replace(/\.json$/, '/index.html')
-        .replace(/\/index\/index\.html$/, '/index.html')
-        .replace(/^index\/index\.html$/, 'index.html');
+function buildPage(page, layout, components) {
+    // Get file path for the page based on the `slug` field.
+    const relFilePath = page.slug.replace(/\/$/, '') + '/index.html';
     // Determine destination file path
-    const distFilePath = path.join(DIST_DIR, urlPath);
-    // If the source file doesn't exist, first delete the file in the dist if it
-    // exists, then return
-    if (!fs.existsSync(absSrcFilePath)) {
-        if (fs.existsSync(distFilePath)) fs.rmSync(distFilePath);
-        return;
-    }
-    // Read and parse page
-    const page = JSON.parse(fs.readFileSync(absSrcFilePath, 'utf-8').toString());
-    // Add meta information for the page
-    page._meta = {
-        // `id` is path from root of project (for inline editing)
-        id: path.relative(process.cwd(), absSrcFilePath)
-    };
+    const distFilePath = path.join(DIST_DIR, relFilePath);
     // Create directory if it doesn't exist
     const dirPath = path.dirname(distFilePath);
     if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
+    // Component renderer
+    const component = (props) => ejs.render(components[props.type], { ...props });
     // Run page through EJS layout and write to file
-    const html = ejs.render(layout, { page, component: renderComponent });
+    const html = ejs.render(layout, { page, component });
     fs.writeFileSync(distFilePath, prettier.format(html, { parser: 'html' }));
 }
 
 /* ----- Watchers / Callers ----- */
 
 if (IS_DEV) {
-    // Watch for changes to content source files and rebuild
-    fs.watch(PAGES_DIR, { recursive: true }, (_, filename) => updateSite(filename, PAGES_DIR));
+    // Watch for changes to layout files and rebuild
+    fs.watch(LAYOUT_FILE, (_, filename) => updateSite(filename, process.cwd()));
     // Watch for changes to component files and rebuild
     fs.watch(COMPONENTS_DIR, { recursive: true }, (_, filename) => updateSite(filename, COMPONENTS_DIR));
     // Start development server, which serves from and watches for changes in the
@@ -154,4 +111,4 @@ if (IS_DEV) {
 }
 
 // Do the initial build
-buildSite();
+await buildSite();
