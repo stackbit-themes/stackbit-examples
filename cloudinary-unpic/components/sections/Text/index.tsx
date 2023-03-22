@@ -9,8 +9,11 @@ type TextSectionProps = Content;
 const TextSection: React.FC<TextSectionProps> = (props) => {
   const { title, body } = props as TextSection;
   return (
-    <div className="w-full flex justify-center pt-8 pb-4">
-      <div className="prose max-w-3xl" {...pickDataAttrs(props)}>
+    <div
+      className="w-full flex justify-center pt-8 pb-4"
+      {...pickDataAttrs(props)}
+    >
+      <div className="prose max-w-3xl">
         {title && (
           <h2 className="text-center" data-sb-field-path=".title">
             {title}
