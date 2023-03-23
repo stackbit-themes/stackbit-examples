@@ -21,6 +21,7 @@
     "autoprefixer": "^10.4.8",
     "contentful-export": "^7.18.0",
     "contentful-import": "^8.3.2",
+    "dotenv": "^16.0.3",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.3",
     "fs-extra": "^10.1.0",
