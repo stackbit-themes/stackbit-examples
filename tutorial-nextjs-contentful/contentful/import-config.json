@@ -1,5 +1,5 @@
 {
-  "contentFile": "contentful/export.json",
-  "uploadAssets": true,
-  "assetsDirectory": "contentful"
+    "contentFile": "contentful/export.json",
+    "uploadAssets": true,
+    "assetsDirectory": "contentful"
 }
