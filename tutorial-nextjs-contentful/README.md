@@ -52,18 +52,6 @@ Now you should be able to run the Next.js development server and see your conten
 
 Visit `localhost:3000` and you should see the example content you imported into your new Contentful space. Now you can continue with the tutorial!
 
-### Run Stackbit in local development mode
-
-To install the Stackbit CLI tool, run:
-
-    npm i -g @stackbit/cli@latest
-
-Keep Next.js running, open another terminal window and run:
-
-    stackbit dev
-
-Then, click on the output URL.
-
 ## Support
 
 If you get stuck along the way, [drop into our Discord server](https://discord.gg/HUNhjVkznH) and send a message in the `#documentation` or `#help` channels.
