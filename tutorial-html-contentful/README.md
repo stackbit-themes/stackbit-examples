@@ -25,11 +25,7 @@ This will create a new instance of this project in a `tutorial-html-contentful` 
 
 ### Create Contentful Space
 
-After signing into Contentful, create a new community (free) space. Note that if you already have an active Contentful account, you may want to [create an organization](https://app.contentful.com/account/organizations/new) to place your new space.
-
-When you're within an organization, you can create a new community space with the web app package.
-
-![Create new Contentful space](./docs/new-community-space.png)
+After signing into Contentful, create a new space. Note that if you already have an active Contentful account, you may want to [create an organization](https://app.contentful.com/account/organizations/new) to place your new space.
 
 ### Generate API Tokens
 
@@ -47,8 +43,6 @@ CONTENTFUL_MANAGEMENT_TOKEN="..."
 Your new project already contains the content for the tutorial. You can import this into Contentful by running the setup command.
 
     npx cross-env npm run setup
-
-Replace the `{...}` with the appropriate values, noting that the `.env` file is not used when running this command.
 
 ### Run the Project
 
