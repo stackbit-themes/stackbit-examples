@@ -1,0 +1,15 @@
+# dependencies
+node_modules/
+
+# mac
+.DS_Store
+
+# build output
+dist/
+
+# Stackbit
+.stackbit/
+
+# env vars
+.env*
+!.env.example
