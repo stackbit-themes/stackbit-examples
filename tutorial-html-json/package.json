@@ -1,0 +1,17 @@
+{
+    "name": "tutorial-html-json",
+    "version": "0.1.0",
+    "type": "module",
+    "scripts": {
+        "dev": "node ./lib/framework.js dev",
+        "build": "node ./lib/framework.js build"
+    },
+    "author": "Sean C Davis",
+    "license": "MIT",
+    "devDependencies": {
+        "ejs": "^3.1.8",
+        "fast-glob": "^3.2.12",
+        "live-server": "^1.2.2",
+        "prettier": "^2.8.4"
+    }
+}
