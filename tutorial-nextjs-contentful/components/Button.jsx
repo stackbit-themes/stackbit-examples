@@ -7,10 +7,11 @@ const themeClassMap = {
 
 export const Button = (props) => {
     return (
-        <Link href={props.url}>
-            <a className={`py-3 px-8 inline-block border rounded-md transition-all duration-300 ${themeClassMap[props.theme] ?? themeClassMap['default']}`}>
-                {props.label}
-            </a>
+        <Link
+            href={props.url}
+            className={`py-3 px-8 inline-block border rounded-md transition-all duration-300 ${themeClassMap[props.theme] ?? themeClassMap['default']}`}
+        >
+            {props.label}
         </Link>
     );
 };

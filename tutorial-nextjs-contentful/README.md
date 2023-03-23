@@ -33,8 +33,8 @@ After creating the Contentful space, copy `.env.example` to `.env` and fill in t
 
 ```bash
 CONTENTFUL_SPACE_ID="..."
-CONTENTFUL_DELIVERY_TOKEN="..."
 CONTENTFUL_PREVIEW_TOKEN="..."
+CONTENTFUL_DELIVERY_TOKEN="..."
 CONTENTFUL_MANAGEMENT_TOKEN="..."
 ```
 

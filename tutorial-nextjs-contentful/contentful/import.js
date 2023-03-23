@@ -10,7 +10,7 @@ const managementToken = process.env.CONTENTFUL_MANAGEMENT_TOKEN || process.argv[
 const spaceId = process.env.CONTENTFUL_SPACE_ID || process.argv[3];
 
 if (!managementToken || !spaceId) {
-    console.error('Contentful management token or space ID were not provided.\n\nUsage:\n./export.js <managementToken> <spaceId>\n');
+    console.error('Contentful management token or space ID were not provided.\n\nUsage:\n./import.js <managementToken> <spaceId>\n');
     process.exit(1);
 }
 
