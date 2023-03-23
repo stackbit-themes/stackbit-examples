@@ -32,10 +32,10 @@ After signing into Contentful, create a new space. Note that if you already have
 After creating the Contentful space, copy `.env.example` to `.env` and fill in the appropriate values.
 
 ```bash
-CONTENTFUL_SPACE_ID=
-CONTENTFUL_MANAGEMENT_TOKEN=
-CONTENTFUL_PREVIEW_TOKEN=
-CONTENTFUL_DELIVERY_TOKEN=
+CONTENTFUL_SPACE_ID="..."
+CONTENTFUL_PREVIEW_TOKEN="..."
+CONTENTFUL_DELIVERY_TOKEN="..."
+CONTENTFUL_MANAGEMENT_TOKEN="..."
 ```
 
 ### Import Content
