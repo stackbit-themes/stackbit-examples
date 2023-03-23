@@ -57,10 +57,12 @@ Showcase implementation & integration patterns in practice.
 
 Examples used as starting points for tutorials and other guides in our documentation.
 
-| Example                                                                                                           | Description                                                                         |
-| :---------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
-| [Next.js + Files](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-files)           | The starting point for following the file-based (Git CMS) getting started tutorial. |
-| [Next.js + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-contentful) | Use Contentful as the content source with the getting started tutorial.             |
+| Example                                                                                                           | Description                                                                                              |
+| :---------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- |
+| [HTML + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-html-contentful)      | Follow the [HTML + Contentful tutorial](https://docs.stackbit.com/getting-started/html-contentful).      |
+| [HTML + JSON](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-html-contentful)            | Follow the [HTML + JSON tutorial](https://docs.stackbit.com/getting-started/html-json).                  |
+| [Next.js + Markdown](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-files)        | Follow the [Next.js + Markdown tutorial](https://docs.stackbit.com/getting-started/nextjs-markdown).     |
+| [Next.js + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-contentful) | Follow the [Next.js + Contentful tutorial](https://docs.stackbit.com/getting-started/nextjs-contentful). |
 
 ## Components
 
