@@ -1,6 +1,6 @@
 {
-    "name": "static-html",
-    "version": "0.0.1",
+    "name": "tutorial-html-json",
+    "version": "0.1.0",
     "type": "module",
     "scripts": {
         "dev": "node ./lib/framework.js dev",
