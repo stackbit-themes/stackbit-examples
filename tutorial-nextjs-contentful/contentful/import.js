@@ -2,7 +2,7 @@
 
 const path = require('path');
 const contentfulImport = require('contentful-import');
-import dotenv from 'dotenv';
+const dotenv = require('dotenv');
 
 dotenv.config();
 
