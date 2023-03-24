@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "type": "module",
     "scripts": {
-        "dev": "node ./lib/framework.js dev",
+        "dev": "NODE_ENV=development node ./lib/framework.js dev",
         "build": "node ./lib/framework.js build"
     },
     "author": "Sean C Davis",
