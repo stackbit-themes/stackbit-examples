@@ -8,7 +8,7 @@
     </head>
     <body>
         <main>
-            <% page.sections.forEach((section, index) => { %>
+            <% (page.sections || []).forEach((section, index) => { %>
             <div><%- component(section) %></div>
             <% }) %>
         </main>
