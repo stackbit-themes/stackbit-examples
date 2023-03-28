@@ -1,8 +1,12 @@
-import type { Asset, EntryFields } from 'contentful';
+import type { ImageDataLike } from 'gatsby-plugin-image';
+import type { EntryFields } from 'contentful';
 
 /* ---------- Shared ---------- */
 
-type Markdown<Key extends string> = Record<Key, EntryFields.Text>;
+namespace CustomFields {
+    export type Markdown<Key extends string> = Record<Key, EntryFields.Text>;
+    export type Image = ImageDataLike & { title: string };
+}
 
 type SystemFields<TypeName> = {
     contentful_id: string;
@@ -26,15 +30,15 @@ export type StatItem = SystemFields<'ContentfulStatItem'> & {
 
 export type Stats = SystemFields<'ContentfulStats'> & {
     heading: EntryFields.Symbol;
-    body: Markdown<'body'>;
+    body: CustomFields.Markdown<'body'>;
     theme: 'dark' | 'primary';
     stats: StatItem[];
 };
 
 export type Hero = SystemFields<'ContentfulHero'> & {
     heading: EntryFields.Symbol;
-    body: Markdown<'body'>;
-    image: Asset;
+    body: CustomFields.Markdown<'body'>;
+    image: CustomFields.Image;
     button: Button;
     theme: 'imgLeft' | 'imgRight';
 };

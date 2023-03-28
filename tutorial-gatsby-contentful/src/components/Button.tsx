@@ -9,9 +9,6 @@ const themeClassMap = {
 };
 
 export const Button = (props: ButtonProps) => {
-    console.log({ props });
-    return <p>Contentful Button</p>;
-
     return (
         <Link
             to={props.url}

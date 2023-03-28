@@ -1,10 +1,10 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
-// import { GatsbyImage } from 'gatsby-plugin-image';
-// import { useContentfulImage } from 'gatsby-source-contentful/hooks';
+
 import { Button } from './Button';
 
 import type { Hero as HeroProps } from '../types/app';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const themeClassMap = {
     imgLeft: 'flex-row-reverse',
@@ -12,6 +12,8 @@ const themeClassMap = {
 };
 
 export const Hero = (props: HeroProps) => {
+    const image = props.image ? getImage(props.image) : null;
+
     return (
         <div className="px-12 py-24 bg-gray-100">
             <div className={`flex mx-auto max-w-6xl gap-12 ${themeClassMap[props.theme] ?? themeClassMap['imgRight']}`}>
@@ -25,8 +27,7 @@ export const Hero = (props: HeroProps) => {
                     {props.button && <Button {...props.button} />}
                 </div>
                 <div className="relative hidden w-full overflow-hidden rounded-md lg:block">
-                    {/* {props.image && <Image src={props.image.src} alt={props.image.alt} layout="fill" objectFit="contain" />} */}
-                    {props.image && <p>Image goes here ...</p>}
+                    {image && <GatsbyImage image={image} alt={props.image.title} />}
                 </div>
             </div>
         </div>

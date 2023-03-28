@@ -45,10 +45,8 @@ export const query = graphql`
                     }
                     heading
                     image {
-                        contentful_id
-                        file {
-                            url
-                        }
+                        gatsbyImage(layout: FULL_WIDTH, width: 800)
+                        title
                     }
                 }
                 ... on ContentfulStats {
