@@ -9,16 +9,13 @@ const themeClassMap = {
 };
 
 export const Stats = (props: StatsProps) => {
-    console.log({ props });
-    return <p>Contentful Stats</p>;
-
     return (
         <div className={`py-24 px-12 text-center ${themeClassMap[props.theme] ?? themeClassMap['dark']}`}>
             <div className="mx-auto">
                 <div className="max-w-2xl mx-auto mb-16">
                     <h2 className="mb-4 text-4xl sm:text-5xl">{props.heading}</h2>
                     <Markdown options={{ forceBlock: true }} className="sm:text-xl">
-                        {props.body}
+                        {props.body.body}
                     </Markdown>
                 </div>
                 <div className="grid max-w-3xl gap-12 mx-auto sm:grid-cols-3">
@@ -35,9 +32,6 @@ const itemThemeClassMap = {
 };
 
 const StatItem = (props: StatItemProps & { theme: StatsProps['theme'] }) => {
-    console.log({ props });
-    return <p>Contentful StatItem</p>;
-
     return (
         <div className={`px-4 py-8 rounded-md ${itemThemeClassMap[props.theme] ?? itemThemeClassMap['dark']}`}>
             <div className="mb-3 text-3xl sm:text-4xl">{props.value}</div>

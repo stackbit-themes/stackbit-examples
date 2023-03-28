@@ -1,5 +1,4 @@
-// import { TypePageFields, TypeStatItemFields, TypeHeroFields, TypeStatsFields, TypeButtonFields } from './contentful/index';
-import type { Asset, Entry, EntryFields } from 'contentful';
+import type { Asset, EntryFields } from 'contentful';
 
 /* ---------- Shared ---------- */
 
@@ -34,7 +33,7 @@ export type Stats = SystemFields<'ContentfulStats'> & {
 
 export type Hero = SystemFields<'ContentfulHero'> & {
     heading: EntryFields.Symbol;
-    body: EntryFields.Text;
+    body: Markdown<'body'>;
     image: Asset;
     button: Button;
     theme: 'imgLeft' | 'imgRight';
