@@ -15,7 +15,6 @@
         "clean": "gatsby clean",
         "typecheck": "tsc --noEmit",
         "contentful-export": "contentful-export --space-id $CONTENTFUL_SPACE_ID --management-token $CONTENTFUL_MANAGEMENT_TOKEN --config ./contentful/export-config.json",
-        "contentful-generate-types": "cf-content-types-generator contentful/export.json --out src/types/contentful",
         "setup": "node ./contentful/import.js"
     },
     "dependencies": {
@@ -32,7 +31,6 @@
         "@types/node": "^18.15.3",
         "@types/react": "^18.0.28",
         "@types/react-dom": "^18.0.11",
-        "cf-content-types-generator": "^2.10.1",
         "contentful-export": "^7.19.44",
         "contentful-import": "^8.5.42",
         "typescript": "^4.9.5"

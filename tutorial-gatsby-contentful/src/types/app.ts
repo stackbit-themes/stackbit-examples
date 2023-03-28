@@ -1,24 +1,49 @@
-import { TypePageFields, TypeStatItemFields, TypeHeroFields, TypeStatsFields, TypeButtonFields } from './contentful/index';
+// import { TypePageFields, TypeStatItemFields, TypeHeroFields, TypeStatsFields, TypeButtonFields } from './contentful/index';
+import type { Asset, Entry, EntryFields } from 'contentful';
 
 /* ---------- Shared ---------- */
 
-type ContentfulEntry<Fields, TypeName> = Fields & {
+type Markdown<Key extends string> = Record<Key, EntryFields.Text>;
+
+type SystemFields<TypeName> = {
     contentful_id: string;
     __typename: TypeName;
 };
 
 /* ---------- Atoms ---------- */
 
-export type Button = ContentfulEntry<TypeButtonFields, 'ContentfulButton'>;
+export type Button = SystemFields<'ContentfulButton'> & {
+    label: EntryFields.Symbol;
+    url: EntryFields.Symbol;
+    theme: 'default' | 'outline';
+};
 
-export type StatItem = ContentfulEntry<TypeStatItemFields, 'ContentfulStatItem'>;
+export type StatItem = SystemFields<'ContentfulStatItem'> & {
+    label: EntryFields.Symbol;
+    value: EntryFields.Symbol;
+};
 
 /* ---------- Sections ---------- */
 
-export type Stats = ContentfulEntry<Omit<TypeStatsFields, 'stats'> & { stats: StatItem[] }, 'ContentfulStats'>;
+export type Stats = SystemFields<'ContentfulStats'> & {
+    heading: EntryFields.Symbol;
+    body: Markdown<'body'>;
+    theme: 'dark' | 'primary';
+    stats: StatItem[];
+};
 
-export type Hero = ContentfulEntry<Omit<TypeHeroFields, 'button'> & { button: Button }, 'ContentfulHero'>;
+export type Hero = SystemFields<'ContentfulHero'> & {
+    heading: EntryFields.Symbol;
+    body: EntryFields.Text;
+    image: Asset;
+    button: Button;
+    theme: 'imgLeft' | 'imgRight';
+};
 
 /* ---------- Templates ---------- */
 
-export type ComposablePage = ContentfulEntry<Omit<TypePageFields, 'sections'> & { sections: Array<Hero | Stats> }, 'ContentfulPage'>;
+export type ComposablePage = SystemFields<'ContentfulPage'> & {
+    title: EntryFields.Symbol;
+    slug: EntryFields.Symbol;
+    sections: Array<Hero | Stats>;
+};
