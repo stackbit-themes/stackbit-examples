@@ -33,7 +33,7 @@ export const query = graphql`
             sections {
                 ... on ContentfulHero {
                     __typename
-                    id
+                    contentful_id
                     body {
                         body
                     }
