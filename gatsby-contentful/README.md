@@ -53,3 +53,7 @@ Start the Stackbit development server.
 ## Disabling Annotations
 
 Annotations are enabled by default. To disabled set `DISABLE_ANNOTATIONS` in `.env` to any string value. (Note that `DISABLE_ANNOTATIONS="false"` will still disable annotations.)
+
+## Support
+
+If you get stuck along the way, [drop into our Discord server](https://discord.gg/HUNhjVkznH) and send a message in the `#documentation` or `#help` channels.
