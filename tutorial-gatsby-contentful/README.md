@@ -1,49 +1,57 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# Stackbit Tutorial [Gatsby + Contentful]
 
-## 🚀 Quick start
+![Tutorial Screenshot](https://assets.stackbit.com/docs/tutorial-shared-thumb-v2.png)
 
-1.  **Create a Gatsby site.**
+ℹ️ This project is used as a starting point for [a getting started tutorial](https://docs.stackbit.com/getting-started/gatsby-contentful) using Gatsby as the framework and Contentful as the content source. If you would like to create a new project with Contentful as the content source, check out [the Gatsby + Contentful example project](https://github.com/stackbit-themes/stackbit-examples/tree/main/gatsby-contentful).
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+## Prerequisites
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+Before you begin, please make sure you have the following:
 
-2.  **Start developing.**
+- Contentful account
+- Node v18 or later
 
-    Navigate into your new site’s directory and start it up.
+## Setup Instructions
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+The following sections take you through the process of getting this project set up and wired up to Contentful so you can begin the tutorial.
 
-3.  **Open the code and start customizing!**
+### Create New Project
 
-    Your site is now running at http://localhost:8000!
+Use the `create-stackbit-app` command to create a new project:
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+    npx create-stackbit-app@latest --example tutorial-gatsby-contentful
 
-4.  **Learn more**
+This will create a new instance of this project in a `tutorial-gatsby-contentful` directory.
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+### Create Contentful Space
 
-## 🚀 Quick start (Netlify)
+After signing into Contentful, create a new space. Note that if you already have an active Contentful account, you may want to [create an organization](https://app.contentful.com/account/organizations/new) to place your new space.
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+### Generate API Tokens
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+After creating the Contentful space, copy `.env.example` to `.env` and fill in the appropriate values.
+
+```bash
+CONTENTFUL_SPACE_ID="..."
+CONTENTFUL_PREVIEW_TOKEN="..."
+CONTENTFUL_DELIVERY_TOKEN="..."
+CONTENTFUL_MANAGEMENT_TOKEN="..."
+```
+
+### Import Content
+
+Your new project already contains the content for the tutorial. You can import this into Contentful by running the setup command.
+
+    npx cross-env npm run setup
+
+### Run the Project
+
+Now you should be able to run the Gatsby development server and see your content.
+
+    npm run dev
+
+Visit `localhost:8000` and you should see the example content you imported into your new Contentful space. Now you can continue with the tutorial!
+
+## Support
+
+If you get stuck along the way, [drop into our Discord server](https://discord.gg/HUNhjVkznH) and send a message in the `#documentation` or `#help` channels.
