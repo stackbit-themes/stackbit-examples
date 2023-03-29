@@ -1,49 +1,55 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# Stackbit Developer Demo [Gatsby + Contentful]
 
-## 🚀 Quick start
+![Tutorial Screenshot](https://assets.stackbit.com/docs/tutorial-shared-thumb-v2.png)
 
-1.  **Create a Gatsby site.**
+A demo project to showcase the basics of Stackbit to new developers.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+## Prerequisites
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+Before you begin, please make sure you have the following:
 
-2.  **Start developing.**
+- Contentful account
+- Node v14 or later
 
-    Navigate into your new site’s directory and start it up.
+## Contentful Setup
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+After cloning the project and installing dependencies, create a new Contentful space.
 
-3.  **Open the code and start customizing!**
+### Generate API Tokens
 
-    Your site is now running at http://localhost:8000!
+Create API tokens for your new space. Then copy `.env.example` to `.env` and fill in the appropriate values.
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+```bash
+CONTENTFUL_SPACE_ID="..."
+CONTENTFUL_DELIVERY_TOKEN="..."
+CONTENTFUL_PREVIEW_TOKEN="..."
+CONTENTFUL_MANAGEMENT_TOKEN="..."
+```
 
-4.  **Learn more**
+### Import Content
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+Your new project already contains the content for the tutorial. You can import this into Contentful by running the setup command.
 
-## 🚀 Quick start (Netlify)
+    npx cross-env npm run setup
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+### Run the Project
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+Now you should be able to run the Next.js development server and see your content.
+
+    npm run dev
+
+Visit `localhost:8000` and you should see the example content you imported into your new Contentful space. Now you can continue with the tutorial!
+
+## Running Stackbit
+
+Make sure the CLI is installed.
+
+    npm install -g @stackbit/cli
+
+Start the Stackbit development server.
+
+    stackbit dev --port 8000
+
+## Disabling Annotations
+
+Annotations are enabled by default. To disabled set `DISABLE_ANNOTATIONS` in `.env` to any string value. (Note that `DISABLE_ANNOTATIONS="false"` will still disable annotations.)
