@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+
+# caches
+.cache/
+
+# generated files
+public
+src/gatsby-types.d.ts
+
+# env vars
+.env*
+!.env.example
+
+# stackbit
+.stackbit/cache/
