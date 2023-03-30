@@ -16,6 +16,14 @@ Starters are basic Stackbit projects that bring some specific combination of _th
 | [`ts-mui-nextjs-starter`](https://github.com/stackbit-themes/ts-mui-nextjs-starter) | TypeScript + MUI components.                                |
 | [`contentful-starter`](https://github.com/stackbit-themes/contentful-starter)       | Minimal Next.js site with Contentful as the content source. |
 
+## Stack-Specific Examples
+
+These projects are the result of [the tutorials](#tutorials) that are also fully-annotated to provide inline editing capabilities.
+
+| Example                                                                                                 | Description                                                                                       |
+| :------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------ |
+| [Gatsby + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/gatsby-contentful) | Basic Gatsby site a composable page and a few components, using Contentful as the content source. |
+
 ## Custom Content Sources
 
 Stackbit's [Content Source Interface](https://docs.stackbit.com/features/content-source-interface) enables you to bring content sources that are not officially supported by Stackbit. These examples show how to do that.
@@ -59,6 +67,7 @@ Examples used as starting points for tutorials and other guides in our documenta
 
 | Example                                                                                                           | Description                                                                                              |
 | :---------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- |
+| [Gatsby + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-gatsby-contentful)  | Follow the [Gatsby + Contentful tutorial](https://docs.stackbit.com/getting-started/gatsby-contentful).  |
 | [HTML + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-html-contentful)      | Follow the [HTML + Contentful tutorial](https://docs.stackbit.com/getting-started/html-contentful).      |
 | [HTML + JSON](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-html-contentful)            | Follow the [HTML + JSON tutorial](https://docs.stackbit.com/getting-started/html-json).                  |
 | [Next.js + Markdown](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-files)        | Follow the [Next.js + Markdown tutorial](https://docs.stackbit.com/getting-started/nextjs-markdown).     |
