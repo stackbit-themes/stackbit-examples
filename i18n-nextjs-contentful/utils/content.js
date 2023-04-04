@@ -1,5 +1,5 @@
 import { createClient } from 'contentful';
-import { PAGE_TYPE, SITE_CONFIG_TYPE, IS_DEV } from './consts';
+import { PAGE_TYPE, SITE_CONFIG_TYPE, IS_DEV } from './common';
 
 const client = createClient({
   accessToken: IS_DEV ? process.env.CONTENTFUL_PREVIEW_TOKEN : process.env.CONTENTFUL_DELIVERY_TOKEN,

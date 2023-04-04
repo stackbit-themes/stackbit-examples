@@ -6,7 +6,7 @@ import {
 } from '@stackbit/types';
 import { LocalizableContentfulContentSource, mapLocalizedDocuments, markLocalizedModel } from 'localization-config';
 import localization from 'utils/localization';
-import { PAGE_TYPES, SITE_CONFIG_TYPE } from 'utils/consts';
+import { normalizeSlug, PAGE_TYPES, SITE_CONFIG_TYPE } from 'utils/common';
 
 const contentSource = new LocalizableContentfulContentSource({
   spaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -57,8 +57,11 @@ const config = defineStackbitConfig({
   siteMap: ({ documents }) => {
     const pages = documents.filter((doc) => PAGE_TYPES.includes(doc.modelName));
 
-    const entries: SiteMapEntry[] = pages.map((document) => {
-      const slug = (document.fields.slug as DocumentStringLikeFieldNonLocalized).value;
+    const entries: SiteMapEntry[] = pages.flatMap((document) => {
+      let slug = (document.fields.slug as DocumentStringLikeFieldNonLocalized)?.value;
+      if (!slug) return null;
+
+      slug = normalizeSlug(slug);
       const slugPrefix = document.locale !== localization.defaultLocale ? '/' + document.locale : '';
       return {
         urlPath: slugPrefix + slug,

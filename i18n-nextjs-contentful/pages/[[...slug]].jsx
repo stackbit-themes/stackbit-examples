@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { Header } from '../components/Header';
 import { getPages, getPagePaths, getSiteConfig } from '../utils/content';
 import localization from '../utils/localization';
-import { IS_DEV } from '../utils/consts';
+import { IS_DEV, normalizeSlug } from '../utils/common';
 import { componentMap } from '../components';
 
 export default function ComposablePage({ page, siteConfig, headerLinks }) {
@@ -56,10 +56,6 @@ export async function getStaticProps({ params, locale }) {
   }
 
   return { props: { page, siteConfig, headerLinks: linksToAllPages(allPages, pageLocale) } };
-}
-
-function normalizeSlug(slug) {
-  return slug.startsWith('/') ? slug : '/' + slug;
 }
 
 function linksToAllPages(pages, locale) {
