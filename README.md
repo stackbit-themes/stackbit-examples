@@ -28,9 +28,9 @@ These projects are the result of [the tutorials](#tutorials) that are also fully
 
 Stackbit's [Content Source Interface](https://docs.stackbit.com/features/content-source-interface) enables you to bring content sources that are not officially supported by Stackbit. These examples show how to do that.
 
-| Example                                                                                 | Description                                                          |
-| :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------- |
-| [`airtable-content-source`](https://github.com/stackbit-themes/airtable-content-source) | Use Airtable as a content source, built on the Next.js blog example. |
+| Example                                                                                                             | Description                                                          |
+| :------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------- |
+| [`airtable-content-source`](https://github.com/stackbit-themes/stackbit-examples/tree/main/airtable-content-source) | Use Airtable as a content source, built on the Next.js blog example. |
 
 ## Full Websites Demos
 
