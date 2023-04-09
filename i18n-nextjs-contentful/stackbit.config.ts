@@ -4,15 +4,19 @@ import {
   ModelExtension,
   SiteMapEntry,
 } from '@stackbit/types';
-import { LocalizableContentfulContentSource, mapLocalizedDocuments, markLocalizedModel } from 'localization-config';
+import {
+  LocalizableContentfulContentSource,
+  markLocalizedModel /*, mapLocalizedDocuments*/,
+} from 'localization-config';
 import localization from 'utils/localization';
 import { normalizeSlug, PAGE_TYPES, SITE_CONFIG_TYPE } from 'utils/common';
+//import { ContentfulContentSource } from '@stackbit/cms-contentful';
 
 const contentSource = new LocalizableContentfulContentSource({
-  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  spaceId: process.env.CONTENTFUL_SPACE_ID!,
   environment: process.env.CONTENTFUL_ENVIRONMENT || 'master',
-  previewToken: process.env.CONTENTFUL_PREVIEW_TOKEN,
-  accessToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN,
+  previewToken: process.env.CONTENTFUL_PREVIEW_TOKEN!,
+  accessToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN!,
 });
 
 const pageModelExtensions: ModelExtension[] = PAGE_TYPES.map((name) => {
@@ -50,10 +54,10 @@ const config = defineStackbitConfig({
     models = models.map(markLocalizedModel);
     return models;
   },
-  mapDocuments: ({ documents }) => {
+  /*mapDocuments: ({ documents }) => {
     documents = mapLocalizedDocuments(documents);
     return documents;
-  },
+  },*/
   siteMap: ({ documents }) => {
     const pages = documents.filter((doc) => PAGE_TYPES.includes(doc.modelName));
 
