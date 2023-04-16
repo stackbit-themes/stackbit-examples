@@ -1,5 +1,4 @@
 import {
-  DocumentWithSource,
   ModelWithSource,
   DocumentStringLikeFieldNonLocalized,
   Model,
@@ -50,23 +49,3 @@ export function markLocalizedModel(model: ModelWithSource): ModelWithSource {
     return model;
   }
 }
-
-/*
-export function mapLocalizedDocuments(documents: DocumentWithSource[]) {
-  const documentLocale = (document: DocumentWithSource) => {
-    const value = (document.fields?.locale as DocumentStringLikeFieldNonLocalized)?.value;
-    return value && localization.locales.includes(value) ? value : null;
-  };
-
-  return documents.map((document) => {
-    if (!localization.nonLocalizedModels.includes(document.modelName)) {
-      const locale = documentLocale(document);
-      return {
-        ...document,
-        locale,
-      };
-    }
-    return document;
-  });
-}
-*/

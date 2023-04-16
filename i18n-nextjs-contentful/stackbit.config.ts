@@ -10,7 +10,6 @@ import {
 } from 'localization-config';
 import localization from 'utils/localization';
 import { normalizeSlug, PAGE_TYPES, SITE_CONFIG_TYPE } from 'utils/common';
-//import { ContentfulContentSource } from '@stackbit/cms-contentful';
 
 const contentSource = new LocalizableContentfulContentSource({
   spaceId: process.env.CONTENTFUL_SPACE_ID!,
@@ -54,10 +53,6 @@ const config = defineStackbitConfig({
     models = models.map(markLocalizedModel);
     return models;
   },
-  /*mapDocuments: ({ documents }) => {
-    documents = mapLocalizedDocuments(documents);
-    return documents;
-  },*/
   siteMap: ({ documents }) => {
     const pages = documents.filter((doc) => PAGE_TYPES.includes(doc.modelName));
 
@@ -66,7 +61,8 @@ const config = defineStackbitConfig({
       if (!slug) return null;
 
       slug = normalizeSlug(slug);
-      const slugPrefix = document.locale !== localization.defaultLocale ? '/' + document.locale : '';
+      const nonDefaultLocale = document.locale && document.locale !== localization.defaultLocale;
+      const slugPrefix = nonDefaultLocale ? '/' + document.locale : '';
       return {
         urlPath: slugPrefix + slug,
         document,
