@@ -1,10 +1,11 @@
 import {
-  DocumentWithSource,
   ModelWithSource,
   DocumentStringLikeFieldNonLocalized,
   Model,
   UpdateOperationField,
   ModelMap,
+  DataModel,
+  PageModel,
 } from '@stackbit/types';
 import { ContentfulContentSource } from '@stackbit/cms-contentful';
 import localization from 'utils/localization';
@@ -32,31 +33,19 @@ export class LocalizableContentfulContentSource extends ContentfulContentSource 
   }
 }
 
-export function markLocalizedModel(model: ModelWithSource) {
+type LocalizableModelWithSource = (DataModel | PageModel) & { srcType: string; srcProjectId: string };
+
+export function markLocalizedModel(model: ModelWithSource): ModelWithSource {
   if (!localization.nonLocalizedModels.includes(model.name)) {
+    model = model as LocalizableModelWithSource;
     return {
       ...model,
       localized: true,
+      locale: ({ document }) => {
+        return (document.fields['locale'] as DocumentStringLikeFieldNonLocalized)?.value;
+      },
     };
   } else {
     return model;
   }
-}
-
-export function mapLocalizedDocuments(documents: DocumentWithSource[]) {
-  const documentLocale = (document: DocumentWithSource) => {
-    const value = (document.fields?.locale as DocumentStringLikeFieldNonLocalized)?.value;
-    return value && localization.locales.includes(value) ? value : null;
-  };
-
-  return documents.map((document) => {
-    if (!localization.nonLocalizedModels.includes(document.modelName)) {
-      const locale = documentLocale(document);
-      return {
-        ...document,
-        locale,
-      };
-    }
-    return document;
-  });
 }
