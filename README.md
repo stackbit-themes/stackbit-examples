@@ -10,7 +10,6 @@ They are broken down into various categories below for easier navigation:
 - [Stackbit Features](#stackbit-features): Simple projects designed to highlight a specific Stackbit feature.
 - [Use Cases](#use-cases): Projects designed to serve a specific purpose (e.g. documentation).
 - [Integrations](#integrations): Examples using various third-party tools within a specific stack.
-- [Production-Ready Websites](#production-ready-websites): Full, opinionated, and production-ready websites.
 
 Have an idea of an example we should add? [Create an issue](https://github.com/stackbit-themes/stackbit-examples/issues/new) or [join us on Discord](https://discord.gg/HUNhjVkznH) to discuss.
 
@@ -76,15 +75,3 @@ Sites built to serve some specific purpose.
 | :------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- |
 | [Documentation](https://github.com/stackbit-themes/stackbit-examples/tree/main/documentation)                  | Documentation site with basic components and a few added features, using Next.js + Contentful.                                           |
 | [Onboarding Web Application](https://github.com/stackbit-themes/stackbit-examples/tree/main/onboarding-webapp) | Showcasing advanced capabilities e.g. auth, DB access through API endpoints, and wizard-based onboarding flows with editor-only screens. |
-
-## Production-Ready Websites
-
-Bigger, more opinionated sites that are production-ready and built to scale. These are good options for non-technical content editors to get an immediate feel for Stackbit.
-
-You can run these locally, but each of these sites is available to [demo immediately in the Stackbit app](https://jamstack.new/).
-
-| Example                                                                                         | Description                                                                  |
-| :---------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
-| [`starter-nextjs-theme`](https://github.com/stackbit-themes/starter-nextjs-theme)               | A beautifully simple site that can be flexed to fit your needs.              |
-| [`small-business-nextjs-theme`](https://github.com/stackbit-themes/small-business-nextjs-theme) | Pages and components meant to help small business spin up new sites quickly. |
-| [`personal-nextjs-theme`](https://github.com/stackbit-themes/personal-nextjs-theme)             | A stylistic site to showcase a portfolio.                                    |
