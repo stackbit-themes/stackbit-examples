@@ -45,27 +45,30 @@ These projects are the result of [the tutorials](#tutorials) that are also fully
 | [Gatsby + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/gatsby-contentful)                | Basic Gatsby site a composable page and a few components, using Contentful as the content source.                                                          |
 | [Hydrogen + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/hydrogen-contentful-demo-store) | Built on Shopify's Hydrogen framework & Contentful for editorial content                                                                                   |
 | [Next.js + Airtable](https://github.com/stackbit-themes/stackbit-examples/tree/main/airtable-content-source)           | Use Airtable as a content source, built on the Next.js blog example. **Note that the Airtable source is just a demo and is not yet officially supported.** |
+| [Nuxt 3 (Preview) + Git CMS](https://github.com/stackbit-themes/stackbit-examples/tree/main/nuxt3-preview)             | A working example with an early version of Nuxt 3, using local files as the content source.                                                                |
 | [SvelteKit + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/sveltekit-contentful)          | Basic SvelteKit & Contentful-based content site.                                                                                                           |
 
 ## Stackbit Features
 
 These projects showcase a specific Stackbit feature.
 
-| Example                                                                                               | Description                                                                         |
-| :---------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
-| [Localization](https://github.com/stackbit-themes/stackbit-examples/tree/main/i18n-nextjs-contentful) | Showcases Stackbit's localization (i18n) capabilities using Next.js and Contentful. |
+| Example                                                                                                   | Description                                                                            |
+| :-------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------- |
+| [Inline Editing](https://github.com/stackbit-themes/stackbit-examples/tree/main/auto-annotated-portfolio) | Uses a custom utility to automatically add annotation details to every content object. |
+| [Localization](https://github.com/stackbit-themes/stackbit-examples/tree/main/i18n-nextjs-contentful)     | Showcases Stackbit's localization (i18n) capabilities using Next.js and Contentful.    |
 
 ## Integrations
 
 Various other implementation and integrations patterns in practice.
 
-| Example                                                                                                                   | Description                                                                                                                             |
-| :------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------- |
-| [Algolia (search)](https://github.com/stackbit-themes/stackbit-examples/tree/main/algolia-search)                         | On-demand statically generated pages, searchable with Algolia                                                                           |
-| [Chakra UI (components)](https://github.com/stackbit-themes/stackbit-examples/tree/main/chakra-ui)                        | A simple site using [Chakra UI](https://chakra-ui.com/).                                                                                |
-| [Contentlayer (content)](https://github.com/stackbit-themes/stackbit-examples/tree/main/contentlayer)                     | Stackbit's minimal starter project, using [Contentlayer](https://www.contentlayer.dev/) to generate importable content files and types. |
-| [Cloudinary + Contentful (images)](https://github.com/stackbit-themes/stackbit-examples/tree/main/cloudinary-contentful)  | Image management & per-device responsive optimization with Cloudinary.                                                                  |
-| [Ninetailed (personalization)](https://github.com/stackbit-themes/stackbit-examples/tree/main/ninetailed-personalization) | Audience-based personalization with Ninetailed, with built-in support in the visual editor.                                             |
+| Example                                                                                                                   | Description                                                                                                                                          |
+| :------------------------------------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Algolia (search)](https://github.com/stackbit-themes/stackbit-examples/tree/main/algolia-search)                         | On-demand statically generated pages, searchable with Algolia                                                                                        |
+| [Chakra UI (components)](https://github.com/stackbit-themes/stackbit-examples/tree/main/chakra-ui)                        | A simple site using [Chakra UI](https://chakra-ui.com/).                                                                                             |
+| [Contentlayer (content)](https://github.com/stackbit-themes/stackbit-examples/tree/main/contentlayer)                     | Stackbit's minimal starter project, using [Contentlayer](https://www.contentlayer.dev/) to generate importable content files and types.              |
+| [Cloudinary + Contentful (images)](https://github.com/stackbit-themes/stackbit-examples/tree/main/cloudinary-contentful)  | Image management & per-device responsive optimization with Cloudinary.                                                                               |
+| [Cloudinary + unpic-img](https://github.com/stackbit-themes/stackbit-examples/tree/main/cloudinary-unpic)                 | Next.js project that uses [unpic-img](https://github.com/ascorbic/unpic-img) with Cloudinary for generating a responsive and optimized image gallery |
+| [Ninetailed (personalization)](https://github.com/stackbit-themes/stackbit-examples/tree/main/ninetailed-personalization) | Audience-based personalization with Ninetailed, with built-in support in the visual editor.                                                          |
 
 ## Use Cases
 
