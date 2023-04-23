@@ -5,7 +5,7 @@ export default defineStackbitConfig({
     stackbitVersion: '~0.6.0',
     nodeVersion: '18',
     ssgName: 'custom',
-    devCommand: 'node node_modules/.bin/gatsby develop -p {PORT} -H 127.0.0.1',
+    devCommand: 'ENABLE_GATSBY_REFRESH_ENDPOINT=true node node_modules/.bin/gatsby develop -p {PORT} -H 127.0.0.1',
     experimental: {
         ssg: {
             name: 'Gatsby',
