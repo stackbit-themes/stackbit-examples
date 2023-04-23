@@ -50,3 +50,8 @@ export type ComposablePage = SystemFields<'ContentfulPage'> & {
     slug: EntryFields.Symbol;
     sections: Array<Hero | Stats>;
 };
+
+/* ---------- All ---------- */
+
+export type ContentObject = Button | StatItem | Stats | Hero | ComposablePage;
+export type ContentTypeNames = ContentObject['__typename'];
