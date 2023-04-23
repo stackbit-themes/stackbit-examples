@@ -5,6 +5,7 @@ export default defineStackbitConfig({
     stackbitVersion: '~0.6.0',
     nodeVersion: '18',
     ssgName: 'custom',
+    devCommand: 'node node_modules/.bin/gatsby develop -p {PORT} -H {HOST}',
     experimental: {
         ssg: {
             name: 'Gatsby',
