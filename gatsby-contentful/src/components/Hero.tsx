@@ -24,7 +24,7 @@ export const Hero: React.FC<HeroProps> = (props) => {
                     </h1>
                     {props.body && (
                         <Markdown options={{ forceBlock: true }} className="mb-6 text-lg" {...fieldPath('body')}>
-                            {props.body.body}
+                            {props.body.internal.content}
                         </Markdown>
                     )}
                     {props.button && <Button {...props.button} />}

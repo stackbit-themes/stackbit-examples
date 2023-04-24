@@ -30,7 +30,9 @@ export const query = graphql`
                     contentful_id
                     id
                     body {
-                        body
+                        internal {
+                            content
+                        }
                     }
                     button {
                         url
@@ -49,7 +51,9 @@ export const query = graphql`
                     contentful_id
                     heading
                     body {
-                        body
+                        internal {
+                            content
+                        }
                     }
                     stats {
                         contentful_id

@@ -16,7 +16,7 @@ export const Stats: React.FC<StatsProps> = (props) => {
                 <div className="max-w-2xl mx-auto mb-16">
                     <h2 className="mb-4 text-4xl sm:text-5xl">{props.heading}</h2>
                     <Markdown options={{ forceBlock: true }} className="sm:text-xl">
-                        {props.body.body}
+                        {props.body.internal.content}
                     </Markdown>
                 </div>
                 <div className="grid max-w-3xl gap-12 mx-auto sm:grid-cols-3">
