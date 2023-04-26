@@ -2,6 +2,7 @@ import type { GatsbyConfig } from 'gatsby';
 require('dotenv').config();
 
 const IS_DEV = process.env.NODE_ENV === 'development';
+if (IS_DEV) process.env.ENABLE_GATSBY_REFRESH_ENDPOINT = 'true';
 
 const config: GatsbyConfig = {
     siteMetadata: {

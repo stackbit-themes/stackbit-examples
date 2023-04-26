@@ -4,7 +4,7 @@ import type { EntryFields } from 'contentful';
 /* ---------- Shared ---------- */
 
 namespace CustomFields {
-    export type Markdown<Key extends string> = Record<Key, EntryFields.Text>;
+    export type Markdown = { internal: { content: EntryFields.Text } };
     export type Image = ImageDataLike & { title: string };
 }
 
@@ -30,14 +30,14 @@ export type StatItem = SystemFields<'ContentfulStatItem'> & {
 
 export type Stats = SystemFields<'ContentfulStats'> & {
     heading: EntryFields.Symbol;
-    body: CustomFields.Markdown<'body'>;
+    body: CustomFields.Markdown;
     theme: 'dark' | 'primary';
     stats: StatItem[];
 };
 
 export type Hero = SystemFields<'ContentfulHero'> & {
     heading: EntryFields.Symbol;
-    body: CustomFields.Markdown<'body'>;
+    body: CustomFields.Markdown;
     image: CustomFields.Image;
     button: Button;
     theme: 'imgLeft' | 'imgRight';
@@ -50,3 +50,8 @@ export type ComposablePage = SystemFields<'ContentfulPage'> & {
     slug: EntryFields.Symbol;
     sections: Array<Hero | Stats>;
 };
+
+/* ---------- All ---------- */
+
+export type ContentObject = Button | StatItem | Stats | Hero | ComposablePage;
+export type ContentTypeNames = ContentObject['__typename'];

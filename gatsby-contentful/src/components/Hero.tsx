@@ -1,22 +1,22 @@
-import React from 'react';
+import * as React from 'react';
 import Markdown from 'markdown-to-jsx';
 
 import { Button } from './Button';
 
 import type { Hero as HeroProps } from '../types/app';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { fieldPath, objectId } from '../utils/annotations';
+import { fieldPath } from '../utils/annotations';
 
 const themeClassMap = {
     imgLeft: 'flex-row-reverse',
     imgRight: ''
 };
 
-export const Hero = (props: HeroProps) => {
+export const Hero: React.FC<HeroProps> = (props) => {
     const image = props.image ? getImage(props.image) : null;
 
     return (
-        <div className="px-12 py-24 bg-gray-100" {...objectId(props.contentful_id)}>
+        <div className="px-12 py-24 bg-gray-100">
             <div className={`flex mx-auto max-w-6xl gap-12 ${themeClassMap[props.theme] ?? themeClassMap['imgRight']}`}>
                 <div className="max-w-xl py-20 mx-auto lg:shrink-0">
                     <h1 className="mb-6 text-5xl leading-tight" {...fieldPath('heading')}>
@@ -24,7 +24,7 @@ export const Hero = (props: HeroProps) => {
                     </h1>
                     {props.body && (
                         <Markdown options={{ forceBlock: true }} className="mb-6 text-lg" {...fieldPath('body')}>
-                            {props.body.body}
+                            {props.body.internal.content}
                         </Markdown>
                     )}
                     {props.button && <Button {...props.button} />}
