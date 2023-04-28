@@ -52,10 +52,12 @@ These projects are the result of [the tutorials](#tutorials) that are also fully
 
 These projects showcase a specific Stackbit feature.
 
-| Example                                                                                                   | Description                                                                            |
-| :-------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------- |
-| [Inline Editing](https://github.com/stackbit-themes/stackbit-examples/tree/main/auto-annotated-portfolio) | Uses a custom utility to automatically add annotation details to every content object. |
-| [Localization](https://github.com/stackbit-themes/stackbit-examples/tree/main/i18n-nextjs-contentful)     | Showcases Stackbit's localization (i18n) capabilities using Next.js and Contentful.    |
+| Example                                                                                                      | Description                                                                                                      |
+| :----------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------- |
+| [Asset Sources](https://github.com/stackbit-themes/stackbit-examples/tree/main/unsplash-asset-source)        | Uses Unsplash as a custom asset source, rather than storing image locally. Built on the minimal Next.js starter. |
+| [Inline Editing](https://github.com/stackbit-themes/stackbit-examples/tree/main/auto-annotated-portfolio)    | Uses a custom utility to automatically add annotation details to every content object.                           |
+| [Localization](https://github.com/stackbit-themes/stackbit-examples/tree/main/i18n-nextjs-contentful)        | Showcases Stackbit's localization (i18n) capabilities using Next.js and Contentful.                              |
+| [Personalization](https://github.com/stackbit-themes/stackbit-examples/tree/main/ninetailed-personalization) | Audience-based personalization with Ninetailed, with built-in support in the visual editor.                      |
 
 ## Integrations
 
@@ -69,6 +71,7 @@ Various other implementation and integrations patterns in practice.
 | [Cloudinary + Contentful (images)](https://github.com/stackbit-themes/stackbit-examples/tree/main/cloudinary-contentful)  | Image management & per-device responsive optimization with Cloudinary.                                                                               |
 | [Cloudinary + unpic-img](https://github.com/stackbit-themes/stackbit-examples/tree/main/cloudinary-unpic)                 | Next.js project that uses [unpic-img](https://github.com/ascorbic/unpic-img) with Cloudinary for generating a responsive and optimized image gallery |
 | [Ninetailed (personalization)](https://github.com/stackbit-themes/stackbit-examples/tree/main/ninetailed-personalization) | Audience-based personalization with Ninetailed, with built-in support in the visual editor.                                                          |
+| [Unsplash (asset source)](https://github.com/stackbit-themes/stackbit-examples/tree/main/unsplash-asset-source)           | Uses Unsplash as a custom asset source, rather than storing image locally. Built on the minimal Next.js starter.                                     |
 
 ## Use Cases
 
