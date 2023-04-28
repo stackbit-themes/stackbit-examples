@@ -35,24 +35,12 @@ export default defineStackbitConfig({
             url: 'https://unsplash-asset-source.netlify.app',
             // transform the value received from iframe if needed
             transform: ({ assetData }) => {
-                // console.log('transforming asset data');
-
-                // console.log({ assetData });
                 return assetData.unsplashImageUrl;
             },
-            // return an object with 'title' and 'image' extracted from
-            // the assetData (after any transformations)
+            // return an object with 'title' and 'image' extracted from the
+            // assetData (after any transformations)
             preview: ({ assetData }: { assetData: string }) => {
-                // console.log('build preview');
-                // console.log({ assetData });
-
-                // if (typeof assetData === 'string') {
-                //     assetData = { unsplashImageUrl: assetData } as { unsplashImageUrl: string };
-                // }
-                return {
-                    title: '[ASSET TITLE]',
-                    image: assetData
-                };
+                return { title: '', image: assetData };
             }
         }
     ]
