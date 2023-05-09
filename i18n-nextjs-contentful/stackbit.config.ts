@@ -1,17 +1,10 @@
-import {
-  defineStackbitConfig,
-  DocumentStringLikeFieldNonLocalized,
-  ModelExtension,
-  SiteMapEntry,
-} from '@stackbit/types';
-import {
-  LocalizableContentfulContentSource,
-  markLocalizedModel /*, mapLocalizedDocuments*/,
-} from 'localization-config';
+import { defineStackbitConfig, ModelExtension, SiteMapEntry } from '@stackbit/types';
+import { getSlug, LocalizedDocumentCreateHook, markLocalizedModel } from './config-helpers';
 import localization from 'utils/localization';
 import { normalizeSlug, PAGE_TYPES, SITE_CONFIG_TYPE } from 'utils/common';
+import { ContentfulContentSource } from '@stackbit/cms-contentful';
 
-const contentSource = new LocalizableContentfulContentSource({
+const contentSource = new ContentfulContentSource({
   spaceId: process.env.CONTENTFUL_SPACE_ID!,
   environment: process.env.CONTENTFUL_ENVIRONMENT || 'master',
   previewToken: process.env.CONTENTFUL_PREVIEW_TOKEN!,
@@ -49,15 +42,15 @@ const config = defineStackbitConfig({
   nodeVersion: '16',
   contentSources: [contentSource],
   modelExtensions: modelExtensions,
+  onDocumentCreate: LocalizedDocumentCreateHook,
   mapModels: ({ models }) => {
     models = models.map(markLocalizedModel);
     return models;
   },
   siteMap: ({ documents }) => {
     const pages = documents.filter((doc) => PAGE_TYPES.includes(doc.modelName));
-
     const entries: SiteMapEntry[] = pages.flatMap((document) => {
-      let slug = (document.fields.slug as DocumentStringLikeFieldNonLocalized)?.value;
+      let slug = getSlug(document);
       if (!slug) return null;
 
       slug = normalizeSlug(slug);
