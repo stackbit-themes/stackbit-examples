@@ -46,6 +46,10 @@ The asset source is a shared resource published to https://unsplash-asset-source
 
 On clicking one of the images, the site sends a `postMessage` call to the iframe used by the Stackbit application, including a string to be used as the `src` value for the image.
 
+### Example Code
+
+There is a copy of the asset source code in the `asset-source` directory in this repository.
+
 ## Other Stackbit Projects
 
 Stackbit has a number of examples that you can use to create a new project or evaluate Stackbit. Run the following command to see a list of available examples:
