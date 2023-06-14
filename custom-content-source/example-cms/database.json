@@ -1,0 +1,204 @@
+{
+    "models": [
+        {
+            "name": "post",
+            "fields": [
+                {
+                    "type": "string",
+                    "name": "title",
+                    "required": "true"
+                },
+                {
+                    "type": "string",
+                    "name": "slug",
+                    "required": "true"
+                },
+                {
+                    "type": "date",
+                    "name": "date"
+                },
+                {
+                    "type": "image",
+                    "name": "coverImage"
+                },
+                {
+                    "type": "reference",
+                    "name": "author",
+                    "allowedTypes": ["author"]
+                },
+                {
+                    "type": "text",
+                    "name": "excerpt"
+                },
+                {
+                    "type": "image",
+                    "name": "ogImage"
+                },
+                {
+                    "type": "markdown",
+                    "name": "content"
+                }
+            ]
+        },
+        {
+            "name": "author",
+            "fields": [
+                {
+                    "type": "string",
+                    "name": "name",
+                    "required": "true"
+                },
+                {
+                    "type": "image",
+                    "name": "picture"
+                }
+            ]
+        }
+    ],
+    "documents": [
+        {
+            "id": "jj-kasper",
+            "type": "author",
+            "createdAt": "2023-01-10T10:00:00Z",
+            "updatedAt": "2023-01-10T10:00:00Z",
+            "status": "published",
+            "fields": {
+                "name": "JJ Kasper",
+                "picture": "jj-picture",
+                "updatedAt": "2023-06-12T08:18:29.694Z",
+                "status": "changed"
+            }
+        },
+        {
+            "id": "joe-haddad",
+            "type": "author",
+            "createdAt": "2023-01-10T10:00:00Z",
+            "updatedAt": "2023-01-10T10:00:00Z",
+            "status": "published",
+            "fields": {
+                "name": "Joe Haddad",
+                "picture": "joe-picture"
+            }
+        },
+        {
+            "id": "tim-neutkens",
+            "type": "author",
+            "createdAt": "2023-01-10T10:00:00Z",
+            "updatedAt": "2023-01-10T10:00:00Z",
+            "status": "published",
+            "fields": {
+                "name": "Tim Neutkens",
+                "picture": "tim-picture"
+            }
+        },
+        {
+            "id": "dd44a5a6-5333-4097-932c-3915f56edda3",
+            "type": "post",
+            "createdAt": "2023-01-10T10:00:00Z",
+            "updatedAt": "2023-01-10T10:00:00Z",
+            "status": "published",
+            "fields": {
+                "title": "Dynamic Routing and Static Generation",
+                "slug": "dynamic-routing",
+                "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.",
+                "coverImage": "dynamic-routing-cover-image",
+                "date": "2020-03-16T05:35:07.322Z",
+                "author": "jj-kasper",
+                "ogImage": "dynamic-routing-cover-image",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.\n\nVenenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.\n\n## Lorem Ipsum\n\nTristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.",
+                "updatedAt": "2023-06-11T12:54:21.563Z",
+                "status": "changed"
+            }
+        },
+        {
+            "id": "1608606e-38cc-44c1-91ee-9aad9c52b7a7",
+            "type": "post",
+            "createdAt": "2023-01-10T10:00:00Z",
+            "updatedAt": "2023-01-10T10:00:00Z",
+            "status": "published",
+            "fields": {
+                "title": "Learn How to Pre-render Pages Using Static Generation with Next.js",
+                "slug": "hello-world",
+                "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.",
+                "coverImage": "hello-world-cover-image",
+                "date": "2020-03-16T05:35:07.322Z",
+                "author": "tim-neutkens",
+                "ogImage": "hello-world-cover-image",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.\n\nVenenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.\n\n## Lorem Ipsum\n\nTristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate."
+            }
+        },
+        {
+            "id": "a8906833-c918-485c-a27b-83f4e2bd2bd4",
+            "type": "post",
+            "createdAt": "2023-01-10T10:00:00Z",
+            "updatedAt": "2023-01-10T10:00:00Z",
+            "status": "published",
+            "fields": {
+                "title": "Preview Mode for Static Generation",
+                "slug": "preview",
+                "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.",
+                "coverImage": "preview-cover-image",
+                "date": "2020-03-16T05:35:07.322Z",
+                "author": "joe-haddad",
+                "ogImage": "preview-cover-image",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.\n\nVenenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.\n\n## Lorem Ipsum\n\nTristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate."
+            }
+        }
+    ],
+    "assets": [
+        {
+            "id": "preview-cover-image",
+            "createdAt": "2023-01-10T10:00:00Z",
+            "updatedAt": "2023-01-10T10:00:00Z",
+            "title": "Preview Cover",
+            "url": "/assets/blog/preview/cover.jpg",
+            "width": 2000,
+            "height": 1000
+        },
+        {
+            "id": "hello-world-cover-image",
+            "createdAt": "2023-01-10T10:00:00Z",
+            "updatedAt": "2023-01-10T10:00:00Z",
+            "title": "Hello World Cover",
+            "url": "/assets/blog/hello-world/cover.jpg",
+            "width": 2000,
+            "height": 1000
+        },
+        {
+            "id": "dynamic-routing-cover-image",
+            "createdAt": "2023-01-10T10:00:00Z",
+            "updatedAt": "2023-01-10T10:00:00Z",
+            "title": "Dynamic Routing Cover",
+            "url": "/assets/blog/dynamic-routing/cover.jpg",
+            "width": 2000,
+            "height": 1000
+        },
+        {
+            "id": "jj-picture",
+            "createdAt": "2023-01-10T10:00:00Z",
+            "updatedAt": "2023-01-10T10:00:00Z",
+            "title": "JJ Picture",
+            "url": "/assets/blog/authors/jj.jpeg",
+            "width": 100,
+            "height": 100
+        },
+        {
+            "id": "joe-picture",
+            "createdAt": "2023-01-10T10:00:00Z",
+            "updatedAt": "2023-01-10T10:00:00Z",
+            "title": "Joe Picture",
+            "url": "/assets/blog/authors/joe.jpeg",
+            "width": 100,
+            "height": 100
+        },
+        {
+            "id": "tim-picture",
+            "createdAt": "2023-01-10T10:00:00Z",
+            "updatedAt": "2023-01-10T10:00:00Z",
+            "title": "Tim Picture",
+            "url": "/assets/blog/authors/tim.jpeg",
+            "width": 100,
+            "height": 100
+        }
+    ]
+}
