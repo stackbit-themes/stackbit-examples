@@ -2,6 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 
 import { DynamicComponent } from '../../components-registry';
+import PostFeedSection from '../../sections/PostFeedSection';
 import BaseLayout from '../BaseLayout';
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 import { PostFeedLayout, PageComponentProps, PostLayout, SectionModels } from '@/types';
@@ -37,7 +38,7 @@ const Component: React.FC<ComponentProps> = (props) => {
                     </div>
                 )}
                 <Sections sections={topSections} />
-                <DynamicComponent {...postFeed} posts={items} />
+                <PostFeedSection {...postFeed} posts={items} />
                 <Sections sections={bottomSections} />
             </main>
         </BaseLayout>
