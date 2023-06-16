@@ -2,6 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 
 import { DynamicComponent } from '../../components-registry';
+import ProjectFeedSection from '../../sections/ProjectFeedSection';
 import BaseLayout from '../BaseLayout';
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 import { ProjectFeedLayout, PageComponentProps, ProjectLayout } from '@/types';
@@ -37,7 +38,7 @@ const Component: React.FC<ComponentProps> = (props) => {
                     </div>
                 )}
                 <Sections sections={topSections} />
-                <DynamicComponent {...projectFeed} projects={items} />
+                <ProjectFeedSection {...projectFeed} projects={items} />
                 <Sections sections={bottomSections} />
             </main>
         </BaseLayout>
