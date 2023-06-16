@@ -8,16 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
-    "markdown-to-jsx": "^7.2.0",
-    "next": "^13.4.4",
+    "markdown-to-jsx": "^7.2.1",
+    "next": "^13.4.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@stackbit/cms-contentful": "^0.3.11",
-    "@stackbit/types": "^0.7.2",
-    "@types/node": "^20.2.5",
-    "@types/react": "18.2.7",
+    "@stackbit/cms-contentful": "^0.3.13",
+    "@stackbit/types": "^0.7.4",
+    "@types/node": "^20.3.1",
+    "@types/react": "18.2.12",
     "autoprefixer": "^10.4.14",
     "contentful-export": "^7.19.58",
     "contentful-import": "^8.5.56",
