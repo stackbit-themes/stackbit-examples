@@ -4,19 +4,8 @@ import { defineStackbitConfig } from '@stackbit/types';
 export default defineStackbitConfig({
     stackbitVersion: '~0.6.0',
     nodeVersion: '18',
-    ssgName: 'custom',
-    devCommand: 'node node_modules/.bin/gatsby develop -p {PORT} -H 127.0.0.1',
-    experimental: {
-        ssg: {
-            name: 'Gatsby',
-            logPatterns: {
-                up: ['success Building development bundle', 'Compiled successfully']
-            },
-            directRoutes: {
-                'socket.io': 'socket.io'
-            }
-        }
-    },
+    ssgName: 'gatsby',
+    ssgVersion: '5',
     contentSources: [
         new ContentfulContentSource({
             spaceId: process.env.CONTENTFUL_SPACE_ID!,
