@@ -1,9 +1,15 @@
 import { defineStackbitConfig, ModelExtension } from '@stackbit/types';
 import { ContentfulContentSource } from '@stackbit/cms-contentful';
 
-import { BRAND_TYPE, PAGE_TYPE, SITE_CONFIG_TYPE } from 'utils/common';
+import { BRAND_TYPE, PAGE_TYPE } from 'utils/common';
 import { setLocaleOnDocumentCreate, setLocalizedModel } from './config/localization-helpers';
-import { brandModelExtension, hideBrandField, setBrandOnContentCreate } from './config/brand-helpers';
+import {
+  brandModelExtension,
+  hideBrandField,
+  relevantToBrand,
+  resolveCurrentBrand,
+  setBrandOnContentCreate,
+} from './config/brand-helpers';
 import { buildSiteMap } from 'config/sitemap';
 
 const modelExtensions: ModelExtension[] = [
@@ -34,6 +40,8 @@ const contentSource = new ContentfulContentSource({
   accessToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN!,
 });
 
+let currentBrandResolved = false;
+
 const config = defineStackbitConfig({
   stackbitVersion: '~0.6.0',
   ssgName: 'nextjs',
@@ -42,6 +50,16 @@ const config = defineStackbitConfig({
   mapModels: ({ models }) => {
     models = models.map(setLocalizedModel).map(hideBrandField);
     return models;
+  },
+  mapDocuments: ({ documents }) => {
+    if (!currentBrandResolved) {
+      resolveCurrentBrand(documents);
+      currentBrandResolved = true;
+    }
+
+    const result = documents.filter(relevantToBrand);
+    console.debug(`[mapDocuments] Returning ${result.length} of ${documents.length} documents`);
+    return result;
   },
   modelExtensions: modelExtensions,
   onDocumentCreate: setLocaleOnDocumentCreate,
@@ -52,9 +70,9 @@ const config = defineStackbitConfig({
   sidebarButtons: [
     {
       type: 'model',
-      modelName: SITE_CONFIG_TYPE,
-      label: 'Site configuration',
-      icon: 'gear',
+      modelName: BRAND_TYPE,
+      label: 'Brand configuration',
+      icon: 'style',
       srcProjectId: contentSource.getProjectId(),
       srcType: contentSource.getContentSourceType(),
     },

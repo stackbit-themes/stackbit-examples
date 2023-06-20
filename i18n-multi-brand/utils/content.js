@@ -1,5 +1,6 @@
 import { createClient } from 'contentful';
-import { PAGE_TYPE, SITE_CONFIG_TYPE, IS_DEV } from './common';
+import { PAGE_TYPE, IS_DEV, getCurrentBrandSlug, BRAND_TYPE } from './common';
+import localization from './localization';
 
 const client = createClient({
   accessToken: IS_DEV ? process.env.CONTENTFUL_PREVIEW_TOKEN : process.env.CONTENTFUL_DELIVERY_TOKEN,
@@ -7,33 +8,61 @@ const client = createClient({
   host: IS_DEV ? 'preview.contentful.com' : 'cdn.contentful.com',
 });
 
-async function getEntries(content_type, queryParams) {
-  const entries = await client.getEntries({ content_type, ...queryParams, include: 10 });
+let cachedCurrentBrandId = null;
+
+export async function getCurrentBrand(locale) {
+  const slug = getCurrentBrandSlug();
+  const { items } = await getEntries(BRAND_TYPE, { 'fields.slug': slug, locale });
+  if (items.length === 1) {
+    return mapEntry(items[0]);
+  } else {
+    throw new Error(`[resolveCurrentBrand] Couldn't find brand document with slug: ${slug}`);
+  }
+}
+
+async function resolveCurrentBrandId() {
+  if (!cachedCurrentBrandId) {
+    const brand = await getCurrentBrand();
+    cachedCurrentBrandId = brand.id;
+    console.log(`[cacheCurrentBrandId] Brand is: "${brand.name}" (id: ${brand.id})`);
+  }
+  return cachedCurrentBrandId;
+}
+
+async function getEntries(contentType, queryParams) {
+  const entries = await client.getEntries({ content_type: contentType, ...queryParams, include: 10 });
   return entries;
 }
 
+async function makeBrandQuery() {
+  const brandId = await resolveCurrentBrandId();
+  return { 'fields.brand.sys.id': brandId };
+}
+
 export async function getPagePaths() {
-  const { items } = await getEntries(PAGE_TYPE);
-  return items.map((page) => {
-    let slug = page.fields.slug.split('/').filter(Boolean);
-    return { params: { slug }, locale: page.fields.locale };
+  const brandQuery = await makeBrandQuery();
+  const { items } = await getEntries(PAGE_TYPE, brandQuery);
+
+  const paths = items.map((page) => {
+    const slug = page.fields.slug.split('/').filter(Boolean);
+    const locale = page.fields.locale;
+    return { params: { slug }, locale };
   });
+
+  for (const locale of localization.locales) {
+    const hpFound = paths.find((path) => path.params.slug === '' && path.locale === locale);
+    if (!hpFound) {
+      console.log(`No homepage found for locale ${locale}`);
+      paths.push({ params: { slug: [] }, locale });
+    }
+  }
+  return paths;
 }
 
 export async function getPages() {
-  let response = await getEntries(PAGE_TYPE);
+  const brandQuery = await makeBrandQuery();
+  let response = await getEntries(PAGE_TYPE, brandQuery);
   return response.items.map(mapEntry);
-}
-
-export async function getSiteConfig(locale) {
-  let response = await getEntries(SITE_CONFIG_TYPE, { locale });
-  const itemCount = response.items?.length;
-  if (itemCount === 1) {
-    return mapEntry(response.items[0]);
-  } else {
-    console.error('Expected 1 site config object, got:', itemCount);
-    return null;
-  }
 }
 
 function mapEntry(entry) {

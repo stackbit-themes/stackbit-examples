@@ -1,21 +1,17 @@
-import { DocumentWithSource, ModelWithSource, OnContentCreateOptions } from '@stackbit/types';
-import { getStringField } from './config-helpers';
 import {
-  STACKBIT_PRESET_TYPE,
-  BRAND_FIELD,
-  MULTI_BRAND_TYPES,
-  BRAND_TYPE,
-  BRAND_FIXED_IDENTIFIER_FIELD,
-  getCurrentBrandIdentifier,
-} from 'utils/common';
-
-const currentBrandIdentifier = getCurrentBrandIdentifier();
+  DocumentReferenceFieldNonLocalized,
+  DocumentWithSource,
+  ModelWithSource,
+  OnContentCreateOptions,
+} from '@stackbit/types';
+import { getLocalizedStringField, getStringField } from './config-helpers';
+import { STACKBIT_PRESET_TYPE, BRAND_FIELD, MULTI_BRAND_TYPES, BRAND_TYPE, getCurrentBrandSlug } from 'utils/common';
 
 export const brandModelExtension = {
   name: BRAND_TYPE,
   singleInstance: true, // User can't create more instances
   readOnly: true, // Can't delete
-  fields: [{ name: BRAND_FIXED_IDENTIFIER_FIELD, readOnly: true }], // String ID of brand can't be changed
+  fields: [{ name: 'slug', readOnly: true }],
 };
 
 export function hideBrandField(model: ModelWithSource) {
@@ -26,26 +22,39 @@ export function hideBrandField(model: ModelWithSource) {
   return newModel;
 }
 
-function findCurrentBrand(documents: DocumentWithSource[]) {
-  const result = documents
-    .filter((e) => e.modelName === BRAND_TYPE)
-    .find((e) => getStringField(e, 'fixedIdentifier') === currentBrandIdentifier);
+let currentBrandId: string | null = null;
 
-  if (!result)
-    throw new Error(`[findCurrentBrand] Couldn't find document for brand identifier: {currentBrandIdentifier}`);
-  return result;
+export function resolveCurrentBrand(allDocuments: DocumentWithSource[]) {
+  const brandSlug = getCurrentBrandSlug();
+  const currBrand = allDocuments
+    .filter((doc) => doc.modelName === BRAND_TYPE)
+    .find((doc) => getStringField(doc, 'slug') === brandSlug);
+
+  if (!currBrand) throw new Error(`[resolveCurrentBrand] Couldn't find brand document with slug: {brandSlug}`);
+
+  console.log(
+    `[resolveCurrentBrand] Brand is: "${getLocalizedStringField(currBrand, 'name')}" (id: "${
+      currBrand.id
+    }", slug: "${brandSlug}")`,
+  );
+  currentBrandId = currBrand.id;
+}
+
+function assertBrandIdSet() {
+  if (!currentBrandId) throw new Error('currentBrandId was not set. Make sure to call resolveCurrentBrand()');
 }
 
 export function setBrandOnContentCreate(options: OnContentCreateOptions) {
+  assertBrandIdSet();
+
   const toplevelModelName = options.model.name;
   let result = { ...options.object };
 
   console.debug('[setBrandOnContentCreate] object before modification:', JSON.stringify(result, null, 2));
 
-  const currBrand = findCurrentBrand(options.getDocuments());
   const currBrandRef = {
-    $$type: currBrand.modelName,
-    $$ref: currBrand.id,
+    $$type: BRAND_TYPE,
+    $$ref: currentBrandId,
   };
 
   if (toplevelModelName === STACKBIT_PRESET_TYPE) {
@@ -95,4 +104,26 @@ function deepSetBrand(obj: any, brandRef: object, implicitModelName?: string) {
     obj.brand = brandRef;
   }
   return obj;
+}
+
+export function relevantToBrand(document: DocumentWithSource) {
+  assertBrandIdSet();
+
+  if (MULTI_BRAND_TYPES.includes(document.modelName)) {
+    return true; // Include all multi-brand docs
+  } else if (document.modelName === BRAND_TYPE) {
+    return document.id === currentBrandId; // Of brand documents, return only the current one
+  } else {
+    const referencedBrand = (document.fields[BRAND_FIELD] as DocumentReferenceFieldNonLocalized)?.refId;
+    if (referencedBrand) {
+      return referencedBrand === currentBrandId;
+    } else {
+      if (document.modelName === STACKBIT_PRESET_TYPE) {
+        return true; // Presets can be multi-brand
+      } else {
+        console.debug(`[relevantToBrand] document ${document.id} (model: ${document.modelName}) has no brand set.`);
+        return false; // Other brand-specific documents should always have the brand field set
+      }
+    }
+  }
 }

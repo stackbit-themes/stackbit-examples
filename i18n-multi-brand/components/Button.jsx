@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 const themeClassMap = {
-  default: 'border-purple-700 bg-purple-700 text-white hover:bg-purple-500 hover:border-purple-500',
-  outline: 'border-purple-700 bg-transparent text-purple-700 hover:text-purple-500 hover:border-purple-500',
+  default: 'border-dark bg-dark text-verylight hover:bg-verydark',
+  outline: 'border-dark bg-verylight text-dark hover:bg-light hover:border-superdark',
 };
 
 export const Button = (props) => {

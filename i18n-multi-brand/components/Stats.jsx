@@ -1,8 +1,8 @@
 import Markdown from 'markdown-to-jsx';
 
 const themeClassMap = {
-  primary: 'bg-purple-700 text-white',
-  dark: 'bg-gray-800 text-white',
+  primary: 'bg-light text-dark',
+  dark: 'bg-dark text-verylight',
 };
 
 export const Stats = (props) => {
@@ -16,12 +16,16 @@ export const Stats = (props) => {
           <h2 className="mb-4 text-4xl font-bold sm:text-5xl" data-sb-field-path="heading">
             {props.heading}
           </h2>
-          {props.body && <Markdown options={{ forceBlock: true }} className="sm:text-lg" data-sb-field-path="body">
-            {props.body}
-          </Markdown>}
+          {props.body && (
+            <Markdown options={{ forceBlock: true }} className="sm:text-lg" data-sb-field-path="body">
+              {props.body}
+            </Markdown>
+          )}
         </div>
         <div className="grid max-w-3xl gap-12 mx-auto sm:grid-cols-3">
-          {(props.stats || []).map((stat, idx) => <StatItem key={idx} {...stat} />)}
+          {(props.stats || []).map((stat, idx) => (
+            <StatItem key={idx} {...stat} />
+          ))}
         </div>
       </div>
     </div>

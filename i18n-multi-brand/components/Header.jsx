@@ -8,16 +8,16 @@ function sortedLinksArray(links) {
   const linksArray = Object.entries(links);
   const hpLink = linksArray.find(([label, url]) => url === '/');
   const restOfLinks = linksArray.filter(([label, url]) => url !== '/');
-  return [hpLink, ...restOfLinks];
+  return [hpLink, ...restOfLinks].filter(Boolean);
 }
 
-export const Header = ({ pageLocale, siteConfig, links }) => {
+export const Header = ({ pageLocale, brand, links }) => {
   let sortedLinks = sortedLinksArray(links);
-  const headerText = siteConfig?.headerText; // This value is field-localized
+  const headerText = brand.name; // This value is field-localized
   return (
-    <div className="bg-gray-800 text-white px-5 py-4 flex items-center gap-6 uppercase">
+    <div className="bg-dark text-verylight px-5 py-4 flex items-center gap-6 uppercase">
       {headerText && (
-        <span className="hidden md:inline text-lg font-bold" data-sb-field-path={siteConfig.id + ':headerText'}>
+        <span className="hidden md:inline text-lg font-bold" data-sb-field-path={brand.id + ':name'}>
           {headerText}
         </span>
       )}
