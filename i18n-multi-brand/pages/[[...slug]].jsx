@@ -38,7 +38,7 @@ export default function ComposablePage({ pageExists, page, brand, headerLinks, l
 function PreviewOnlyMessage({ message }) {
   return IS_DEV ? (
     <div className="flex items-center justify-center w-full py-32">
-      <div className="border-4 border-gray-400 rounded p-16 border-dashed flex flex-col gap-2 items-center">
+      <div className="border-4 border-verydark rounded p-16 border-dashed flex flex-col gap-2 items-center">
         <span className="text-2xl">{message}</span>
         <span>Note: this message appears only in preview mode.</span>
       </div>

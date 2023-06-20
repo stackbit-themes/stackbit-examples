@@ -17,10 +17,10 @@
   },
   "clean-smile": {
     "colors": {
-      "verylight": "#ecfeff",
-      "light": "#a5f3fc",
-      "dark": "#155e75",
-      "verydark": "#083344"
+      "verylight": "#eff6ff",
+      "light": "#eff6ff",
+      "dark": "#1e40af",
+      "verydark": "#1e3a8a"
     }
   },
   "fallback": {
