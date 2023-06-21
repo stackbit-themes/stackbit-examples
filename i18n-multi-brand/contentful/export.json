@@ -839,6 +839,70 @@
           "omitted": false
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "64yvip0g8t1m"
+          }
+        },
+        "id": "multiBrandConfig",
+        "type": "ContentType",
+        "createdAt": "2023-06-21T15:40:58.417Z",
+        "updatedAt": "2023-06-21T15:40:58.858Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-06-21T15:40:58.858Z",
+        "firstPublishedAt": "2023-06-21T15:40:58.858Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5EVbQR9vkbrESvndkkstCM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5EVbQR9vkbrESvndkkstCM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5EVbQR9vkbrESvndkkstCM"
+          }
+        }
+      },
+      "displayField": "footerText",
+      "name": "Multi-Brand Configuration",
+      "description": "",
+      "fields": [
+        {
+          "id": "footerText",
+          "name": "Footer Text",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "tags": [
@@ -1334,6 +1398,57 @@
             "helpText": "Used to identify the brand in environment variables. This value should not change, and is not localized."
           },
           "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "64yvip0g8t1m",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-06-21T15:40:58.998Z",
+        "createdBy": {
+          "sys": {
+            "id": "5EVbQR9vkbrESvndkkstCM",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-06-21T15:40:59.835Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5EVbQR9vkbrESvndkkstCM",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "multiBrandConfig",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "footerText",
+          "widgetId": "markdown",
           "widgetNamespace": "builtin"
         }
       ]
@@ -3342,6 +3457,73 @@
           }
         }
       }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "64yvip0g8t1m"
+          }
+        },
+        "id": "4RhXd3KVgwZwUNtfgEE7Ra",
+        "type": "Entry",
+        "createdAt": "2023-06-21T15:41:14.499Z",
+        "updatedAt": "2023-06-21T17:05:29.457Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2023-06-21T17:05:29.457Z",
+        "firstPublishedAt": "2023-06-21T15:45:23.083Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5EVbQR9vkbrESvndkkstCM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5EVbQR9vkbrESvndkkstCM"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5EVbQR9vkbrESvndkkstCM"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "multiBrandConfig"
+          }
+        }
+      },
+      "fields": {
+        "footerText": {
+          "en-US": "© 2023. Part of the [SuperBrands](https://www.stackbit.com) group: superior technology and safety.",
+          "es": "© 2023. Parte del grupo [SuperBrands](https://www.stackbit.com): tecnología y seguridad superiores."
+        }
+      }
     }
   ],
   "assets": [
@@ -3361,7 +3543,7 @@
         "id": "o1G1j1B3fpZyVGa33M1zJ",
         "type": "Asset",
         "createdAt": "2023-06-19T07:53:21.615Z",
-        "updatedAt": "2023-06-19T07:53:22.944Z",
+        "updatedAt": "2023-06-21T17:08:26.834Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3369,8 +3551,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 2,
-        "publishedAt": "2023-06-19T07:53:22.944Z",
+        "publishedVersion": 5,
+        "publishedAt": "2023-06-21T17:08:26.834Z",
         "firstPublishedAt": "2023-06-19T07:53:22.944Z",
         "createdBy": {
           "sys": {
@@ -3386,8 +3568,8 @@
             "id": "5EVbQR9vkbrESvndkkstCM"
           }
         },
-        "publishedCounter": 1,
-        "version": 3,
+        "publishedCounter": 2,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3405,12 +3587,12 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/64yvip0g8t1m/o1G1j1B3fpZyVGa33M1zJ/c5c8fcd97ac454b084d523e5b6a460a1/fpo-sandwich.jpg",
+            "url": "//images.ctfassets.net/64yvip0g8t1m/o1G1j1B3fpZyVGa33M1zJ/663c9bc3fbd41071cd567886c55526e6/fpo-sandwich.jpg",
             "details": {
-              "size": 2148104,
+              "size": 262237,
               "image": {
-                "width": 5000,
-                "height": 4000
+                "width": 2000,
+                "height": 1600
               }
             },
             "fileName": "fpo-sandwich.jpg",

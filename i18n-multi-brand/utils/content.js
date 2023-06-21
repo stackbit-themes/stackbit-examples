@@ -1,5 +1,5 @@
 import { createClient } from 'contentful';
-import { PAGE_TYPE, IS_DEV, getCurrentBrandSlug, BRAND_TYPE } from './common';
+import { PAGE_TYPE, IS_DEV, getCurrentBrandSlug, BRAND_TYPE, MULTI_BRAND_CONFIG_TYPE } from './common';
 import localization from './localization';
 
 const client = createClient({
@@ -16,7 +16,16 @@ export async function getCurrentBrand(locale) {
   if (items.length === 1) {
     return mapEntry(items[0]);
   } else {
-    throw new Error(`[resolveCurrentBrand] Couldn't find brand document with slug: ${slug}`);
+    throw new Error(`[getCurrentBrand] Couldn't find brand document with slug: ${slug}, found ${items.length} items`);
+  }
+}
+
+export async function getMultiBrandConfig(locale) {
+  const { items } = await getEntries(MULTI_BRAND_CONFIG_TYPE, { locale });
+  if (items.length === 1) {
+    return mapEntry(items[0]);
+  } else {
+    throw new Error(`[getMultiBrandConfig] Couldn't find multi-brand config, found ${items.length} items`);
   }
 }
 

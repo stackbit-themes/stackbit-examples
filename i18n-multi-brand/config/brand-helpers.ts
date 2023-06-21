@@ -1,18 +1,34 @@
 import {
   DocumentReferenceFieldNonLocalized,
   DocumentWithSource,
+  ModelExtension,
   ModelWithSource,
   OnContentCreateOptions,
 } from '@stackbit/types';
 import { getLocalizedStringField, getStringField } from './config-helpers';
-import { STACKBIT_PRESET_TYPE, BRAND_FIELD, MULTI_BRAND_TYPES, BRAND_TYPE, getCurrentBrandSlug } from 'utils/common';
+import {
+  STACKBIT_PRESET_TYPE,
+  BRAND_FIELD,
+  MULTI_BRAND_TYPES,
+  BRAND_TYPE,
+  getCurrentBrandSlug,
+  MULTI_BRAND_CONFIG_TYPE,
+} from 'utils/common';
 
-export const brandModelExtension = {
-  name: BRAND_TYPE,
-  singleInstance: true, // User can't create more instances
-  readOnly: true, // Can't delete
-  fields: [{ name: 'slug', readOnly: true }],
-};
+export const brandModelExtensions: ModelExtension[] = [
+  {
+    name: BRAND_TYPE,
+    singleInstance: true, // User can't create more instances
+    readOnly: true, // Can't delete
+    fields: [{ name: 'slug', readOnly: true }],
+  },
+  {
+    name: MULTI_BRAND_CONFIG_TYPE,
+    singleInstance: true, // User can't create more instances
+    readOnly: true, // Can't delete
+    fields: [{ name: 'footerText', readOnly: true }],
+  },
+];
 
 export function hideBrandField(model: ModelWithSource) {
   if (!model.fields[BRAND_FIELD]) return model;

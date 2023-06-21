@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import { Header } from '../components/Header';
-import { getPages, getPagePaths, getCurrentBrand } from '../utils/content';
+import { getPages, getPagePaths, getCurrentBrand, getMultiBrandConfig } from '../utils/content';
 import localization from '../utils/localization';
 import { IS_DEV, normalizeSlug } from '../utils/common';
 import { componentMap } from '../components';
+import { Footer } from '../components/Footer';
 
-export default function ComposablePage({ pageExists, page, brand, headerLinks, locale }) {
+export default function ComposablePage({ page, multiBrandConfig, brand, headerLinks, locale }) {
   if (!page) {
     return (
       <>
@@ -20,17 +21,20 @@ export default function ComposablePage({ pageExists, page, brand, headerLinks, l
       <Head>
         <title>{page.title}</title>
       </Head>
-      <Header pageLocale={page.locale} links={headerLinks} brand={brand} />
-      <div data-sb-object-id={page.id}>
-        {page.sections?.length ? (
-          page.sections.map((section, idx) => {
-            const Component = componentMap[section.type];
-            return <Component key={idx} {...section} />;
-          })
-        ) : (
-          <PreviewOnlyMessage message="Empty page! add sections." />
-        )}
-      </div>
+      <main className="min-h-screen flex flex-col">
+        <Header pageLocale={page.locale} links={headerLinks} brand={brand} />
+        <div className="flex-grow" data-sb-object-id={page.id}>
+          {page.sections?.length ? (
+            page.sections.map((section, idx) => {
+              const Component = componentMap[section.type];
+              return <Component key={idx} {...section} />;
+            })
+          ) : (
+            <PreviewOnlyMessage message="Empty page! add sections." />
+          )}
+        </div>
+        <Footer multiBrandConfig={multiBrandConfig} />
+      </main>
     </>
   );
 }
@@ -70,7 +74,11 @@ export async function getStaticProps({ params, locale }) {
   const slug = '/' + (params?.slug ?? ['']).join('/');
   const pageLocale = locale || localization.defaultLocale;
 
-  const [brand, allPages] = await Promise.all([getCurrentBrand(pageLocale), getPages()]);
+  const [multiBrandConfig, brand, allPages] = await Promise.all([
+    getMultiBrandConfig(pageLocale),
+    getCurrentBrand(pageLocale),
+    getPages(),
+  ]);
   const page = allPages.find((e) => normalizeSlug(e.slug) === slug && e.locale === pageLocale);
 
   if (!page) {
@@ -85,6 +93,7 @@ export async function getStaticProps({ params, locale }) {
   return {
     props: {
       page: page || null, // Undefined can't be serialized by Next.js
+      multiBrandConfig,
       brand,
       headerLinks: linksToAllPages(allPages, pageLocale),
       locale: pageLocale,

@@ -4,7 +4,7 @@ import { ContentfulContentSource } from '@stackbit/cms-contentful';
 import { BRAND_TYPE, PAGE_TYPE } from 'utils/common';
 import { setLocaleOnDocumentCreate, setLocalizedModel } from './config/localization-helpers';
 import {
-  brandModelExtension,
+  brandModelExtensions,
   hideBrandField,
   relevantToBrand,
   resolveCurrentBrand,
@@ -13,11 +13,11 @@ import {
 import { buildSiteMap } from 'config/sitemap';
 
 const modelExtensions: ModelExtension[] = [
+  ...brandModelExtensions,
   {
     name: PAGE_TYPE,
     type: 'page',
   },
-  brandModelExtension,
   {
     name: 'hero',
     fields: [
