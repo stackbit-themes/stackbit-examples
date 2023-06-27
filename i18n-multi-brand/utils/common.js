@@ -3,7 +3,7 @@ export const BRAND_FIELD = 'brand';
 export const PAGE_TYPE = 'page';
 export const BRAND_TYPE = 'brand';
 export const MULTI_BRAND_CONFIG_TYPE = 'multiBrandConfig';
-export const MULTI_BRAND_TYPES = [MULTI_BRAND_CONFIG_TYPE];
+export const MULTI_BRAND_TYPES = [STACKBIT_PRESET_TYPE, MULTI_BRAND_CONFIG_TYPE];
 
 export const IS_DEV = process.env.NODE_ENV === 'development';
 

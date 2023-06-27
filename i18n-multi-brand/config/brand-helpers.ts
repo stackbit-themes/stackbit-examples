@@ -74,14 +74,8 @@ export function setBrandOnContentCreate(options: OnContentCreateOptions) {
   };
 
   if (toplevelModelName === STACKBIT_PRESET_TYPE) {
-    const modelOfPreset = result.data?.modelName as string | undefined;
-
-    if (!MULTI_BRAND_TYPES.includes(modelOfPreset)) {
-      result[BRAND_FIELD] = currBrandRef;
-      console.log(`[setBrandOnContentCreate] New preset "${result.label}"'s brand is set to: ${currBrandRef}`);
-    } else {
-      console.log(`[setBrandOnContentCreate] New preset "${result.label}" is for a multi-brand content type`);
-    }
+    result[BRAND_FIELD] = currBrandRef;
+    console.log(`[setBrandOnContentCreate] New preset "${result.label}"'s source brand is set to: ${currBrandRef}`);
   } else {
     if (!MULTI_BRAND_TYPES.includes(toplevelModelName)) {
       result = deepSetBrand(result, currBrandRef, toplevelModelName);
@@ -134,12 +128,8 @@ export function relevantToBrand(document: DocumentWithSource) {
     if (referencedBrand) {
       return referencedBrand === currentBrandId;
     } else {
-      if (document.modelName === STACKBIT_PRESET_TYPE) {
-        return true; // Presets can be multi-brand
-      } else {
-        console.debug(`[relevantToBrand] document ${document.id} (model: ${document.modelName}) has no brand set.`);
-        return false; // Other brand-specific documents should always have the brand field set
-      }
+      console.debug(`[relevantToBrand] document ${document.id} (model: ${document.modelName}) has no brand set.`);
+      return false; // Other brand-specific documents should always have the brand field set
     }
   }
 }

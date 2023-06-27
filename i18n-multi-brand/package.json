@@ -1,9 +1,9 @@
 {
-  "name": "nextjs-contentful-minimal-starter",
+  "name": "i18n-multi-brand-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "rm -rf .next && next dev",
     "build": "next build",
     "start": "next start"
   },
