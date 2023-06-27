@@ -1,0 +1,34 @@
+{
+  "darn-good-sandwiches": {
+    "colors": {
+      "verylight": "#f0fdfa",
+      "light": "#ccfbf1",
+      "dark": "#115e59",
+      "verydark": "#042f2e"
+    }
+  },
+  "jetpack-oils": {
+    "colors": {
+      "verylight": "#faf5d5",
+      "light": "#e9ca9d",
+      "dark": "#bd3735",
+      "verydark": "#bd3735"
+    }
+  },
+  "clean-smile": {
+    "colors": {
+      "verylight": "#eff6ff",
+      "light": "#eff6ff",
+      "dark": "#1e40af",
+      "verydark": "#1e3a8a"
+    }
+  },
+  "fallback": {
+    "colors": {
+      "verylight": "#f9fafb",
+      "light": "#f3f4f6",
+      "dark": "#374151",
+      "verydark": "#BD3735"
+    }
+  }
+}
