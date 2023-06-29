@@ -52,12 +52,13 @@ These projects are the result of [the tutorials](#tutorials) that are also fully
 
 These projects showcase a specific Stackbit feature.
 
-| Example                                                                                                      | Description                                                                                                      |
-| :----------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------- |
-| [Asset Sources](https://github.com/stackbit-themes/stackbit-examples/tree/main/unsplash-asset-source)        | Uses Unsplash as a custom asset source, rather than storing image locally. Built on the minimal Next.js starter. |
-| [Inline Editing](https://github.com/stackbit-themes/stackbit-examples/tree/main/auto-annotated-portfolio)    | Uses a custom utility to automatically add annotation details to every content object.                           |
-| [Localization](https://github.com/stackbit-themes/stackbit-examples/tree/main/i18n-nextjs-contentful)        | Showcases Stackbit's localization (i18n) capabilities using Next.js and Contentful.                              |
-| [Personalization](https://github.com/stackbit-themes/stackbit-examples/tree/main/ninetailed-personalization) | Audience-based personalization with Ninetailed, with built-in support in the visual editor.                      |
+| Example                                                                                                      | Description                                                                                                                                                         |
+| :----------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [A/B Testing](https://github.com/stackbit-themes/stackbit-examples/tree/main/ab-testing)                     | A Next.js site that uses middleware to swap content on the page. Content is stored in Contentful, made editable in Stackbit, and ready to deploy to Netlify's edge. |
+| [Asset Sources](https://github.com/stackbit-themes/stackbit-examples/tree/main/unsplash-asset-source)        | Uses Unsplash as a custom asset source, rather than storing image locally. Built on the minimal Next.js starter.                                                    |
+| [Inline Editing](https://github.com/stackbit-themes/stackbit-examples/tree/main/auto-annotated-portfolio)    | Uses a custom utility to automatically add annotation details to every content object.                                                                              |
+| [Localization](https://github.com/stackbit-themes/stackbit-examples/tree/main/i18n-nextjs-contentful)        | Showcases Stackbit's localization (i18n) capabilities using Next.js and Contentful.                                                                                 |
+| [Personalization](https://github.com/stackbit-themes/stackbit-examples/tree/main/ninetailed-personalization) | Audience-based personalization with Ninetailed, with built-in support in the visual editor.                                                                         |
 
 ## Integrations
 
