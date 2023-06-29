@@ -1,0 +1,5 @@
+[functions.___netlify-odb-handler]
+  included_files = [".contentful-cache.json"]
+
+[dev]
+  autoLaunch = false
