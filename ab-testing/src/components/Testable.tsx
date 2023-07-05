@@ -3,6 +3,7 @@ import { Test } from '@/content/content-types';
 import { TestingContext } from '@/contexts/TestableContext';
 import { fieldPathAnnotation, objectIdAnnotation } from '@/utils/annotations';
 import { MouseEventHandler, PropsWithChildren, useContext, useEffect, useState } from 'react';
+import { Portal } from 'react-portal';
 
 type TestableProps = PropsWithChildren & {
     /** ID of the component object */
@@ -97,40 +98,42 @@ export const TestableModal: React.FC<TestableModalProps> = (props) => {
     if (!props.test) return null;
 
     return (
-        <div className="fixed top-0 left-0 z-50 flex items-center justify-center w-screen h-screen backdrop-blur-md">
-            <div className="relative w-full max-w-3xl mx-auto text-base text-left bg-white shadow-sm">
-                <div className="mb-12 last:mb-0" {...objectIdAnnotation(props.test.id)}>
-                    <div className="flex items-center justify-between px-8 py-5 border-b border-b-slate-200">
-                        <h2 className="text-2xl font-medium leading-none" {...fieldPathAnnotation('title')}>
-                            {props.test.name}
-                        </h2>
-                        <button className="text-xl leading-none" onClick={props.closeModal}>
-                            X
-                        </button>
-                    </div>
-                    <div className="px-8 py-6">
-                        <div className="mb-6">
-                            <code className="block mb-1 text-xs font-bold uppercase text-slate-400">ID</code>
-                            <code className="block font-medium text-slate-700">{props.test.id}</code>
+        <Portal>
+            <div className="fixed top-0 left-0 z-50 flex items-center justify-center w-screen h-screen backdrop-blur-md">
+                <div className="relative w-full max-w-3xl mx-auto text-base text-left bg-white shadow-sm">
+                    <div className="mb-12 last:mb-0" {...objectIdAnnotation(props.test.id)}>
+                        <div className="flex items-center justify-between px-8 py-5 border-b border-b-slate-200">
+                            <h2 className="text-2xl font-medium leading-none" {...fieldPathAnnotation('title')}>
+                                {props.test.name}
+                            </h2>
+                            <button className="text-xl leading-none" onClick={props.closeModal}>
+                                X
+                            </button>
                         </div>
-                        <div className="mb-6">
-                            <code className="block mb-1 text-xs font-bold uppercase text-slate-400">Field</code>
-                            <code className="block font-medium text-slate-700">{props.test.field}</code>
-                        </div>
-                        <div {...fieldPathAnnotation('values')}>
-                            <code className="block mb-2 text-xs font-bold uppercase text-slate-400">Values</code>
-                            {(props.test.values || []).map((value, index) => {
-                                return (
-                                    <div key={index} {...fieldPathAnnotation(`.${index}`)} className="mb-4 last:mb-0">
-                                        {value ? value : <p className="bg-yellow-200/50">[no content]</p>}
-                                    </div>
-                                );
-                            })}
+                        <div className="px-8 py-6">
+                            <div className="mb-6">
+                                <code className="block mb-1 text-xs font-bold uppercase text-slate-400">ID</code>
+                                <code className="block font-medium text-slate-700">{props.test.id}</code>
+                            </div>
+                            <div className="mb-6">
+                                <code className="block mb-1 text-xs font-bold uppercase text-slate-400">Field</code>
+                                <code className="block font-medium text-slate-700">{props.test.field}</code>
+                            </div>
+                            <div {...fieldPathAnnotation('values')}>
+                                <code className="block mb-2 text-xs font-bold uppercase text-slate-400">Values</code>
+                                {(props.test.values || []).map((value, index) => {
+                                    return (
+                                        <div key={index} {...fieldPathAnnotation(`.${index}`)} className="mb-4 last:mb-0">
+                                            {value ? value : <p className="bg-yellow-200/50">[no content]</p>}
+                                        </div>
+                                    );
+                                })}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </Portal>
     );
 };
 
@@ -138,10 +141,12 @@ export const TestableModal: React.FC<TestableModalProps> = (props) => {
 
 export const LoadingModal: React.FC = () => {
     return (
-        <div className="fixed top-0 left-0 z-50 flex items-center justify-center w-screen h-screen backdrop-blur-md">
-            <div className="relative w-full max-w-3xl mx-auto text-base text-left bg-white shadow-sm">
-                <div className="p-16 text-2xl font-medium text-center">Creating new test ...</div>
+        <Portal>
+            <div className="fixed top-0 left-0 z-50 flex items-center justify-center w-screen h-screen backdrop-blur-md">
+                <div className="relative w-full max-w-3xl mx-auto text-base text-left bg-white shadow-sm">
+                    <div className="p-16 text-2xl font-medium text-center">Creating new test ...</div>
+                </div>
             </div>
-        </div>
+        </Portal>
     );
 };
