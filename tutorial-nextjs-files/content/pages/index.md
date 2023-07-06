@@ -1,5 +1,6 @@
 ---
 title: Home Page
+type: page
 sections:
   - type: hero
     heading: This is your main value proposition
