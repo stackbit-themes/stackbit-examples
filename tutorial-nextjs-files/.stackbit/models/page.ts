@@ -5,6 +5,7 @@ export const page: PageModel = {
     type: 'page',
     hideContent: true,
     urlPath: '/{slug}',
+    filePath: 'content/pages/{slug}.md',
     fields: [
         { name: 'title', type: 'string', required: true },
         { name: 'sections', type: 'list', items: { type: 'model', models: ['hero', 'stats'] } }
