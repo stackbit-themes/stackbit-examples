@@ -86,6 +86,7 @@ const config = defineStackbitConfig({
     accessTokenEnvVar: 'CONTENTFUL_MANAGEMENT_TOKEN',
   },
   treeViews: ({ getDocuments }) => {
+        try {
         const documents = getDocuments();
         return documents.reduce((tree, document) => {
             if (document.modelName === 'PageLayout') {
@@ -136,6 +137,9 @@ const config = defineStackbitConfig({
             }
             return tree;
         }, []);
+        } catch () => {
+          return [];
+        ]
     }
 });
 
