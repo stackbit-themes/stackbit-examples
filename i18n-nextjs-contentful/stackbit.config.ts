@@ -137,7 +137,7 @@ const config = defineStackbitConfig({
               }
               return tree;
           }, []);
-        } catch () {
+        } catch (e) {
           return [];
         }
     }
