@@ -139,7 +139,7 @@ const config = defineStackbitConfig({
         }, []);
         } catch () {
           return [];
-        ]
+        }
     }
 });
 
