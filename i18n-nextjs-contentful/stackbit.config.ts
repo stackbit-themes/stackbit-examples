@@ -88,7 +88,7 @@ const config = defineStackbitConfig({
   treeViews: ({ getDocuments }) => {
           const documents = getDocuments();
           return documents.reduce((tree, document) => {
-              if (document.modelName === 'PageLayout') {
+              if (document.modelName === 'page') {
                   let leaf = tree.find((leaf) => leaf.stableId === document.modelName);
                   if (leaf) {
                       const childDocument = document;
