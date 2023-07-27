@@ -87,56 +87,56 @@ const config = defineStackbitConfig({
   },
   treeViews: ({ getDocuments }) => {
         try {
-        const documents = getDocuments();
-        return documents.reduce((tree, document) => {
-            if (document.modelName === 'PageLayout') {
-                let leaf = tree.find((leaf) => leaf.stableId === document.modelName);
-                if (leaf) {
-                    const childDocument = document;
-                    const getChildrenRefsRecursively = (document) => {
-                        const children = [];
-                        for (const [key, field] of Object.entries(document.fields || document.items || {})) {
-                            if (field.type === 'reference' || field.type === 'asset') {
-                                const doc = documents.find(({ id }) => id === field.refId);
-                                if (doc) {
-                                    children.push({
-                                        label: doc.fields?.title?.value || undefined,
-                                        document: doc,
-                                        children: getChildrenRefsRecursively(doc)
-                                    });
-                                }
-                            }
-                            if (field.type === 'list') {
-                                children.push({
-                                    label: key,
-                                    stableId: `${key}-${document.id}}`,
-                                    children: getChildrenRefsRecursively(field)
-                                });
-                            }
-                        }
-                        return children;
-                    };
-
-                    leaf.children.push({
-                        label: document.fields?.title?.value || document.modelName,
-                        document: childDocument,
-                        children: getChildrenRefsRecursively(document)
-                    });
-                } else {
-                    leaf = {
-                        label: document.fields?.title?.value || document.modelName,
-                        stableId: document.modelName,
-                        children: [
-                            {
-                                document
-                            }
-                        ]
-                    };
-                    tree.push(leaf);
-                }
-            }
-            return tree;
-        }, []);
+          const documents = getDocuments();
+          return documents.reduce((tree, document) => {
+              if (document.modelName === 'PageLayout') {
+                  let leaf = tree.find((leaf) => leaf.stableId === document.modelName);
+                  if (leaf) {
+                      const childDocument = document;
+                      const getChildrenRefsRecursively = (document) => {
+                          const children = [];
+                          for (const [key, field] of Object.entries(document.fields || document.items || {})) {
+                              if (field.type === 'reference' || field.type === 'asset') {
+                                  const doc = documents.find(({ id }) => id === field.refId);
+                                  if (doc) {
+                                      children.push({
+                                          label: doc.fields?.title?.value || undefined,
+                                          document: doc,
+                                          children: getChildrenRefsRecursively(doc)
+                                      });
+                                  }
+                              }
+                              if (field.type === 'list') {
+                                  children.push({
+                                      label: key,
+                                      stableId: `${key}-${document.id}}`,
+                                      children: getChildrenRefsRecursively(field)
+                                  });
+                              }
+                          }
+                          return children;
+                      };
+  
+                      leaf.children.push({
+                          label: document.fields?.title?.value || document.modelName,
+                          document: childDocument,
+                          children: getChildrenRefsRecursively(document)
+                      });
+                  } else {
+                      leaf = {
+                          label: document.fields?.title?.value || document.modelName,
+                          stableId: document.modelName,
+                          children: [
+                              {
+                                  document
+                              }
+                          ]
+                      };
+                      tree.push(leaf);
+                  }
+              }
+              return tree;
+          }, []);
         } catch () {
           return [];
         }
