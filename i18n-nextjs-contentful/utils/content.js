@@ -1,10 +1,12 @@
 import { createClient } from 'contentful';
 import { PAGE_TYPE, SITE_CONFIG_TYPE, IS_DEV } from './common';
 
+console.log(process.env.IS_DEV, 'isDev');
+
 const client = createClient({
-  accessToken: IS_DEV ? process.env.CONTENTFUL_PREVIEW_TOKEN : process.env.CONTENTFUL_DELIVERY_TOKEN,
+  accessToken: process.env.IS_DEV ? process.env.CONTENTFUL_PREVIEW_TOKEN : process.env.CONTENTFUL_DELIVERY_TOKEN,
   space: process.env.CONTENTFUL_SPACE_ID,
-  host: IS_DEV ? 'preview.contentful.com' : 'cdn.contentful.com',
+  host: process.env.IS_DEV ? 'preview.contentful.com' : 'cdn.contentful.com',
 });
 
 async function getEntries(content_type, queryParams) {
