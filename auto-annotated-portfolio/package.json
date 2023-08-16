@@ -18,16 +18,16 @@
         "tailwindcss": "^3.3.3"
     },
     "devDependencies": {
-        "@stackbit/cms-git": "^0.3.17",
-        "@stackbit/types": "^0.9.1",
+        "@stackbit/cms-git": "^0.3.18",
+        "@stackbit/types": "^0.9.2",
         "@types/glob": "^8.1.0",
         "@types/react": "^18.2.20",
         "@types/react-syntax-highlighter": "^15.5.7",
-        "autoprefixer": "^10.4.14",
+        "autoprefixer": "^10.4.15",
         "eslint": "^8.42.0",
         "eslint-config-next": "^13.4.6",
         "js-yaml": "^4.1.0",
-        "postcss": "^8.4.27",
+        "postcss": "^8.4.28",
         "prettier": "^2.8.8",
         "typescript": "^5.1.3"
     },
