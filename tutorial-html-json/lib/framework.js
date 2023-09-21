@@ -6,6 +6,7 @@ import glob from 'fast-glob';
 import liveServer from 'live-server';
 import path from 'path';
 import prettier from 'prettier';
+import watch from 'node-watch';
 
 /* ----- Constants ----- */
 
@@ -95,7 +96,7 @@ function buildSite() {
     // Get page files
     const pageFiles = glob.sync('**/*.json', { cwd: PAGES_DIR });
     // Build each page
-    pageFiles.forEach(buildPage);
+    pageFiles.forEach((relSrcFilePath) => buildPage(path.join(PAGES_DIR, relSrcFilePath)));
     // Provide feedback
     console.log(`Built ${pageFiles.length} pages`);
 }
@@ -104,10 +105,10 @@ function buildSite() {
  * Reads page content, runs it through the layout, and writes the result to a
  * file in the dist directory.
  *
- * @param {string} relSrcFilePath - Path to page file, relative to PAGES_DIR
+ * @param {string} absSrcFilePath - Path to page file
  */
-function buildPage(relSrcFilePath) {
-    const absSrcFilePath = path.join(PAGES_DIR, relSrcFilePath);
+function buildPage(absSrcFilePath) {
+    const relSrcFilePath = absSrcFilePath.replace(SRC_DIR, '').replace('/pages', '');
     // Get and set urlPath on page from file path
     const urlPath = relSrcFilePath
         .replace(/\.json$/, '/index.html')
@@ -140,13 +141,13 @@ function buildPage(relSrcFilePath) {
 
 if (IS_DEV) {
     // Watch for changes to content source files and rebuild
-    fs.watch(PAGES_DIR, { recursive: true }, (_, filename) => updateSite(filename, PAGES_DIR));
+    watch(PAGES_DIR, { recursive: true }, (_, filename) => updateSite(filename, PAGES_DIR));
     // Watch for changes to component files and rebuild
-    fs.watch(COMPONENTS_DIR, { recursive: true }, (_, filename) => updateSite(filename, COMPONENTS_DIR));
+    watch(COMPONENTS_DIR, { recursive: true }, (_, filename) => updateSite(filename, COMPONENTS_DIR));
     // Start development server, which serves from and watches for changes in the
     // dist directory
     liveServer.start({
-        port: 3000,
+        port: process.env.PORT || 3000,
         root: path.relative(process.cwd(), DIST_DIR),
         open: false,
         host: 'localhost'
