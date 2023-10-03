@@ -18,8 +18,8 @@
         "tailwindcss": "^3.3.3"
     },
     "devDependencies": {
-        "@stackbit/cms-git": "^0.3.23",
-        "@stackbit/types": "^0.10.3",
+        "@stackbit/cms-git": "^0.3.25",
+        "@stackbit/types": "^0.10.4",
         "@types/glob": "^8.1.0",
         "@types/react": "^18.2.21",
         "@types/react-syntax-highlighter": "^15.5.7",
