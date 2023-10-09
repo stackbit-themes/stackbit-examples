@@ -5,10 +5,7 @@ const nextConfig = {
     },
     trailingSlash: true,
     reactStrictMode: true,
-    webpack: (config) => {
-        config.watchOptions.ignored.push('**/content/pages/**');
-        return config;
-    }
+    swcMinify: true
 };
 
 module.exports = nextConfig;
