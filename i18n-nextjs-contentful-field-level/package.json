@@ -14,8 +14,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@stackbit/cms-contentful": "^0.4.14",
-    "@stackbit/types": "^0.10.4",
+    "@stackbit/cms-contentful": "^0.4.17",
+    "@stackbit/types": "^0.10.7",
     "@types/node": "^18.15.11",
     "@types/react": "18.0.32",
     "autoprefixer": "^10.4.16",
