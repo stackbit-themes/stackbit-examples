@@ -9,12 +9,12 @@
   },
   "dependencies": {
     "markdown-to-jsx": "^7.2.1",
-    "next": "^13.4.6",
+    "next": "^13.5.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@stackbit/cms-contentful": "^0.4.17",
+    "@stackbit/cms-contentful": "^0.4.20",
     "@stackbit/types": "^0.10.7",
     "@types/node": "^20.5.7",
     "@types/react": "18.2.21",
