@@ -29,7 +29,7 @@
                 "type": "Social",
                 "altText": "Twitter",
                 "label": "Twitter",
-                "url": "https://twitter.com/stackbit",
+                "url": "https://twitter.com/netlify",
                 "icon": "twitter"
             },
             {
@@ -84,7 +84,7 @@
             "address": "312 Lovely Street, Brooklyn, NY, 123456",
             "addressAltText": "My address"
         },
-        "copyrightText": "Powered by [Stackbit](https://www.stackbit.com/)",
+        "copyrightText": "Powered by [Netlify Create](https://www.netlify.com/platform/create/)",
         "styles": {
             "self": {
                 "width": "narrow",
