@@ -109,7 +109,7 @@ All of these projects should share the same Contentful space and code repository
 
 As part of creating the first project, you will create a new Contentful space and repository. These will then be shared with the rest of the projects.
 
-1. Open the `Import` screen in *Duplicate a Repository* mode by [clicking here](https://app.stackbit.com/import?mode=duplicate&repository=https%3A%2F%2Fgithub.com%2Fstackbit-themes%2Fstackbit-examples&rootdir=i18n-multi-brand&validate=auto).
+1. Open the `Import` screen in *Duplicate a Repository* mode by [clicking here](https://create.netlify.com/import?mode=duplicate&repository=https%3A%2F%2Fgithub.com%2Fstackbit-themes%2Fstackbit-examples&rootdir=i18n-multi-brand&validate=auto).
 1. Connect your Contentful account to Stackbit.
 1. Set the environment variable `CURRENT_BRAND_SLUG` to the first brand's identifier (e.g. *darn-good-sandwiches*).
 1. Run the import. A new Contentful space & GitHub repository will be created for you.

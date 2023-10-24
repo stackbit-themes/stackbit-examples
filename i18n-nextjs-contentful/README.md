@@ -19,7 +19,7 @@ There are two ways to start using this project: importing it via the UI, or deve
 
 ## Creating a Stackbit Project via the UI
 
-To create a cloud-based Stackbit project based on this repository, [click here](https://app.stackbit.com/import?mode=duplicate&repository=https%3A%2F%2Fgithub.com%2Fstackbit-themes%2Fstackbit-examples&rootdir=i18n-nextjs-contentful&validate=auto).
+To create a cloud-based Stackbit project based on this repository, [click here](https://create.netlify.com/import?mode=duplicate&repository=https%3A%2F%2Fgithub.com%2Fstackbit-themes%2Fstackbit-examples&rootdir=i18n-nextjs-contentful&validate=auto).
 
 You will need to connect your Contentful account (create a free account if needed), and a new Contentful space with sample content will be created for you. 
 
