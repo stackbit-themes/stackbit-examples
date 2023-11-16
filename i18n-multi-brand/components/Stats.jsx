@@ -8,7 +8,7 @@ const themeClassMap = {
 export const Stats = (props) => {
   return (
     <div
-      className={`py-24 px-12 text-center ${themeClassMap[props.theme] ?? themeClassMap['primary']}`}
+      className={`py-16 px-6 text-center ${themeClassMap[props.theme] ?? themeClassMap['primary']}`}
       data-sb-object-id={props.id}
     >
       <div className="mx-auto">
