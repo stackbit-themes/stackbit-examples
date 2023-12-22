@@ -14,8 +14,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@stackbit/cms-contentful": "^0.4.29",
-    "@stackbit/types": "^0.10.18",
+    "@stackbit/cms-contentful": "^0.4.30",
+    "@stackbit/types": "^0.10.19",
     "@types/node": "^20.10.4",
     "@types/react": "18.2.42",
     "autoprefixer": "^10.4.16",
@@ -25,7 +25,7 @@
     "eslint": "^8.37.0",
     "eslint-config-next": "^13.2.4",
     "postcss": "^8.4.32",
-    "tailwindcss": "^3.3.6",
+    "tailwindcss": "^3.4.0",
     "typescript": "^5.0.3"
   }
 }
