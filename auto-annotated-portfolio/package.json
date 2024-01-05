@@ -7,10 +7,10 @@
         "start": "next start"
     },
     "dependencies": {
-        "classnames": "^2.3.2",
+        "classnames": "^2.5.1",
         "dayjs": "^1.11.10",
         "front-matter": "^4.0.2",
-        "markdown-to-jsx": "^7.2.1",
+        "markdown-to-jsx": "^7.4.0",
         "next": "13.4.9",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
@@ -18,16 +18,16 @@
         "tailwindcss": "^3.4.0"
     },
     "devDependencies": {
-        "@stackbit/cms-git": "^0.3.39",
-        "@stackbit/types": "^0.10.19",
+        "@stackbit/cms-git": "^0.3.40",
+        "@stackbit/types": "^0.10.20",
         "@types/glob": "^8.1.0",
-        "@types/react": "^18.2.37",
+        "@types/react": "^18.2.46",
         "@types/react-syntax-highlighter": "^15.5.7",
         "autoprefixer": "^10.4.16",
         "eslint": "^8.42.0",
         "eslint-config-next": "^13.4.6",
         "js-yaml": "^4.1.0",
-        "postcss": "^8.4.32",
+        "postcss": "^8.4.33",
         "prettier": "^2.8.8",
         "typescript": "^5.1.3"
     },
