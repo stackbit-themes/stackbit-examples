@@ -14,18 +14,18 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@stackbit/cms-contentful": "^0.4.33",
-    "@stackbit/types": "^0.10.22",
+    "@stackbit/cms-contentful": "^0.4.34",
+    "@stackbit/types": "^0.10.23",
     "@types/node": "^20.10.4",
     "@types/react": "18.2.42",
-    "autoprefixer": "^10.4.16",
+    "autoprefixer": "^10.4.17",
     "contentful-export": "^7.19.89",
     "contentful-import": "^9.4.7",
     "dotenv": "^16.3.1",
     "eslint": "^8.37.0",
     "eslint-config-next": "^13.2.4",
     "postcss": "^8.4.33",
-    "tailwindcss": "^3.4.0",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.0.3"
   }
 }
