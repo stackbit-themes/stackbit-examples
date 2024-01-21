@@ -18,12 +18,12 @@
         "tailwindcss": "^3.4.1"
     },
     "devDependencies": {
-        "@stackbit/cms-git": "^0.3.42",
-        "@stackbit/types": "^0.10.22",
+        "@stackbit/cms-git": "^0.3.43",
+        "@stackbit/types": "^0.10.23",
         "@types/glob": "^8.1.0",
         "@types/react": "^18.2.46",
         "@types/react-syntax-highlighter": "^15.5.7",
-        "autoprefixer": "^10.4.16",
+        "autoprefixer": "^10.4.17",
         "eslint": "^8.42.0",
         "eslint-config-next": "^13.4.6",
         "js-yaml": "^4.1.0",
