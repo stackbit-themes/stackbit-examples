@@ -14,10 +14,10 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@stackbit/cms-contentful": "^0.4.34",
-    "@stackbit/types": "^0.10.23",
-    "@types/node": "^20.10.4",
-    "@types/react": "18.2.42",
+    "@stackbit/cms-contentful": "^0.4.35",
+    "@stackbit/types": "^0.10.24",
+    "@types/node": "^20.10.7",
+    "@types/react": "18.2.48",
     "autoprefixer": "^10.4.17",
     "contentful-export": "^7.19.74",
     "contentful-import": "^9.0.12",
