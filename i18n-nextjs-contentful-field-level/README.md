@@ -17,7 +17,7 @@ Lastly, a live production build of the website on Netlify is automatically provi
 Before you begin, please make sure you have the following:
 
 - Contentful account
-- Node v14 or later
+- Node v18 or later
 
 ### Clone this repository
 
@@ -69,7 +69,7 @@ Run the Next.js development server:
 
 Visit [localhost:3000](http://localhost:3000) and you should see the example content you imported into your new Contentful space.
 
-### Run Stackbit in Local Development Mode
+### Run Netlify Create in Local Development Mode
 
 Keep the Next.js development server running, and open a new command-line window in the same directory.
 
@@ -85,11 +85,11 @@ Click the displayed link to [localhost:8090/_stackbit](http://localhost:8090/_st
 
 ### Create a Cloud-Based Stackbit Project
 
-To deploy a cloud-based Stackbit project connected to your repository:
+To deploy a cloud-based Netlify Create project connected to your repository:
 
 1. Push your code to a GitHub repository (preferably, push only the contents of this directory as a new repository).
 1. Open the [import page](https://app.stackbit.com/import) and choose *Use my repository*.
 
 ## Support
 
-If you get stuck along the way, [drop into our Discord server](https://discord.gg/HUNhjVkznH) and send a message in the `#documentation` or `#help` channels.
+If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
