@@ -2,9 +2,9 @@
 
 ![Developer Portfolio](https://assets.stackbit.com/docs/personal-nextjs-starter-thumb.png)
 
-This is a full-fledged portfolio website built with Next.js, Tailwind & the [Git Content Source](https://docs.stackbit.com/integrations/content-sources/git).
+This is a full-fledged portfolio website built with Next.js, Tailwind & the [Git Content Source](https://docs.netlify.com/create/content-sources/git/).
 
-The codebase showcases **how to apply annotations at scale**, meaning: how to make much of your components [highlightable in the visual editor](https://docs.stackbit.com/features/visual-editing/inline-editor) through data attributes without manually adding code throughout the codebase.
+The codebase showcases **how to apply annotations at scale**, meaning: how to make much of your components [highlightable in the visual editor](https://docs.netlify.com/create/visual-editing/inline-editor/) through data attributes without manually adding code throughout the codebase.
 
 This is achieved by:
 
@@ -45,11 +45,10 @@ This outputs your own Stackbit URL. Open this, register or sign in, and you will
 
 Here are a few suggestions on what to do next if you're new to Stackbit:
 
-- Learn [how Stackbit works](https://docs.stackbit.com/conceptual-guides/how-stackbit-works/)
-- Follow the [_Getting Started_ tutorial](https://docs.stackbit.com/getting-started/)
-- Explore the [how-to guides](https://docs.stackbit.com/how-to-guides/) for help while developing your site
+- Learn [how Netlify Create works](https://docs.netlify.com/create/concepts/how-create-works/)
+- Follow the [_Getting Started_ tutorial](https://docs.netlify.com/create/get-started/nextjs-markdown/)
 
-## Other Stackbit Projects
+## Other Netlify Create Projects
 
 Stackbit has a number of examples that you can use to create a new project or evaluate Stackbit. Run the following command to see a list of available examples:
 
@@ -59,6 +58,6 @@ npx create-stackbit-app@latest --help
 
 You can also visit [our `stackbit-themes` GitHub organization](https://github.com/stackbit-themes)
 
-## Join the Community
+## Support
 
-[Join us on Discord](https://discord.gg/HUNhjVkznH) for community support and to showcase what you build with this starter.
+If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
