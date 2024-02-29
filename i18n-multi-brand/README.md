@@ -10,15 +10,15 @@ This example showcases a multi-brand setup based on a single CMS space and a sha
 
 ## How it works
 
-Firstly, the example Next.js website itself is wired to only read content for the configured brand - see [utils/content.js](./utils/content.js). That code does not depend upon Stackbit in any way. 
+Firstly, the example Next.js website itself is wired to only read content for the configured brand - see [utils/content.js](./utils/content.js). That code does not depend upon Netlify Create in any way. 
 
 All pages, buttons, sections and whatnot have a reference field to a single brand, and that field is used to filter content.
 
-To filter out content in the Stackbit visual editor, check out the `mapDocuments` callback implementation in [stackbit.config.ts](./stackbit.config.ts) ([reference](https://docs.stackbit.com/reference/config/content-modeling#mapdocuments)). Only documents that are returned from this callback are visible in the editor.
+To filter out content in the Netlify Create visual editor, check out the `mapDocuments` callback implementation in [stackbit.config.ts](./stackbit.config.ts) ([reference](https://create-reference.netlify.com/config/content-modeling#mapdocuments)). Only documents that are returned from this callback are visible in the editor.
 
 Creating content (be it pages or specific components) from presets that were saved in other brands presents a challenge: the content object and all its referenced content all point to the original brand! 
 
-To solve this, note the `OnContentCreate` callback ([reference](https://docs.stackbit.com/reference/config/documents#oncontentcreate)) in the same config file: it is traversing the original content (as stored in the preset) and updating all brand references to the current brand. The visual editor than uses the transformed object to create the new content.
+To solve this, note the `OnContentCreate` callback ([reference](https://create-reference.netlify.com/config/documents#oncontentcreate)) in the same config file: it is traversing the original content (as stored in the preset) and updating all brand references to the current brand. The visual editor than uses the transformed object to create the new content.
 
 To learn how localization was implemented, [see here](../i18n-nextjs-contentful/README.md).
 
@@ -99,7 +99,7 @@ Click the displayed link to [localhost:8090/_stackbit](http://localhost:8090/_st
 
 ℹ️ To switch between brands, change the `CURRENT_BRAND_SLUG` variable value in your `.env` file, and then restart both the Next.js server (`npm run dev` process) and the `stackbit dev` command.
 
-## Creating Multi-Brand Stackbit Projects via the UI
+## Creating Multi-Brand Netlify Create Projects via the UI
 
 While in local development you can switch between brands by setting the needed env. variable and restaring, when providing cloud-based projects for editors, you'd normally want to have one always-on project for each brand.
 
@@ -110,7 +110,7 @@ All of these projects should share the same Contentful space and code repository
 As part of creating the first project, you will create a new Contentful space and repository. These will then be shared with the rest of the projects.
 
 1. Open the `Import` screen in *Duplicate a Repository* mode by [clicking here](https://create.netlify.com/import?mode=duplicate&repository=https%3A%2F%2Fgithub.com%2Fstackbit-themes%2Fstackbit-examples&rootdir=i18n-multi-brand&validate=auto).
-1. Connect your Contentful account to Stackbit.
+1. Connect your Contentful account to Netlify Create.
 1. Set the environment variable `CURRENT_BRAND_SLUG` to the first brand's identifier (e.g. *darn-good-sandwiches*).
 1. Run the import. A new Contentful space & GitHub repository will be created for you.
 1. Transfer ownership of the duplicated repository to your GitHub account, via the Project Settings.
@@ -119,8 +119,8 @@ Keep the *Project Settings* dialog open, and switch to the *Advanced* tab. Keep 
 
 For each of the additional brands:
 
-1. In a new tab, open the `Import` screen in [Use My Repository Mode](https://app.stackbit.com/import?mode=use).
-1. Select the repository you've just created above. If you don't see that repository listed, then either you haven't completed transferring the repository to your GitHub account, or you haven't granted Stackbit the permissions to read from the relevant GitHub account/organization.
+1. In a new tab, open the `Import` screen in [Use My Repository Mode](https://create.netlify.com/import?mode=use).
+1. Select the repository you've just created above. If you don't see that repository listed, then either you haven't completed transferring the repository to your GitHub account, or you haven't granted Netlify Create the permissions to read from the relevant GitHub account/organization.
 1. Copy all `CONTENTFUL_...` environment variables from the original project to the new one.
 1. Set the `CURRENT_BRAND_SLUG` variable to the relevant brand for this project.
 1. Run the import.
@@ -129,4 +129,4 @@ When using our paid plans, you can not only assign specific users & teams to eac
 
 ## Support
 
-Creating & maintaining a multi-brand setup is an advanced functionality. If you get stuck along the way, or are unsure how to proceed, [drop into our Discord server](https://discord.gg/HUNhjVkznH) and send a message in the `#documentation` or `#help` channels.
+If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).

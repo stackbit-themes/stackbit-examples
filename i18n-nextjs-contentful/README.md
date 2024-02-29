@@ -1,25 +1,25 @@
 # Localization (i18n) Example with Next.js + Contentful
 
-**ℹ️ Based on [our Getting Started tutorial](https://docs.stackbit.com/getting-started) in its completed state.**
+**ℹ️ Based on [our Getting Started tutorial](https://docs.netlify.com/create/get-started/nextjs-contentful/) in its completed state.**
 
 This website supports localization in two flavours:
 
-1. **Field-level localization** is supported by both Contentful and Stackbit. It is only used here for the "Header Text" field in the Site Configuration content object.
-2. **Document-level localization** is not directly supported by Contentful. However, by configuring Stackbit appropriately, the visual editor provides a native-like localization experience at the content object-level for all localized models. See [Stackbit config file](./stackbit.config.ts).
+1. **Field-level localization** is supported by both Contentful and Netlify Create. It is only used here for the "Header Text" field in the Site Configuration content object.
+2. **Document-level localization** is not directly supported by Contentful. However, by configuring Netlify Create appropriately, the visual editor provides a native-like localization experience at the content object-level for all localized models. See [Stackbit config file](./stackbit.config.ts).
 
 Locale-aware routing in the website is implemented via [Next.js i18n](https://nextjs.org/docs/advanced-features/i18n-routing). Note that for the default locale (en-US in this site) no locale prefix is added to pathnames. See [Next.js config file](./next.config.js).
 
 Notes:
 
 1. When switching between locales, the client-side code is navigating to the same route but with the selected locale. If there's no such page, a 404 page is shown (defining a different behavior is up to you).
-1. The code implements bi-directional syncing between the locale switcher in the Stackbit visual editor (which controls which pages & fields you can see & edit) and the custom locale switcher rendered in the header of all site pages. This is fully optional, but makes for a more streamlined experience for editors working on multiple locales.
+1. The code implements bi-directional syncing between the locale switcher in the Netlify Create visual editor (which controls which pages & fields you can see & edit) and the custom locale switcher rendered in the header of all site pages. This is fully optional, but makes for a more streamlined experience for editors working on multiple locales.
 
 
 There are two ways to start using this project: importing it via the UI, or developing locally.
 
-## Creating a Stackbit Project via the UI
+## Creating a Netlify Create Project via the UI
 
-To create a cloud-based Stackbit project based on this repository, [click here](https://create.netlify.com/import?mode=duplicate&repository=https%3A%2F%2Fgithub.com%2Fstackbit-themes%2Fstackbit-examples&rootdir=i18n-nextjs-contentful&validate=auto).
+To create a cloud-based Netlify Create project based on this repository, [click here](https://create.netlify.com/import?mode=duplicate&repository=https%3A%2F%2Fgithub.com%2Fstackbit-themes%2Fstackbit-examples&rootdir=i18n-nextjs-contentful&validate=auto).
 
 You will need to connect your Contentful account (create a free account if needed), and a new Contentful space with sample content will be created for you. 
 
@@ -29,7 +29,7 @@ Lastly, a live production build of the website on Netlify is automatically provi
 
 ## Developing Locally 
 
-### Prerequisites
+### Prerequisites 
 
 Before you begin, please make sure you have the following:
 
@@ -86,7 +86,7 @@ Run the Next.js development server:
 
 Visit [localhost:3000](http://localhost:3000) and you should see the example content you imported into your new Contentful space.
 
-### Run Stackbit in Local Development Mode
+### Run Netlify Create in Local Development Mode
 
 Keep the Next.js development server running, and open a new command-line window in the same directory.
 
@@ -100,7 +100,7 @@ Run the CLI:
 
 Click the displayed link to [localhost:8090/_stackbit](http://localhost:8090/_stackbit) and the visual editor will open.
 
-### Create a Cloud-Based Stackbit Project
+### Create a Cloud-Based Netlify Create Project
 
 To deploy a cloud-based Stackbit project connected to your repository:
 
@@ -109,4 +109,4 @@ To deploy a cloud-based Stackbit project connected to your repository:
 
 ## Support
 
-If you get stuck along the way, [drop into our Discord server](https://discord.gg/HUNhjVkznH) and send a message in the `#documentation` or `#help` channels.
+If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
