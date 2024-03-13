@@ -20,7 +20,6 @@ export const HeroSection: ObjectModel = {
         {
             type: 'image',
             name: 'image',
-            default: 'Image',
             source: 'unsplash-asset-source'
         },
         {

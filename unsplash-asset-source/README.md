@@ -1,10 +1,10 @@
 # Unsplash Asset Source
 
-This project uses Unsplash as a [custom asset source](https://docs.stackbit.com/features/asset-sources).
+This project uses Unsplash as a [custom asset source](https://docs.netlify.com/create/asset-sources/overview/).
 
 It builds on [Stackbit's minimal Next.js starter](https://github.com/stackbit-themes/nextjs-starter) by adding an `image` field to the `HeroSection` component, and wiring that field up to the custom image source.
 
-[Learn more about custom asset sources](https://docs.stackbit.com/features/asset-sources).
+[Learn more about custom asset sources](https://docs.netlify.com/create/asset-sources/overview/).
 
 ## Getting Started
 
@@ -50,7 +50,7 @@ On clicking one of the images, the site sends a `postMessage` call to the iframe
 
 There is a copy of the asset source code in the `asset-source` directory in this repository.
 
-## Other Stackbit Projects
+## Other Netlify Create (formerly Stackbit) Projects
 
 Stackbit has a number of examples that you can use to create a new project or evaluate Stackbit. Run the following command to see a list of available examples:
 
@@ -60,6 +60,6 @@ npx create-stackbit-app@latest --help
 
 You can also visit [our `stackbit-themes` GitHub organization](https://github.com/stackbit-themes)
 
-## Join the Community
+## Support
 
-[Join us on Discord](https://discord.gg/HUNhjVkznH) for community support and to showcase what you build with this starter.
+If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).

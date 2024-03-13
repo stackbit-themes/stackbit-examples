@@ -88,7 +88,7 @@ p {
 
 .hero-container.with-image {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     max-width: 64rem;
 }
 

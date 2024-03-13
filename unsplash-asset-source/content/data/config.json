@@ -1,8 +1,8 @@
 {
     "type": "SiteConfig",
-    "title": "Stackbit",
+    "title": "Netlify Create",
     "footer": {
         "type": "FooterConfig",
-        "body": "Made by [Stackbit](https://www.stackbit.com/)\n"
+        "body": "Made by [Netlify Create](https://www.netlify.com/platform/create/)."
     }
 }
