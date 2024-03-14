@@ -1,12 +1,12 @@
-# Stackbit Tutorial [Next.js + Files]
+# Netlify Create Tutorial [Next.js + Files]
 
 ![Tutorial Screenshot](https://assets.stackbit.com/docs/tutorial-shared-thumb-v2.png)
 
-**ℹ️ This project is used as a starting point for [a getting started tutorial](https://docs.stackbit.com/getting-started/nextjs-markdown) using markdown files (Git CMS) as the content source.**
+**ℹ️ This project is used as a starting point for [a getting started tutorial](https://docs.netlify.com/create/get-started/nextjs-markdown/) using markdown files (Git CMS) as the content source.**
 
 ## Prerequisites
 
-Before you begin, make sure you are using Node v14 or newer.
+Before you begin, make sure you are using Node v18 or newer.
 
 ## Project Setup
 
@@ -23,4 +23,4 @@ Visit `localhost:3000` and you should see the example content. Now you can conti
 
 ## Support
 
-If you get stuck along the way, [drop into our Discord server](https://discord.gg/HUNhjVkznH) and send a message in the `#documentation` or `#help` channels.
+If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
