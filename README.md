@@ -11,7 +11,7 @@ They are broken down into various categories below for easier navigation:
 - [Use Cases](#use-cases): Projects designed to serve a specific purpose (e.g. documentation).
 - [Integrations](#integrations): Examples using various third-party tools within a specific stack.
 
-Have an idea of an example we should add? [Create an issue](https://github.com/stackbit-themes/stackbit-examples/issues/new) or [join us on Discord](https://discord.gg/HUNhjVkznH) to discuss.
+Have an idea of an example we should add? [Create an issue](https://github.com/stackbit-themes/stackbit-examples/issues/new).
 
 ## Minimal Starters
 
