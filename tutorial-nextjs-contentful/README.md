@@ -1,15 +1,15 @@
-# Stackbit Tutorial [Next.js + Contentful]
+# Netlify Create Tutorial [Next.js + Contentful]
 
 ![Tutorial Screenshot](https://assets.stackbit.com/docs/tutorial-shared-thumb-v2.png)
 
-ℹ️ This project is used as a starting point for [a getting started tutorial](https://docs.stackbit.com/getting-started/nextjs-contentful) using Next.js as the framework and Contentful as the content source. If you would like to create a new project with Contentful as the content source, use [the Contentful starter](https://github.com/stackbit-themes/contentful-starter).
+ℹ️ This project is used as a starting point for [a getting started tutorial](https://docs.netlify.com/create/get-started/nextjs-contentful/) using Next.js as the framework and Contentful as the content source. If you would like to create a new project with Contentful as the content source, use [the Contentful starter](https://github.com/stackbit-themes/nextjs-contentful-starter).
 
 ## Prerequisites
 
 Before you begin, please make sure you have the following:
 
 - Contentful account
-- Node v14 or later
+- Node v18 or later
 
 ## Setup Instructions
 
@@ -54,4 +54,4 @@ Visit `localhost:3000` and you should see the example content you imported into 
 
 ## Support
 
-If you get stuck along the way, [drop into our Discord server](https://discord.gg/HUNhjVkznH) and send a message in the `#documentation` or `#help` channels.
+If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
