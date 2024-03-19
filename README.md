@@ -1,13 +1,13 @@
-# Stackbit Examples
+# Netlify Create (formerly Stackbit) Examples
 
-A collection of examples that can be used to learn more about Stackbit or to be the basis for your new Stackbit project.
+A collection of examples that can be used to learn more about Netlify Create or to be the basis for your new Netlify Create project.
 
 They are broken down into various categories below for easier navigation:
 
-- [Minimal Starters](#minimal-starters): Small, Stackbit-ready sites.
-- [Tutorials](#tutorials): Starting point for [getting started tutorials](https://docs.stackbit.com/getting-started).
-- [Stack-Specific Demos](#stack-specific-demos): Simple sites, equipped for Stackbit, using various frameworks and content sources, many of which are experimental.
-- [Stackbit Features](#stackbit-features): Simple projects designed to highlight a specific Stackbit feature.
+- [Minimal Starters](#minimal-starters): Small, Netlify Create ready sites.
+- [Tutorials](#tutorials): Starting point for [getting started tutorials](https://docs.netlify.com/create/get-started/).
+- [Stack-Specific Demos](#stack-specific-demos): Simple sites, equipped for Netlify Create, using various frameworks and content sources, many of which are experimental.
+- [Netlify Create Features](#netlify-create-features): Simple projects designed to highlight a specific Netlify Create feature.
 - [Use Cases](#use-cases): Projects designed to serve a specific purpose (e.g. documentation).
 - [Integrations](#integrations): Examples using various third-party tools within a specific stack.
 
@@ -15,7 +15,7 @@ Have an idea of an example we should add? [Create an issue](https://github.com/s
 
 ## Minimal Starters
 
-Starters are basic Stackbit projects that bring some specific combination of _the basics_. These are good starting points for developers and easy to get around.
+Starters are basic Netlify Create projects that bring some specific combination of _the basics_. These are good starting points for developers and easy to get around.
 
 | Example                                                                             | Description                                                 |
 | :---------------------------------------------------------------------------------- | :---------------------------------------------------------- |
@@ -29,11 +29,11 @@ Examples used as starting points for tutorials and other guides in our documenta
 
 | Example                                                                                                           | Description                                                                                              |
 | :---------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- |
-| [Gatsby + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-gatsby-contentful)  | Follow the [Gatsby + Contentful tutorial](https://docs.stackbit.com/getting-started/gatsby-contentful).  |
-| [HTML + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-html-contentful)      | Follow the [HTML + Contentful tutorial](https://docs.stackbit.com/getting-started/html-contentful).      |
-| [HTML + JSON](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-html-contentful)            | Follow the [HTML + JSON tutorial](https://docs.stackbit.com/getting-started/html-json).                  |
-| [Next.js + Markdown](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-files)        | Follow the [Next.js + Markdown tutorial](https://docs.stackbit.com/getting-started/nextjs-markdown).     |
-| [Next.js + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-contentful) | Follow the [Next.js + Contentful tutorial](https://docs.stackbit.com/getting-started/nextjs-contentful). |
+| [Gatsby + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-gatsby-contentful)  | Follow the [Gatsby + Contentful tutorial](https://docs.netlify.com/create/get-started/gatsby-contentful/).  |
+| [HTML + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-html-contentful)      | Follow the [HTML + Contentful tutorial](https://docs.netlify.com/create/get-started/html-contentful/).      |
+| [HTML + JSON](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-html-contentful)            | Follow the [HTML + JSON tutorial](https://docs.netlify.com/create/get-started/html-json/).                  |
+| [Next.js + Markdown](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-files)        | Follow the [Next.js + Markdown tutorial](https://docs.netlify.com/create/get-started/nextjs-markdown/).     |
+| [Next.js + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/tutorial-nextjs-contentful) | Follow the [Next.js + Contentful tutorial](https://docs.netlify.com/create/get-started/nextjs-contentful/). |
 
 ## Stack-Specific Demos
 
@@ -48,7 +48,7 @@ These projects are the result of [the tutorials](#tutorials) that are also fully
 | [Nuxt 3 (Preview) + Git CMS](https://github.com/stackbit-themes/stackbit-examples/tree/main/nuxt3-preview)             | A working example with an early version of Nuxt 3, using local files as the content source.                                                                |
 | [SvelteKit + Contentful](https://github.com/stackbit-themes/stackbit-examples/tree/main/sveltekit-contentful)          | Basic SvelteKit & Contentful-based content site.                                                                                                           |
 
-## Stackbit Features
+## Netlify Create Features
 
 These projects showcase a specific Stackbit feature.
 
@@ -67,7 +67,6 @@ Various other implementation and integrations patterns in practice.
 | Example                                                                                                                   | Description                                                                                                                                          |
 | :------------------------------------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Algolia (search)](https://github.com/stackbit-themes/stackbit-examples/tree/main/algolia-search)                         | On-demand statically generated pages, searchable with Algolia                                                                                        |
-| [Chakra UI (components)](https://github.com/stackbit-themes/stackbit-examples/tree/main/chakra-ui)                        | A simple site using [Chakra UI](https://chakra-ui.com/).                                                                                             |
 | [Contentlayer (content)](https://github.com/stackbit-themes/stackbit-examples/tree/main/contentlayer)                     | Stackbit's minimal starter project, using [Contentlayer](https://www.contentlayer.dev/) to generate importable content files and types.              |
 | [Cloudinary + Contentful (images)](https://github.com/stackbit-themes/stackbit-examples/tree/main/cloudinary-contentful)  | Image management & per-device responsive optimization with Cloudinary.                                                                               |
 | [Cloudinary + unpic-img](https://github.com/stackbit-themes/stackbit-examples/tree/main/cloudinary-unpic)                 | Next.js project that uses [unpic-img](https://github.com/ascorbic/unpic-img) with Cloudinary for generating a responsive and optimized image gallery |
