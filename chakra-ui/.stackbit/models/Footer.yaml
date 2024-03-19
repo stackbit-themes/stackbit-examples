@@ -1,9 +1,0 @@
-type: object
-name: Footer
-label: Footer
-labelField: copyrightText
-readOnly: true
-fields:
-  - type: markdown
-    name: copyrightText
-    label: Footer Text
