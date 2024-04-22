@@ -9,7 +9,7 @@ A demo project to showcase the basics of Stackbit to new developers.
 Before you begin, please make sure you have the following:
 
 - Contentful account
-- Node v14 or later
+- Node v18 or later
 
 ## Contentful Setup
 
@@ -56,4 +56,4 @@ Annotations are enabled by default. To disabled set `DISABLE_ANNOTATIONS` in `.e
 
 ## Support
 
-If you get stuck along the way, [drop into our Discord server](https://discord.gg/HUNhjVkznH) and send a message in the `#documentation` or `#help` channels.
+If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).

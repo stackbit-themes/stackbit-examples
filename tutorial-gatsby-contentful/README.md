@@ -54,4 +54,4 @@ Visit `localhost:8000` and you should see the example content you imported into 
 
 ## Support
 
-If you get stuck along the way, [drop into our Discord server](https://discord.gg/HUNhjVkznH) and send a message in the `#documentation` or `#help` channels.
+If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
