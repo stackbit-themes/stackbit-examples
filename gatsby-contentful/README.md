@@ -9,7 +9,7 @@ A demo project to showcase the basics of Stackbit to new developers.
 Before you begin, please make sure you have the following:
 
 - Contentful account
-- Node v14 or later
+- Node v18 or later
 
 ## Contentful Setup
 
