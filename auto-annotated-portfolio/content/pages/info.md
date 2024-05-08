@@ -215,7 +215,7 @@ sections:
       - type: Label
         label: Next.js
       - type: Label
-        label: Stackbit
+        label: Netlify
       - type: Label
         label: Pancakes
       - type: Label
