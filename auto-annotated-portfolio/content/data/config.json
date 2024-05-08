@@ -36,7 +36,7 @@
                 "type": "Social",
                 "altText": "GitHub",
                 "label": "GitHub",
-                "url": "https://github.com/stackbit-themes",
+                "url": "https://github.com/netlify-templates",
                 "icon": "github"
             }
         ],
@@ -70,8 +70,8 @@
             {
                 "type": "Link",
                 "label": "GitHub",
-                "url": "https://github.com/stackbit-themes",
-                "altText": ""
+                "url": "https://github.com/netlify-templates",
+                "altText": "Netlify templates"
             }
         ],
         "contacts": {
