@@ -18,7 +18,7 @@ export function LocalizedDocumentCreateHook(options: OnDocumentCreateOptions) {
   const { model, locale, updateOperationFields } = createDocumentOptions;
 
   if (!localization.nonLocalizedModels.includes(model.name)) {
-    const localeField = model.fields.find((field) => field.name === 'locale');
+    const localeField = model.fields?.find((field) => field.name === 'locale');
     if (localeField) {
       updateOperationFields.locale = { type: 'enum', value: locale };
     }

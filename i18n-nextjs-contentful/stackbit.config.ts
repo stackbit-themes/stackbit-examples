@@ -49,10 +49,11 @@ const config = defineStackbitConfig({
   },
   siteMap: ({ documents }) => {
     const pages = documents.filter((doc) => PAGE_TYPES.includes(doc.modelName));
-    const entries: SiteMapEntry[] = pages.flatMap((document) => {
+    const entries: SiteMapEntry[] = pages.filter((document) => {
       let slug = getSlug(document);
-      if (!slug) return null;
-
+      return !!slug;
+    }).map((document) => {
+      let slug = getSlug(document);
       slug = normalizeSlug(slug);
       const nonDefaultLocale = document.locale && document.locale !== localization.defaultLocale;
       const slugPrefix = nonDefaultLocale ? '/' + document.locale : '';
